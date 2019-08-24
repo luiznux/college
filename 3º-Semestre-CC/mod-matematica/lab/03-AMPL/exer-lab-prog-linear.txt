@@ -1,0 +1,47 @@
+Natália Gama de Mattos - 31887201
+
+var x1>=0;
+var x2>=0;
+
+maximize L: 5*x1 + 3*x2;
+
+subject to
+c1: x1 + x2 <= 5;
+c2: x1 + 2*x2 <= 6;
+
+solve;
+
+display L, x1, x2;
+
+
+Exercício 2
+
+var x1 >=0;
+var x2 >=0;
+
+maximize Z: 12*x1 + 11*x2;
+
+subject to
+c1: x1 + x2 <= 3;
+c2: 3*x1 + 2*x2 <= 8;
+
+solve;
+
+display Z, x1, x2;
+
+
+
+Exercício 3
+
+var x1 >= 0;
+var x2 >= 0;
+
+maximize L: 2*x1 + x2;
+
+subject to
+c1: - x1 -x2 <=2;
+c2: x1 + x2 <= 4;
+
+solve;
+
+display L, x1 ,x2;

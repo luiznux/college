@@ -1,0 +1,8 @@
+Disciplinas = {Cod_disciplina,Sigla,Descrição}
+
+Aluno ={Matricula, Nome, Dt_Nasc, Nota,Bairro}
+
+Aluno_Disciplina = {Matricula, Cod_disciplina,nota}
+
+CEP_Bairro = {CEP,Bairro}
+

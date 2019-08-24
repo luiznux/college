@@ -1,0 +1,100 @@
+;Exercício para entrega (Moodle)
+
+;Rodar este código em http://www.onlinepiccompiler.com. (Turma 3C11. Turma 3N11 pode usar somente o PICSimLab)
+
+;Com base neste exemplo, implementer um contador de 00 a 99. O código dos digitos está configurado para funcionar na placa McLab1 do PICSimLab.
+
+LIST P=16F628A, R=DEC ; Use the PIC16F628 and decimal system
+
+;LIST P=16F84A, R=DEC
+
+;#include "p16f628a.inc" ; Include header file 
+#include <P16F84A.INC> ; Include header file
+
+__config _INTRC_OSC_NOCLKOUT & _LVP_OFF & _WDT_OFF & _PWRTE_ON & _BODEN_ON 
+
+ORG 0x00
+
+;----EXAMPLE-8 FOR 16F628A----
+;http://www.onlinepiccompiler.com
+;------7 SEGMENT EXAMPLE------
+;Seven Segment Data pins are connected to PORTB, 
+;enable pin is connected to RA0.
+;This program displays numbers 0 to 9 on the seven segment
+;with 0.2 seconds of time intervals. After 9 it returns back to 0.
+;------------------
+;Variable Declarations
+COUNTER1 EQU 0X20; Used in DELAY routine
+COUNTER2 EQU 0X21; Used in DELAY routine
+TEMP EQU 0X22; Used to hold the last number displayed on 7segment
+
+;------------------
+;PORT settings
+BANKSEL TRISA; Select BANK 1
+CLRF TRISA; Set PORTA as output
+CLRF TRISB; Set PORTB as output
+BANKSEL PORTA; Select BANK 0
+MOVLW 0x07 
+MOVWF CMCON
+CLRF PORTA; Clear PORTA
+CLRF PORTB; Clear PORTB
+CLRF TEMP; Clear TEMP
+BSF PORTA, 0; Enable 7 Segment
+
+;Display on 7 Segment
+INCREMENT
+MOVF TEMP, W; W=TEMP
+CALL SEVENSEG; Find the number to be sent to 7 Segment
+MOVWF PORTB; Send this number to PORTB (data pins)
+BSF PORTB, 4
+CALL DELAY; Wait for 0.2 seconds
+INCF TEMP, 1; Increment the number to be displayed
+MOVLW 0X0A; Compare this number with 10
+XORWF TEMP, 0
+BTFSC STATUS, Z
+CLRF TEMP; If TEMP becomes 10, clear it and continue displaying
+GOTO INCREMENT; If TEMP<10, continue displaying
+
+;---------------------
+;Routine finding the number to be sent to 7 segment
+SEVENSEG
+;ADDWF PCL,F
+;RETLW 0x3F;To display 0 on the seven segment, we send 0011 1111 
+;RETLW 0x06;1
+;RETLW 0x5B;2
+;RETLW 0x4F;3
+;RETLW 0x66;4
+;RETLW 0x6D;5
+;RETLW 0x7D;6
+;RETLW 0x07;7
+;RETLW 0x7F;8
+;RETLW 0x6F;To display 9 on the seven segment, we send 0110 1111 
+addwf PCL, F
+retlw B'11101110';0
+retlw B'00101000';1
+retlw B'11001101';2
+retlw B'01101101';3
+retlw B'00101011';4
+retlw B'01100111';5
+retlw B'11100111';6
+retlw B'00101100';7
+retlw B'11101111';8
+retlw B'01101111';9
+retlw B'00000000' ;apagado
+
+;--------------------
+;Delay routine, approximately 0.2 seconds
+DELAY
+MOVLW 0XFF
+MOVWF COUNTER2
+LOOP2
+MOVLW 0XFF
+MOVWF COUNTER1
+LOOP1
+DECFSZ COUNTER1, F
+GOTO LOOP1
+DECFSZ COUNTER2, F
+GOTO LOOP2
+RETURN
+
+END

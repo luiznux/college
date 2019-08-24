@@ -1,0 +1,22 @@
+
+tam = 20;
+
+vetor_entrada = [5,6,7,4,9,1,2,3,9,0,22,12,3,2,100,16,8,6,0,19]
+
+vetor_chave = [0]*100
+
+for i in range(0, i< tam, 1):
+    aux = 0
+    vetor_chave[vetor_entrada[i]] = vetor_chave[i]
+
+
+for i in range(0, i <100,1):
+    while(vetor_chave[i]) != 0):
+        vetor_entrada[i] = vetor_chave[i]
+        vetor_chave[i] = vetor_chave[i]-1
+
+
+print(vetor_chave)
+
+print(vetor_entrada)
+

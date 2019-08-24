@@ -1,0 +1,24 @@
+#SEMANA_03_RECURSÃO
+#EXERCÍCIOS DE LABORATÓRIO
+
+#EXERCICIO - FATORIAL VERSÃO iTERATIVA
+def fatIt(n):
+    fat = 1
+    while n >=1:
+        fat = fat*n
+        n = n-1
+    return fat
+   
+
+#EXERCICIO - FATORIAL VERSÃO RECURSIVA
+def fatRec(n):
+    if  n == 0:
+        return 1
+    return n*fatRec(n-1)
+    
+
+
+print("Primo Interativo -> ", fatIt(7))
+print("Primo Recursivo -> ", fatRec(7))
+
+

@@ -1,0 +1,7 @@
+1) Para as folhas de dados dos microcontroladores, responda:
+
+a) Quais são os mnemônicos (Opcodes) implementados para o PIC16F628A e para o PIC18F4550.
+
+b) Modifique o programa de exemplo apresentado em sala de aula para acionar todas as portas em sequência. Para cada saida acionada, a anterior deve ser desligada Ex. RA0 -> RA1 ->....->RB7
+
+O programa deve ser enviado em formato  numero_tia.asm contendo o código pronto para ser executado.

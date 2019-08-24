@@ -1,0 +1,15 @@
+ T(n) = 12n² + 30n + 243
+
+ T(N) = 3n² + 10n + 12
+
+Assintoticamente os dois sao iguais no quesito tempo pois para nos, 
+ambos dao T(n)=O(n²), para numeros suficientemente grandes . Igno-
+ramos os outros termos por serem despreziveis para o resultado fi-
+nal do tempo.
+
+***Para se resolver uma recorrencia é necessario ter uma divisao no 'n' , caso contrario nao é possivel resolver
+com o teorema mestre.
+
+THE LOST ROOM
+
+

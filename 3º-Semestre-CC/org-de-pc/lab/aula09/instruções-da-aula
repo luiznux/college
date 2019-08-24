@@ -1,0 +1,29 @@
+1) Criar uma conta em https://mplabxpress.microchip.com/mplabcloud/ide
+
+2) Ao logar, selecionar "File->New Project"
+
+3)Selecionar "Microchip Embedded-> stand alone project" e clique em "Next"
+
+4)Selecione o "PIC16F628A" ou outro PIC de sua escolha, clique "Next"
+
+5) Nomeie o projeto de "Pisca_Led"
+
+6) Clique em "Finish"
+
+7)Clique em "File->Project Properties"
+
+8) Secione: "Compile Toolchains->mpasm(5....)" e clique em "Finish"
+
+9) Clique "File->New File"
+
+10) Selecione "Microchip Embebded -> MPASMWIN assembler"  e "Projects -> AssemblyFile .asm" e clique em "Next"
+
+11) No campo "Nome" insira o nome do arquivo .asm e Clique em "Finish"
+
+12) Insira o código contendo os comandos assembly para o microcontrolador selecionado.
+
+13) Compile clicando no ícone do martelo ou selecionando "Run -> Buld Project"
+
+14) Baixe o arquivo .hex clicando em "Make and Program device"
+
+15) Carrege o coldigo no PICSimLab. (Você pode executa-lo online em https://lcgamboa.github.io/wasm/picsimlab.html).  Escolha "Board-> Mclab1" em Seguinda "File-> Load Hex"

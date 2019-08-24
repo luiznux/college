@@ -1,0 +1,10 @@
+como estamos lidando com um vetor , para entao criar um novo 
+como por exemplo um mair(dentro da classe)
+
+v é um ponteiro para uma posição de memoria
+com alteramos o valor de v para o novo vetor de tamanho
+(antigo + novo), precisamos desalocar o v da memoria com
+o destruidor para so assim criarmos o novo v
+tambem devemos atualizar o tamanho, pois ele esta ligado com o 
+antigo v
+	assim atualizamos o tamanho para o novo tam do vetor novo.

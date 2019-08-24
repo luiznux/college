@@ -1,0 +1,10 @@
+
+
+
+"new" aloca um quantidade necessaria de memora pra um tipo definido
+
+	por exemplo, apos instanciar um obj na classe vetor definida,
+ele cria um espaço de memoria "novo" para esse vetor que o usuario de-
+finiu para  o obj:
+	
+	int* a= new int (5);

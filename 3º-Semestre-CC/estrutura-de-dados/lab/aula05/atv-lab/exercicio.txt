@@ -1,0 +1,8 @@
+Uma operação bastante importante em vetor é a junção, que permite agrupar dois vetores
+em um só. Acrescente, na classe Vetor, um método chamado agrupamento, que recebe
+como parâmetro um outro vetor e insere todos os seus elementos no final do vetor que
+invocou o método de agrupamento.
+Implemente este método em C++.                                                               
+~                                                                
+~                                                                
+

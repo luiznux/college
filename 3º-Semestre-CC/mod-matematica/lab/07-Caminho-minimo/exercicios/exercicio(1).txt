@@ -1,0 +1,28 @@
+var AB>=0;
+var AC>=0;
+var AD>=0;
+var AE>=0;
+var BD>=0;
+var CG>=0;
+var DF>=0;
+var EG>=0;
+var FH>=0;
+var GH>=0;
+
+
+minimize C: 22*AB + 18*AC + 30*AD + 27*AE + 18*BD + 45*CG + 36*DF + 38*EG + 24*FH + 22*GH;
+
+subject to
+
+c1: -(AB) - (AC) - (AD) - (AE) = -1;
+c2: -(BD) + AB = 0;
+c3: -(CG) + AC = 0;
+c4: -(DF) + AD + BD = 0;
+c5: -(EG) + AE = 0;
+c6: -(FH) + DF = 0;
+c7: -(GH) + CG + EG = 0;
+c8: FH + GH = 1;
+
+solve;
+
+display C;

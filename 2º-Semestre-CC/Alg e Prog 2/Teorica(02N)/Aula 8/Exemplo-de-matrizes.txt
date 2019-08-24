@@ -1,0 +1,71 @@
+import random
+       
+
+linha_com_zeros = [0]*5
+A = [ linha_com_zeros ] * 5
+A[1][1] = 2
+
+for i in range(0, len(A)):
+    for j in range(0, len(A)):
+        print(A[i][j], end=" ")
+    print("\n")
+
+
+
+Matriz = []
+for i in range(0, 10):
+    linha = []
+    for j in range(0, 10):
+        linha.append(random.randint(1,100))
+    Matriz.append(linha)
+
+
+for i in range(0, 10):
+    for j in range(0, 10):
+        print(Matriz[i][j], end=" ")
+    print("\n")
+    
+
+    
+M = [[0,0,0],[0,0,0]]
+
+for i in range(2):
+    print("\n")
+    for j in range(3):
+        M[i][j] = random.randint(1,100)
+        print(M[i][j], end = " ")import random
+       
+
+linha_com_zeros = [0]*5
+A = [ linha_com_zeros ] * 5
+A[1][1] = 2
+
+for i in range(0, len(A)):
+    for j in range(0, len(A)):
+        print(A[i][j], end=" ")
+    print("\n")
+
+
+
+Matriz = []
+for i in range(0, 10):
+    linha = []
+    for j in range(0, 10):
+        linha.append(random.randint(1,100))
+    Matriz.append(linha)
+
+
+for i in range(0, 10):
+    for j in range(0, 10):
+        print(Matriz[i][j], end=" ")
+    print("\n")
+    
+
+    
+M = [[0,0,0],[0,0,0]]
+
+for i in range(2):
+    print("\n")
+    for j in range(3):
+        M[i][j] = random.randint(1,100)
+        print(M[i][j], end = " ")

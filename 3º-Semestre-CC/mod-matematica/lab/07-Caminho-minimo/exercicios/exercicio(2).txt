@@ -1,0 +1,47 @@
+var CHJO>=0;
+var CHLA>=0;
+var CHJV>=0;
+var JOCX>=0;
+var JOFL>=0;
+var JVFL>=0;
+var JVSM>=0;
+var LACX>=0;
+var LAFL>=0;
+var CXPA>=0;
+var FLPA>=0;
+var FLSM>=0;
+var SMPA>=0;
+var JOCH>=0;
+var JVCH>=0;
+var LACH>=0;
+var CXJO>=0;
+var CXLA>=0;
+var CXFL>=0;
+var FLJO>=0;
+var FLLA>=0;
+var FLJV>=0;
+var SMJO>=0;
+var SMFL>=0;
+var PACX>=0;
+var PAFL>=0;
+var PASM>=0;
+
+
+minimize C: 400*CHJO + 950*CHLA + 800*CHJV + JOCX*1800 + JOFL*900 + JVFL*600 + JVSM*1200 + LACX*900 + LAFL*600 + CXPA*400 + FLPA*1300 + FLSM*1000 + SMPA*600 
+
+subject to
+
+c1: -CHJO - CHLA - CHJV = -1;
+c2: CHJO - JOFL - JOCX = 0;
+c3: CHLA - LACX - LAFL = 0;
+c4: SHJV - JVFL - JVSM = 0;
+c5: JOCX + LACX + FLCX - CXPA = 0;
+c6: JOFL + LAFL + JVFL - FLCX - FLPA - FLSM = 0;
+c7: FLSM + JVSM - SMPA = 0;
+c8: CXPA + FLPA + SMPA = 1;
+
+
+
+solve;
+
+display C;

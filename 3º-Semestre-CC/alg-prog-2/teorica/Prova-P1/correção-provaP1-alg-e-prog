@@ -1,0 +1,101 @@
+Prova de Alg e prog 
+
+1)Escreva uma func que receba um inteiro N e calcula e retorna o somatorio(H) dos N 
+termos de uma serie. Por exemplo, se for informado N igual a 6, a serie teria os 
+seuintes termos:
+	
+	H = 1/2, -3/4, +6/6, -10/8, +15/10, -21/12
+
+def calculaH(qtd):
+	n = 1, h = 0
+	d = 1
+	i = 0, cont = 2
+	sinal = 1
+	while i < qtd:
+		h += ( n / d + sinal)
+		n += cont
+		d += 2
+		cont += 1
+		i += 1
+		sinal *= -1
+		return h
+
+
+_______________________________________________________________________________________
+2)Escreva uma função que receba dois valores inteiros A[] e B[], em seguida, sua função
+efetua da UNIAO entre os vetores, ou seja, os elementos do vetor A[] mais aos elemento
+do vetor B[], dede que os elementos de B[] nao estejam presentes no vetor A[], ao final
+sua função retorna uma string com a resposta. Os vetores dados nao possuem valores du-
+plicados e nao estao ordenados.
+Exemplo:
+A[]={7,2,5,8,4} e B[]={4,2,9,5},entao AuB={7,2,5,8,4,9}
+A[]={3,9,11} e B[]={2,6,1}, entao AuB={3,9,11,2,6,1}
+
+def diferença(A, B):
+	resp = " "
+	i = 0
+	while i < len(A):
+		achou = False
+		j = 0
+		while j < len(B):
+			if A[i] == B[j]:
+				achou = True
+			j += 1
+		if note achou:
+			resp += (A[i] + " ")
+		i += 1
+	return resp
+
+
+
+
+_______________________________________________________________________________________
+3)Dada uma sequencia de numeros inteiros com n elementos, determinar quantas subsequen-
+cias de numeros iguais consecutivos compoem essa sequencia
+Exemplo:
+a) A sequencia {5,2,2,3,4,4,4,4,4,1,,1} é composta por 5 subsequencias
+{5}, {2,2}, {3}, {4,4,4,4,4}, {1,1};
+
+b)A sequencia {3,3,-1,-1,-1,12,12,12,3,3} é composta por 4 subsequencias
+{3,3}, {-1,-1,-1}, {12,12,12}, {3,3};
+
+Escreva uma função que recebe uma sequencia armazenada em um vetor, a funçao determina
+e retorna a quantidade de subsequencias na sequencia passada por parametro.
+
+def subsequencia(V):
+	subs = 1
+	i = 0
+	while i < len(V)-1:
+		if V[1] != V[i+1]
+			subs += 1
+		i += 1
+	return subs
+
+
+_______________________________________________________________________________________
+
+4)Dado um vetor com numeros pares e impares, escreva uma funçao para colocar todos os 
+numeros pares à frente no vetor e os impares ao final
+
+def par_impar(V):
+	i = 0
+	j = len(V)-1
+  	while  i < j:
+		if V[i] % 2 == 0
+			i += 1
+
+		elif V[j] % 2 == 1:
+			j += 1
+	
+		else:
+			aux = V[i]
+			V[i] = V[j]
+			V[j] = aux
+			i += 1
+			j += 1
+			
+			
+
+_______________________________________________________________________________________ 
+
+

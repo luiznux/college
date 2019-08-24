@@ -1,0 +1,13 @@
+def restoDiv(a,b):
+    if(a < b):
+        return a
+    else:
+        return restoDiv(a-b,b)
+    
+
+
+    
+
+n1 = int(input("Digite o primeiro numero"))
+n2 = int(input("Digite o segundo numero"))
+print(restoDiv(n1,n2))

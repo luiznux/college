@@ -1,0 +1,94 @@
+
+1)
+END: 32 BITS 
+palavra = 2 bytes
+
+a) 2³²    X    2bytes  =  2³³ --> 2³ X 2³⁰---> 8 GB 
+   |		  |
+   quand        tamanho da
+   de		informação
+   posições			 	
+
+
+2³² endereços 
+
+
+b) 2⁶⁴ X 2bytes --> 2⁶⁵ bytes --> 2⁵ X 2⁶⁰ --> 32EB
+						HEXAByte
+
+
+c) 4Kbytes de blocos 
+
+a- 8GB / 4KB --> 2²¹ blocos
+
+b- 32EB / 4KB --> 2³ x 2⁵⁰ = 2⁵³
+
+----------------------------------------------------------
+
+2) taxa de transferencia da memoria com barramento de 64 bits
+e com frequencia de 1800Mhz
+
+F = 1/T
+
+Tx = Dados/T = 8bytes x 1800Mhz --> {64vias} 14.400 MB/s
+   	
+ 
+------------------------------------------------------------
+
+3) 16Gb-> MEMORIA Principal 
+
+a) DDR4 --> F = 2133Mhz por ser ddr, duas operações por ciclo!!!! uma operação na subida do clock e outra na descida , depois outro na descida e sa subida
+64 bits
+
+
+b)em 1 segundo , sua frequencia 2133MHz, assim: tendo 2.133.000 de ciclos em um segundo, pore é ddr, ent é dobrado o os ciclos
+assim: 4.266.000 milhoes de operações p/ seg 
+
+
+c)  Tx = 4266MHZ x 8byte = 32.128MB/s, considerendo single channel.
+se fosse dual channel , a taxa é dobrada ! 
+
+-------------------------------------------------------------------
+
+4)Tm = (Tac cache x P acerto) + (Tac memoria pricp x P falha)
+	
+	(6ns x 0.6) + (11ns x 0.4)
+	
+	3,6ns + 4,4ns
+___________
+|Tm = 8ns| 
+-----------
+
+
+exemplo extra  contado  o cache principal e disco
+
+16GB -> Memoria principal
+DDR4 -> F= 2133
+64bits
+			cache = 6ns       
+			Prob = 60%       
+			
+			Mem = 11ns
+			prob = 80%
+	
+			Disco(mv) = 50ns
+
+Tm 	  = 8,8ns +10ns = 18,8ns --> isso é o tempo medio entre a prob de acesso entre Mem principal e disco 		
+mem princ
+e disco
+
+
+Tm = (Tac cache x P acerto) + (Tac memoria pricp x P falha)
+	
+	(6ns x 0.6) + (18,8ns x 0,4) tempo somado com o disco
+	
+	3,6ns + 7,52ns
+	
+	= 11,12ns -> tempo contando com a prob dos 3 tipos de meoria (cache -> mem.princ -> disco)
+
+_______________________________________________________________________________________________________________________________
+EXERCICOS DE COD DE CORREÇÃO DE ERRO
+
+
+
+

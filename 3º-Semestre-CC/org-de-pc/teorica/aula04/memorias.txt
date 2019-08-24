@@ -1,0 +1,284 @@
+* Memória
+
+| Unidade | CPU  | Memória |
+|---------+------+---------|
+| K       | 10³  | 2¹⁰     |
+| M       | 10⁶  | 2²⁰     |
+| G       | 10⁹  | 2³⁰     |
+| T       | 10¹² | 2⁴⁰     |
+
+** Endereços
+
+Multicore - SMP(MIMD) (Processamento de Memória Simétrico)
+
+SDR - Single Data Rate
+DDR - Double Data Rate
+
+** Características das memórias
+
+*** Localização
+
+- CPU
+Registradores e Cache.
+
+- Interna
+Memória principal.
+
+- Externa
+HD, SSD, Pen Drive, CD, DVD, ...
+
+*** Capacidade
+
+Cada uma das posições de memória é chamada de palavra.
+- palavra: menor quantidade enredeçavel de memória.
+- bloco: Conjunto de palavras.
+
+bloco de 4kB / palavra de 1B = 4 * 2¹⁰
+   = 4096 palavras
+
+- Tamanho da palavra
+-* A unidade natural da organização
+
+- Número de palavras
+-* ou Bytes
+
+*** Unidade de transferência
+
+CPU(registradores) transfere palavras para o cache e vice-versa, o
+cache transfere blocos para a memória principal e vice-versa.
+
+*** Método de acesso
+
+**** Aleatório
+
+- Cada unidade enredeçavel possui um mecanismo de enredeçamento único.
+- O tempo de acesso é constante e independente da localização ou do
+  acesso anterior.
+- Ex.: RAM
+
+**** Associativo
+
+- Um dado é localizado baseado em parte de seu conteúdo
+  e não por seu endereço.
+- O tempo de acesso é constante e independente da localização
+  ou do acesso anterior.
+- Por que a posição do dado está associada a uma parte.
+- Ex.: Cache
+
+**** Sequencial
+
+- O acesso é feito segundo uma sequência linar específica.
+- O tempo de acesso depende da localização do dado.
+- Ex.: Fitas
+
+**** Direto
+
+- Blocos individuais ou registros têm endereço único
+- Acesso é feito por meio de um direto a uma vizihança do registro e,
+  em seguida, por uma pesquisa sequencial.
+- Tempo de acesso também é variável.
+- Tenho que ter uma referência direta à ele.
+- Ex: Discos
+
+*** Hierarquia de memória
+
+1. Registradores (CPU)
+2. Interta ou Memória Principal
+  - Pode incluir um ou mais níveis de cache: L1, L2 e até L3.
+    - Um desses níveis é compartilhado
+  - RAM
+3. Memória Externa
+  - Armazenamento secundário
+
+*** Desempenho
+
+**** Tempo de acesso (latência)
+
+- Tempo gasto desde o instante em que o endereço é aprensentado à
+  memória até o momento em que os dados se tornam disponíveis.
+- Tempo gasto para realizar uma operação de leitura ou escrita.
+
+**** Tempo de ciclo
+
+- Tempo de acesso + recovery
+- Desaparecimento de transientes
+
+  tav R
+|-----|---|-----|
+  5ns 1ns 5ns 6ns
+
+6ns é o tempo de ciclo.
+
+**** Taxa de transferência
+
+- Taxa na qual os dados podem ser movidos de ou para a memória.  é
+  quanto tempo os dados demoram de ir para a CPU da memória pelo
+  barramento.
+
+Cálculo da taxa:
+#+BEGIN_SRC 
+F = 1 / T
+Tx = 32bits / T
+#+END_SRC
+
+**** Tempo médio de acesso
+
+Quando desejamos calcular um tempo médio de acesso a 2 ou mais níveis
+de memória Levamos em conta o tempo de acesso de cada nível e a
+probabilidade de encontrar ou não o dado em cada nível: N1 é o nível
+mais alto e N2 o nível logo abaixo.
+
+#+BEGIN_SRC 
+Fórmula: Tempo_Médio = (Tn1 * Pacerto_n1) + (Tn2 * Pfalha_n1)
+
+Tn1 = Tempo de acesso á memória 1
+Tn2 = Tempo de acesso á memória 2
+Pacetor_n1 = Probabilidade de ter o acesso na memória n1
+Pacetor_n2 = Probabilidade de ter o acesso na memória n2
+#+END_SRC
+
+**** Exemplo
+
+- Calcular o tempo médio de acesso entre memória principal e cache,
+  sabendo que:
+  - Tempo acesso MP = 10ns
+  - Tempo acesso Cache = 5ns
+  - probabilidade de acerto (cache) = 40%
+
+#+BEGIN_SRC
+Tempo_Médio = (Tn1 * Pacerto_n1) + (Tn2 * Pfalha_n1)
+Tempo_Médio = (5 * 0.4) + (10 * 0.6)
+Tempo_Médio = 2ns + 6ns
+Tempo_Médio = 8ns
+#+END_SRC
+
+*** Tipo físico
+
+**** Semitondutor (RAM)
+
+Posso usar Flip-Flops(estático) ou capacitores(precisa de refresh).
+
+Os registradoes usam flip-flops e a RAM usa capacitores.
+
+**** Magnético (Disco e Fita)
+
+Escrita por indução magnética. Se colocar um campo magnético muito
+forte perto pode perder dados.
+
+**** Óptico (CD e DVD)
+
+Consegue ler por reflexão de luz.
+
+*** Características físicas
+
+**** Volátil
+
+Não armazena permanentemente o dado.
+
+**** Não-volátil
+
+HD, SSD, Pen Drive. O dado permanece de modo consistente.
+
+**** Apagável
+
+Cache, RAM, HD, SSD, BIOS, EPROM EEPROM.
+
+**** Não-Apagável
+
+Memórias ROM.
+
+**** Consumo de energia
+
+*** Organização
+
+**** Princípios de Localidade
+
+- Localidade espacial
+  - Exemplo: laços de repetição
+
+- Localidade temporal
+  - Repetir o acesso de um dado específico.
+
+***** Exemplo: Laços
+
+#+BEGIN_SRC c
+for (int i = 0;i < N;i++)
+    soma += vet[i];
+#+END_SRC
+
+** Correção de Erro
+
+Memórias ECC(Código de Correção de Erro), capazes de detectar erros no
+armazenamento dos dados.
+
+*** Falhas Graves
+*** Erros Moderados
+*** Detectando usando código de correção de Erros de Hamming
+*** Função de Correção de Erros
+*** Numero de bits do Código
+
+2^k - 1 >= M + K M é o tamanho da palavra K é o npumero de bits do
+código
+
+|         |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 | 11 | 12 |
+|---------+----+----+----+----+----+----+----+----+----+----+----+----|
+| 2⁰      |  0 |  0 |  0 |  0 |  0 |  0 |  0 |  1 |  1 |  1 |  1 |  1 |
+| 2¹      |  0 |  0 |  0 |  1 |  1 |  1 |  1 |  0 |  0 |  0 |  0 |  1 |
+| 2²      |  0 |  1 |  1 |  0 |  0 |  1 |  1 |  0 |  0 |  1 |  1 |  1 |
+| 2³      |  1 |  0 |  1 |  0 |  1 |  0 |  1 |  0 |  1 |  0 |  1 |  1 |
+|         | K1 | K2 | M1 | K3 | M2 | M3 | M4 | K4 | M5 | M6 | M7 | M8 |
+| M       |  0 |  1 |  0 |  0 |  1 |  0 |  1 |  0 |  0 |  0 |  0 |  0 |
+| Memória |  0 |  0 |  0 |  0 |  0 |  1 |  0 |  1 |  0 |  0 |  1 |  0 |
+
++ = xor
+M = 00001010
+|   | K1 = | M1 + M2 + M4 + M5 + M7 | 0 |  1 |
+|   | K2 = | M1 + M3 + M4 + M6 + M7 | 1 |  1 |
+| F | K3 = | M2 + M3 + M4 + M8      | 0 |  0 |
+|   | K4 = | M5 + M6 + M7 + M8      | 0 |  1 |
+|   |      |                        | K | K' |
+
+End a = 000101010010
+
+K = 0010
+K' = 1011
+K XOR K' = 1001 (Erro) (O valor mostra o bit onde está erro)
+
+** Cache
+
+*** Organização
+
+Bloco é a unidade de transferência.
+A linha do cache tem exatamente o tamanho de um bloco.
+
+*** Gerência dos dados
+
+**** Algoritmos de mapeamento
+
+***** Mapeamento direto
+
+Cada bloco só pode ser carregado em uma linha exclusiva do cache.
+
+***** Mapeamento Associativo
+
+****** FIFO
+
+****** LRU - Least Recently used
+
+****** LFU - Least-frequently used
+
+***** Mapeamento Associativo por Conjunto
+
+- Divide o cache em blocos chamados de conjuntos
+
+**** Algoritmos de substituição
+
+***** Write Through
+
+- Consistente
+- Desempenho fraco (pois acessa a memória sempre)
+
+***** Write back
+
+- Não consistente
+- Desempenho melhor que o write through

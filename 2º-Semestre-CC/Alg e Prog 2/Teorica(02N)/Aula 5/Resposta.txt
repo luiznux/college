@@ -1,0 +1,110 @@
+#SEMANA_03_RECURSÃO
+#EXERCÍCIOS DE LABORATÓRIO
+
+#EXERCICIO 1 - POTENCIA VERSÃO ITERATIVA
+def potenciaFuncIter(base, expoente):
+    resultado = base
+    while expoente>1:
+        resultado = resultado * base
+        expoente = expoente-1
+    return resultado
+
+
+#EXERCICIO 1 - POTENCIA VERSÃO RECURSIVA
+def potenciaFunc(base, expoente):
+    if expoente==0:
+        return 1
+    return base*potenciaFunc(base, expoente-1)
+
+
+print("Chada da função potencia iterativa")
+potencia = potenciaFuncIter(3, 3)
+print(potencia)
+    
+
+print("Chada da função potencia Recursiva")
+potencia = potenciaFunc(3, 3)
+print(potencia)
+
+_____________________________________________________
+
+def restoDiv(a,b):
+    if(a < b):
+        return a
+    else:
+        return restoDiv(a-b,b)
+    
+
+
+    
+
+n1 = int(input("Digite o primeiro numero"))
+n2 = int(input("Digite o segundo numero"))
+print(restoDiv(n1,n2))
+
+______________________________________________________
+#EXERCICIO - CONVERTER DECIMAL PARA BINÁRIO VERSÃO INTERATIVA
+def decimalToBinary(decimal):
+    binario = " "
+    while decimal > 0:
+        if(decimal%2 == 0):
+            binario = "0" + binario
+        else:
+            binario = "1" + binario
+        decimal = decimal//2   
+    return binario
+
+
+#EXERCICIO - CONVERTER DECIMAL PARA BINÁRIO VERSÃO RECURSIVA
+def dec2bin(decimal): 
+    if decimal == 0: 
+        return "" 
+    else: 
+        return str(dec2bin(decimal//2))+str(decimal % 2)
+
+
+num = int(input("digite um numero: "))
+print("Iterativa -> ", decimalToBinary(num))
+print("Recursiva -> ", dec2bin(num))
+
+
+__________________________________________________________
+def quociente(a,b): 
+    if a < b: 
+        return 0 
+    else: 
+        return 1 + quociente(a-b,b)
+
+a=int(input("Digite o primeiro numero"))
+b=int(input("Digite o segundo numero"))
+print(quociente(a,b))
+
+
+___________________________________________________________
+#SEMANA_03_RECURSÃO
+#EXERCÍCIOS DE LABORATÓRIO
+
+#EXERCICIO - FATORIAL VERSÃO iTERATIVA
+def fatIt(n):
+    fat = 1
+    while n >=1:
+        fat = fat*n
+        n = n-1
+    return fat
+   
+
+#EXERCICIO - FATORIAL VERSÃO RECURSIVA
+def fatRec(n):
+    if  n == 0:
+        return 1
+    return n*fatRec(n-1)
+    
+
+
+print("Primo Interativo -> ", fatIt(7))
+print("Primo Recursivo -> ", fatRec(7))
+
+
+_____________________________________________________________
+
+

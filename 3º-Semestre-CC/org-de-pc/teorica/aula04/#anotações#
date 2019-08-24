@@ -1,0 +1,288 @@
+__________
+|MEMORIAS|*****************************************************************************************************************
+---------------------------------------------------------------------------------------------------------------------------
+
+***ler o capitulo do stallings(memoria)
+
+LOCALIZAÇÃO
+
+CPU--> cache, registradores
+
+Interna --> Memoria principal
+
+Externa--> HD, SSD, pendrive, cd, dvd (armazenamento secundariao)
+___________________________________________________________________________________________________________________________________
+Capacidade 
+
+Unidade --> Byte 
+
+PALAVRA--> menor unidade endereçada de memoria, que esta associada a um unico endereço . Sendo grupadas em blocos(conjunto de pala
+vras)
+
+
+
+
+***um bloco de 4K, contem quants palavras?
+
+--> 4KB / 1B = 4x2¹⁰ ---> 4096 palavras
+
+
+______________________________
+|    Freq CPU    X    MEMORIA |
+|                |            |   
+|     K = 10³    |    2¹⁰     |
+|                |            |
+|     M = 10⁶    |    2²⁰     |
+|                |            |
+|     G = 10⁹    |    2³⁰     |
+|       .        |     .      |
+|	    .        |     .      |
+|	    .        |     .      |
+|	    .        |     .      |
+|	    .⁺³            . ⁺¹⁰   
+| 	   10              2      |   
+|_____________________________|                             
+
+
+_____________________________________________________________________________________________________________________________________
+SISTEMAS OPERACIONAIS PAGINADOS 
+
+-->> Sistema que a unidade de transf entre memoria e  cache  é 
+atravez de blocos de memoria e nao por posiçoes expecificas
+Isso ajuda na velocidade pois buscando um bloco inteiro 
+podemos aproveitar varias informaçoes foram levadas juntas
+assim evitando ir ate a memoria para buscar dados que faltem 
+
+--> uma linha do cache é exatamente um bloco de memoria!!!!!
+
+--> oq levar para os registradores depois do cache?
+	somente as palavras! e nao o bloco de dados
+
+
+Unidade de transferência: É o "caminho" que os dados passam
+
+   Transf. Palavras          Transf. Blocos
+   |               |         |             |
+CPU ---------------> MEMÓRIA -------------->  MEMÓRIA
+    <---------------  CACHE  <-------------- PRINCIPAL
+
+_______________________________________________________________________________________________________________________________________
+METODO DE ACESSO 
+
+**ALEATORIO-- ja mencionado na ultima aula( memoria princial)
+
+
+***SQUENCIAL --> acesso feito segundo uma  sequencia linear especifica 
+		tempo de acesso depende da localização dos dados
+		Exemplo: Fita cassete!
+
+
+***ASSOCIATIVO:
+	Um dado é localizado baseado em parte de seu conteúdo e não por seu endereço
+	O tempo de acesso é constante e independente da localização ou do acesso anterior
+	parte da informação é utilizada para gerar uma tag , posição do dado esta associada a parte do seu conteudo
+	Ex. cache
+
+
+***DIRETO --> Blocos individuais ou registros tem endereço unico(referencia), nao necesario ler todos os arquivos ate o desejado
+	     Exemplo: HD
+	     eof --> indica o fim do arquivo(fim da leitura)
+	     end of file
+
+
+_______________________________________________________________________________________________________________________________________
+DESEMPENHO DE MEMORIA
+
+Latencia--> relacionada com o tempo de acesso a memoria para uma operação de leitura ou escrita( quanto menor melhor)
+
+Temp cilco--> recivery(tempo para recuperar o barramento de lixos restos)
+
+executa operação --> limpa o barramento 
+
+
+***Taxa de Transferencia
+-->dados transferidos por tempo (atravez do barramento)
+      |TX= 32bits x frequencia| 
+
+exemplo--> 32bitsx 4133MHz --> 16532 bytes-->
+
+--> 16gbPOR SEGUNDNO PASSA PELO BARRENTO
+supondo para uma arquitetura de 65bits
+__________________________________________________________________________________________________________________________________________
+Desempenho: Como posso medir o desempenho da memória? Existem várias maneiras:
+
+- Tempo de acesso (Latência, quanto menor, melhor):
+	Tempo gasto desde o instante em que o endereço é apresentado à memória até o momento em que os dados se tornam 
+disponíveis
+	Tempo gasto para realizar uma operação de leitura ou escrita
+
+- Tempo de ciclo da memória:
+	Tempo de acesso + recuperar o barramento da memória
+	Desaparecimento de transientes, sujeiras
+
+- Taxa de Transferência (Frequência, quanto de dados podem passar pelo barramento por segundo):
+	Taxa na qual os dados podem ser movidos de ou para a memória 
+	Tx = 32 bits *Frequência => 4bytes * 4133 = 16532 bytes, ou seja, 16GB de dados podem passar pelo barramento
+
+Tempo Médio de Acesso: Quanto tempo levamos para acessar um dado?
+
+- Quando desejamos calcular um tempo médio de acesso a 2 ou mais níveis de memória
+- Levamos em conta o tempo de acesso de cada nível e a probabilidade de encontrar ou não o dado em cada nível: 
+	N1 é o nível mais alto e N2 o nível logo abaixo
+
+- Fórmula:
+	Tempo_Médio = (TN1 * P_acerto_N1) + (TN2 * P_falha_N1)
+	TN1: Tempo para acessar os dados no Nível 1
+	TN2: Tempo para acessar os dados no Nível 2
+	P_acerto_N1: Probabilidade de achar o dado no Nível 1
+	P_falha_N1: Probabilidade de não achar o dado no Nível 1
+	N1: Cache
+	N2: Memória Principal
+	CONSIDERANDO APENAS CACHE E MEMÓRIA PRINCIPAL
+____________________________________________________________________________________________________________________________________________
+Exemplo: Calcular o tempo médio de acesso entre memória principal e cache, sabendo que:
+Tempo acesso MP = 10ns
+Tempo acesso Cache = 5ns
+Probabilidade de acerto (cache) = 40%
+
+Tempo_Médio = (TN1 * Pacerto_N1) + (TN2 * Pfalha_N1)
+Tempo_Médio = (5ns * 0,4) + (10ns * 0,6)
+Tempo_Médio = 2ns + 6ns
+Tempo_Médio = 8ns
+
+Aumentar o tamanho do Cache aumenta a Probabilidade de um dado estar lá, logo melhora a velocidade de acesso ao dado
+
+E se tivermos mais de 2 Níveis? Ficaria assim:
+
+Cache --> Memória Principal --> Disco
+
+Primeiro temos que calcular o Tempo Médio da Memória Principal e Disco, então compor com o Cache. Exemplo:
+
+Tempo_Médio = (TN1 * P_acerto_N1) + (TN2N3 * P_falha_N1)
+TN2N3 = (TN2 * P_acerto_N2) + (TN3 * P_falha_N2)
+
+Tipo físico: Maneiras de armazenar os dados
+
+- Semicondutor (Energia):
+	RAM
+
+- Magnético (Campo Magnético):
+	Disco e Fita
+
+- Óptico (Reflexo):
+	CD e DVD
+
+Características físicas:
+
+- Volátil (Não armazena permanentemente o dado):
+	Memória Principal
+
+- Não-Volátil (Armazena permanentemente o dado):
+	Pen Drive
+
+- Apagável:
+	Disco Rígido, Cache, Memória Principal
+
+- Não-Apagável:
+	CD-ROM	
+
+- Consumo de energia
+
+Princípios de Localidade:
+
+- Localidade espacial:
+	Acessar endereços consecutivos na memória em cada instante de tempo
+
+- Localidade temporal:
+	Repetir os acessos ao um dado quando ele estiver com valores diferentes	
+
+Exemplo: laços de repetição
+	for(i=0; i<N; i++)
+		soma += vet[i];
+	COMO SÃO PEGOS BLOCOS DA MEMÓRIA, ENTÃO NOS VALORES DE VET[1], VET[2], ..., VET[N] SERÃO ACESSADOS NO CACHE
+
+Memória de Semicondutores:
+RAM
+	- Acesso aleatório
+	- Read/Write
+	- Mecanismo elétrico: ler, escrever e apagar dados
+	- Volátil
+	- Armazenamento temporário
+	- Estática (flip-flop) ou dinâmica (presença ou ausência de carga em capacitores → refresh)
+	- Estática é, em geral, mais rápida e mais cara
+
+	RAM Dinâmica
+		- Bits são armazenados como carga em capacitores
+		- É necessário regeneração (refresh)
+		- Volátil
+		- Construção é mais simples
+		- Tamanho menor se comparado com estática
+		- Requer circuito de regeneração
+		- Menor custo
+		- Mais lenta
+
+	RAM Estática
+		- Bits são armazenados em flip-flops
+		- Volátil
+		- Não precisa de regeneração
+		- Construção é mais complexa (projeto)
+		- Maior por bit (espaço físico)
+		- Mais cara
+		- Não precisa de circuito de refresh
+		- Mais rápida
+	
+	Read Only Memory(ROM)
+		- Armazenamento permanente
+		- Não é possível gravar novos dados
+		- Aplicações:
+			- Microprogramação e sistemas embarcado
+			- Bibliotecas de sub-rotinas
+			- Programas de sistemas (BIOS)
+
+Tipos de ROM
+- Escritas durante a fabricação
+	- Muito cara para produção pequena
+- Programável (once)
+	- PROM
+	- Exige equipamento especial para programá-la
+- Principalmente Leitura
+	- Erasable Programmable (EPROM)
+		- Gravado por UV
+	- Electrically Erasable (EEPROM)
+		- Demora muito mais para escrever do que pra ler
+		- Apagável eletricamente: bytes
+	- Flash memory
+		- Apagável eletricamente: blocos de bytes
+		- Processo rápido para apagar dados
+
+
+_____________________________________________________________________________________
+CORREÇÃO DE ERRO
+
+Falhas Graves
+	-Defeito permanente
+
+Erros MOderados
+	-evento aleatório
+	-n danifica a memoria 
+	-nao permamente 
+	-pode ser causado por problemas de fornecimento de energia 
+Detectando usando o codigo de correção de erros de Hamming 
+
+--> ocorrencias de erros nos valores das mamorias
+--> causados por:
+		memorias semicondutores-> ocilações de corrente eletrica causam erros nos valores guardados nas memrias 
+		memorias magnéticas --> campo magnéticos 
+ECC --> CODIGO DE CORREÇÃO DE ERRO
+
+
+--> COMO FUNCIONA?
+	antes de guardar na memoria , uso este dado para uma função que gera um codigo de correção de erro
+	armazeno ambos na memoria, quando for ler o dado, comparo com o codigo para ver se ta certo
+
+LEMBRANOD QUE ARMAZENO O CODIGO DE ERRO NA MEMORIA TAMBEM!
+
+-->quanto maior o tamanho de dado, menos diperdicio de memoria para armazenar o codigo 
+
+
+

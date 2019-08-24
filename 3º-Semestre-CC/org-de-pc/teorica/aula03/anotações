@@ -1,0 +1,35 @@
+no PC esta contido o endereço de memoria onde estao as instruções
+
+IR---> Registrador de instruções 
+
+Unidade de controle decodifica , interpreta as instruções do IR e as executa
+
+Registrador de interface --> MAR(Memory Adresser) so passa endereços de memoria entre memoria e cpu 
+
+MDR-- instruçoes e dados entre cpu e memoria(manda os dados que serao gravados na memoria)
+
+K = 10³
+
+M = 10⁶ 
+
+G = 10⁹
+
+T = 10¹² 
+
+a distancia aumentou , por consequencia posso colocar mais transistors.
+Notavel evolução na arquitetura e desempenho de processadores com o passar dos anos com destaque no mult-thread, fazendo o desempenho aumentar drasticamente. 
+Passamos de 1 core com alta frequencia para 2,4,8,1212 cores todos a alta frequencia e com caches para cada processador(L1,L2) sendo L1 divido entre instruções e codigo, e L3 compartilhado com todos os  cores para melhor fluxo de dados e ganho de tempo.
+ 
+CICLO---> um clock!
+
+Intrução --
+/
+CICLO---> um clock!
+
+GPU--RODA UMA INSTRUÇÃO POR CORE, POREM SAO MUITOS CORES RODANDO DADOS DIFERENTES
+
+roda o mesmo porgrama porem destribuindo ele em todos os cores 
+
+
+
+

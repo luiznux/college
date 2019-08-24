@@ -1,0 +1,22 @@
+tilizando a estrutura aprendida para a criação do switch, implemente a seguinte instrução em assembly do MIPS, com as condicionais aprendidas no laboratório anterior com a seguinte definição:
+
+switch(x) {
+
+                case 1: IF      # rodar uma rotina que implemente  um IF
+
+                               break;
+
+                case 2: IF/Then/Else  # Implemente uma versão do IF/Else
+
+                                break;
+
+                case 3: while   #implementar uma versão do while
+
+break;
+
+               case 4: do/while  #implementar uma versão do do/while
+
+                                break;
+
+}
+

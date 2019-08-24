@@ -1,0 +1,57 @@
+Organização de Computadores - Ponto Flutuante IEEE 754
+
+Notação definida na década de 80 para definir números do tipo de float e double. 
+
+**Cuidado com programações tipadas, sempre escolha o melhor tipo para suas necessidades**
+
+Float usa 4 Bytes (32 bits) e o Double usa 8 Bytes (64 bits)
+
+2 representações possíveis: 
+- Precisão simples (32 bits): float
+- Precisão dupla   (64 bits): double
+
+
+Notação = | Sinal | Expoente | Fração |
+
+Em Precisão Simples:
+- Sinal = 1 bit
+- Expoente = 8 bits
+- Fração (mantissa) = 23 bits
+- Bias: 127
+
+
+Em Precisão Dupla:
+- Sinal = 1 bit
+- Expoente = 11 bits
+- Fração (mantissa) = 52 bits
+- Bias: 1023
+
+Bias serve para LIMITAR o tamanho do seu expoente
+
+Para escrever um número em Ponto Flutuante, é preciso passar o valor para forma normal, ou seja:
+- O número 1101,0011 fica como 1,1010011 * 2^3. (Forma Normal)
+
+E em binário?
+Exemplos:
+- 130,75		10000010 = 130
+			,11 = 0,75 (0,5 + 0,25)
+
+Na Forma Normal, fica 1,000001011 * 2^7
+
+Aplicando a Notação, temos:
+
+Sinal = 0 (Positivo)
+Expoente = 10000110 (127 + 4 + 2 = 134) 
+Fração (mantissa) = 000001011 0000...00(14 zeros)
+
+
+- 0,125			0 = 0
+			,001 = 0,125 (2^-3)
+
+Na Forma Normal, fica 0,001 * 2^-3
+
+Aplicando a Notação, temos:
+
+Sinal = 0
+Expoente = 0111100
+Fração (mantissa) = 001 0000...00(49 zeros)

@@ -1,0 +1,70 @@
+Alunos,
+
+Sejam bem-vindos ao curso de Organização de Computadores! Nesta disciplina iremos aprender quais são os principais componentes de uma arquitetura básica e como eles se relacionam nesta estrutura. Desvendaremos a máquina de von Neumann!
+
+Espero que aproveitem o curso,
+
+Prof. Jean Laine
+
+Ementa: 
+
+Estudo da organização funcional de computadores, com destaque para a Unidade Central de Processamento, Memória, Barramento e Dispositivos de E/S. Estudo dos aspectos de desempenho de arquiteturas de computadores.
+
+
+Metodologia:
+
+Aulas expositivas
+Aulas práticas em laboratórios
+Suporte extra-classe através de plantões de professores e monitores
+Utilização do ambiente Moodle
+Listas de Exercícios e Projetos Práticos
+ 
+
+Critério de Avaliação:  
+
+Nota 1(N1) composta de:
+• Prova parcial 1 (P1) escrita, individual e sem consulta (70%) – NOTA A (TIA)
+• Atividades de Laboratório (Lab1) (30%) – NOTA B (TIA)
+
+Nota 2(N2) composta de:
+• Prova parcial 2 (P2) escrita, individual e sem consulta (70%) – NOTA F (TIA)
+
+• Atividades de Laboratório (Lab2) (30%) – NOTA G (TIA)
+
+                                                      MI = (N1 + N2)/2 + NP
+
+
+• Nota de participação (NP): até um ponto (0 a 1.0) – atividades definidas pelo professor.
+
+
+Se MI ≥ 7.5, aluno está APROVADO e a Média Final (MF) = MI.
+
+Caso contrário, poderá fazer uma PROVA SUBSTITUTIVA (SUB), que substituirá a menor nota
+
+entre N1 e N2. Ou, se o aluno ainda não for aprovado, poderá fazer a PROVA FINAL (PF):
+
+MF = (MI + PF)/2
+
+Se MF ≥ 6.0, aluno está APROVADO. Caso contrário, está REPROVADO. 
+
+Bibliografia Básica:
+
+HENNESSY, J. L.; PATTERSON, D. A.; LARUS, J. R.; MACHADO FILHO, N. Organização e projeto de computadores: a interface hardware/software. 4ª Edição, Rio de Janeiro: Elsevier, 2013.
+
+STALLINGS, W.; VIEIRA, D.; BOSNIC, I. Arquitetura e organização de computadores. 8. ed. São Paulo: Pearson, 2011.
+
+TANENBAUM, A. S. Organização estruturada de computadores. 5ª.ed. São Paulo: Pearson, 2011.
+
+ 
+
+Bibliografia Complementar:
+
+DELGADO, J., RIBEIRO, C. Arquitetura de computadores. 2. edição. Rio de. Janeiro: LTC, 2009.
+
+DE ROSE, C. A.F.; NAVAUX, P. O.A. Arquiteturas paralelas. Porto Alegre: Bookman, 2008.
+
+MONTEIRO, M. A. Introdução à organização de computadores. 5ª. Edição. Rio de Janeiro: LTC. 2007.
+
+PARHAMI, B. Arquitetura de computadores: de microprocessadores a supercomputadores. McGraw-Hill, 2008.
+
+PATTERSON, D., HENNESSY, J. Arquitetura de computadores: uma abordagem quantitativa, Elsevier, 2006.

@@ -1,0 +1,10 @@
+Consulte a documentação sobre distribuições de probabilidade em SciPy: https://docs.scipy.org/doc/scipy/reference/stats.html 
+
+Agora, faça o gráfico da função de distribuição de probabilidade para as seguintes funções:
+a) Geométrica, com probabilidade p = 1/3.
+b) Poisson, com mu = 0.4.
+c) Exponencial, com lambda = 0.5.
+d) Normal padrão.
+e) Uniforme no intervalo [0, 10].
+
+Use a Wikipedia para saber mais sobre as várias distribuições de probabilidade. 

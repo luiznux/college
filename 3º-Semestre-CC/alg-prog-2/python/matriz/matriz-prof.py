@@ -1,0 +1,58 @@
+#Aloca Matriz uma matriz N linhas com M colunas,
+def AlocaMatriz(N, M):
+   A = []*N # N linhas
+   for i in range(N):
+      A[i]=[0] * M
+   return A
+
+
+# funcao le e retorna a matriz preenchida
+def leMatriz(A):
+   for i in range(len(A)):
+      for j in range(len(A[0])):
+         print("A[",i,"]","[",j,"]=",end='')
+         A[i][j]=int(input())
+   
+   return A
+
+# funcao imprime uma   
+def printMatriz( A ):
+   N = len(A)
+   M = len(A[0])
+   for i in range(len(A)):
+      for j in range(len(A[0])):
+         print("%2d"%A[i][j], " ", end="")
+         
+      print() 
+
+
+
+#Main
+M=[[0,6],[-1,2],[5,0]]
+
+M=AlocaMatriz(2,3)
+leMatriz(M)
+print("matriz original")
+printMatriz(M)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

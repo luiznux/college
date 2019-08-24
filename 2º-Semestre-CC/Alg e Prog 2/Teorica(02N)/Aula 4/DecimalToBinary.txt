@@ -1,0 +1,26 @@
+#SEMANA_03_RECURSÃO
+#EXERCÍCIOS DE LABORATÓRIO
+
+#EXERCICIO - CONVERTER DECIMAL PARA BINÁRIO VERSÃO INTERATIVA
+def decimalToBinary(decimal):
+    binario = " "
+    while decimal > 0:
+        if(decimal%2 == 0):
+            binario = "0" + binario
+        else:
+            binario = "1" + binario
+        decimal = decimal//2   
+    return binario
+
+
+#EXERCICIO - CONVERTER DECIMAL PARA BINÁRIO VERSÃO RECURSIVA
+def dec2bin(decimal): 
+    if decimal == 0: 
+        return "" 
+    else: 
+        return str(dec2bin(decimal//2))+str(decimal % 2)
+
+
+num = int(input("digite um numero: "))
+print("Iterativa -> ", decimalToBinary(num))
+print("Recursiva -> ", dec2bin(num))

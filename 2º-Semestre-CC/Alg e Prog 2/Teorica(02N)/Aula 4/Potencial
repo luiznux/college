@@ -1,0 +1,27 @@
+#SEMANA_03_RECURSÃO
+#EXERCÍCIOS DE LABORATÓRIO
+
+#EXERCICIO 1 - POTENCIA VERSÃO ITERATIVA
+def potenciaFuncIter(base, expoente):
+    resultado = base
+    while expoente>1:
+        resultado = resultado * base
+        expoente = expoente-1
+    return resultado
+
+
+#EXERCICIO 1 - POTENCIA VERSÃO RECURSIVA
+def potenciaFunc(base, expoente):
+    if expoente==0:
+        return 1
+    return base*potenciaFunc(base, expoente-1)
+
+
+print("Chada da função potencia iterativa")
+potencia = potenciaFuncIter(3, 3)
+print(potencia)
+    
+
+print("Chada da função potencia Recursiva")
+potencia = potenciaFunc(3, 3)
+print(potencia)

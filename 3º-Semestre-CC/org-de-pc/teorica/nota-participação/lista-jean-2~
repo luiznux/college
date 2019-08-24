@@ -1,0 +1,279 @@
+Lista de Exercicios 2 Jean-Org-De-PC
+
+Nome: Luiz Fernando Tagliaferro Brito, TIA 3186180-6
+-----------------------------------------------------
+
+1)
+
+a)É uma memoria intermediária entre registrador e memoria principal(ram), ultilizada pela CPU para evitar procurar blocos de instruções ou dados na ram,
+possui 3 niveis se falarmos de uma arquitetura multicore, primeiro nivel subdividido em 2 niveis, um para dados e outro para instruções. O bloco dois é
+exclusivo de cara core e o bloco 3 é compartilhado com todos os cores.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+b)O gerenciador de cache faz com que os blocos mais usados fiquem armazenados temporariamente no mesmo, evitando uma frequente consulta a mem. principal,
+pois o tempo de busca de instruções na ram é maior e consequentemente afeta o desempenho da maquina. Assim com o cache, o tempo de busca de instruções fi-
+ca menor, melhorando seu desempenho
+_________________________________________________________________________________________________________________________________________________________}
+
+c)O cache de está dividido em 3 niveis:
+
+    1 Nivel
+1a- dados / 1.b instruções
+
+    2 Nivel
+
+    3 Nivel
+
+O L1 é subdividido em bloco de instruções e bloco de dados. Nivel 2 exclusivo de cada core,
+Nivel 3 é compartilhado entre todos os nucleos.
+
+__________________________________________________________________________________________________________________________________________________________
+
+d) No mapeamento direto , cada bloco da memoria principal é alocada em uma linha do cache, sendo que o primeiro a entrar é o ultimo a sair(no caso das instruções)
+
+Já no Mapeamento associativo, cada linha da mem. principal pode ser carregado em qualquer lugar do cache e sao endereçadas por tags
+        
+E por conjunto o cache é subdividido em cojuntos que podem ter um tamanho escolhido, em que o bloco  da memoria principal estara alocado no mesmo.
+
+___________________________________________________________________________________________________________________________________________________________
+
+2)
+
+16GB de DDR4(ram) 50,00   |  16 x 50 
+
+2TB HD 0,30               |  2000 x 0,30    ==> TOTAL PC DA ANA R$ 1798,40
+
+256GB SSD 1,50            | 256GB x 1,50
+
+___________________________________________________________________________________________________________________________________________________________
+
+3)
+As memorias  DRAM, precisam de um refresh(dependem de corrente constante) para atualizar os dados , assim gastando mais energia porém seu custo é mais barato
+
+Já as SRAM usam flip-flops, armazenando seus dados estaticamente , nao dependendo de uma corrente constante, porém são mais caras
+
+As DDR4 sao classificadas como DRAM
+
+_____________________________________________________________________________________________________________________________________________________________
+
+4) Pois qunato maior o tamanho do endereço, maior o numero de palavras armazendas por endereço
+
+2³² suporta ate 4GB de ram
+
+2⁶⁴ suporta  16HB de ram
+
+_____________________________________________________________________________________________________________________________________________________________
+
+5) 2¹⁶ = 64536
+
+   2³² = 4294967296
+
+   2⁶⁴ = 1,844674407×10¹⁹ 
+
+_____________________________________________________________________________________________________________________________________________________________
+
+6)
+
+2¹⁶ = 64536 --> 64536 / 8bits =  8067 palavras 
+
+2³² = 4294967296 / 8bits = 536870912 palavras 
+
+2⁶⁴ = 1,844674407×10¹⁹ / 8bits =   2,305843009×10¹⁸ Palavras
+------------------------------------------------------------
+**caso dobre
+
+2¹⁶ = 64536 --> 64536 / 16bits = 4033,5 palavras
+
+2³² = 4294967296 / 16bits  = 26843545,5625 palavras
+
+2⁶⁴ = 1,844674407×10¹⁹/ 16bits = 1,152921504×10¹⁸
+
+______________________________________________________________________________________________________________________________________________
+
+7)
+
+**ALEATORIO--> Tempo de acesso constante independende da localização do dado
+               Exemplo: Memoria RAM
+
+        
+***SQUENCIAL -> acesso feito segundo uma  sequencia linear especifica
+                tempo de acesso depende da localização dos dados
+                Exemplo: Fita cassete!
+
+
+***ASSOCIATIVO:
+        Um dado é localizado baseado em parte de seu conteúdo e não por seu endereço
+        O tempo de acesso é constante e independente da localização ou do acesso anterior
+        parte da informação é utilizada para gerar uma tag , posição do dado esta associada a parte do seu conteudo
+        Ex. cache
+
+
+***DIRETO --> Blocos individuais ou registros tem endereço unico(referencia), nao necesario ler todos os arquivos ate o desejado
+             Exemplo: HD
+_________________________________________________________________________________________________________________________________________________
+
+8)
+--volátil- os dados continuam armazenados em quanto houver corrente no sistema, assim apos o dispositivo for desligado,
+           todos os dados contidos nessa memoria serao perdidos.
+           Exemplos: RAM, Registrador e cache.
+
+--estática- os dados continuam armazenados mesmo apos a interrupção da corrente eletrica, seu HD não perde os dados quando
+            seu computador for desligado.
+            Exemplos: HD, SSD. Pendrive
+_________________________________________________________________________________________________________________________________________________
+
+9)
+
+8x2³⁰ / 1 = 8589934592 palavras
+
+_________________________________________________________________________________________________________________________________________________
+
+10) Serve para transferencia de dados e indicação de endereços de memorias dos dados .
+Interliga as memorias como cache, ram etc...
+
+__________________________________________________________________________________________________________________________________________________
+
+11) 64bits --> 8bytes e seu fequencia é de 1800Mhz, entao: 8B x 1800mhz = >14.400MB/s
+
+__________________________________________________________________________________________________________________________________________________
+
+12) As modificações seriam aumentar o tamanho do barramento e sua frequencia maxima,assim, estaremos melhorando a quantidade de dados transmitidos
+por ciclo e juntamente  aumentando ainda mais os ciclos.
+
+__________________________________________________________________________________________________________________________________________________
+
+13) Palavras 1byte e endereços de 32bits
+
+a) 2³² --> 4GB de memoria
+-------------------------------------
+
+b) 8KBytes = 8 x 2¹⁰ -> 2³ x 2¹⁰ -> 2¹³
+
+4GB / 8KB = 0,5x(2³⁰/2¹⁰)--> 0,5 x 2²⁰ --> 2⁻¹ x 2²⁰ --> 2¹⁹
+
+então: 2³² / 2¹³ = 2¹⁹ blocos!
+--------------------------------------
+
+c) 8 x 2¹⁰ = 8 x 1024 -> 8192 Palavras
+__________________________________________________________________________________________________________________________________________________
+14) Palavras 1byte e endereços de 64bits
+
+a) 2⁶⁴ ---> 16PB 
+--------------------------------------
+
+b) 4KBytes = 4 x 2¹⁰ -> 2² x 2¹⁰ -> 2¹²:
+
+16PB / 4KB ->(16 / 4) x (2⁶⁰ - 2¹⁰) -> 2² x 2⁵⁰ --> 2⁵² 
+
+então: 2⁶⁴ / 2¹² = 2⁵² blocos!
+--------------------------------------
+
+c) 4 x 2¹⁰ = 4 x 1024 -> 4096 Palavras
+
+__________________________________________________________________________________________________________________________________________________
+15) x-> tamanho
+
+2^x = 16GB / 2Bytes --> 2^x = 8GB --> 2^x = 2³x 2³⁰--> x = 33
+
+                    OU
+
+              2⁶⁴ --> supondo que queira em um endereçamento que exista
+
+__________________________________________________________________________________________________________________________________________________
+16)
+
+a) 0110
+___________________________________________________________
+b)
+
+1    1    1    1    0    1    1    0    1    1    1    0
+
+__________________________________________________________________________________________________________________________________________________
+17)
+PALAVRA 10001101
+
+a) 1110
+_____________________
+b)
+
+0    1
+1    0
+1    1
+1    1
+__________________________________________________________________________________________________________________________________________________
+18)
+
+a) 8GB/2KB--> 2³x2³⁰/ 2x2¹⁰ = 2²x2²⁰ = 4MB de Blocos
+_______________________________________________
+b) 15000Mhz x 2(DDR) = 3.000.000.000 operações por seg  
+_______________________________________________
+c) T = 1/32⁻³⁰ ~=  0,332^-30s
+____________________________________________________________________________________
+d) 1500*10^6 *8bytes * 2(por ser DDR) = 24000 * 10^6 = 24GB/s(single chanel)
+
+_______________________________________________________________________________________
+e) 1500*10^6 *8bytes * 2(por ser DDR) * 2(Por ser dual channel) = 48000 * 10^6 = 48GB/s
+
+_______________________________________________________________________________________
+f)
+
+item d = 24GB  em 1seg --> 1GB em x segundos
+      X = 0,041s
+
+Item f = 0,020s
+__________________________________________________________________________________________________________________________________________________
+
+19)
+
+a)-78 em binário --> 01001110
+
+em 8bits  --> 10110010
+
+em 16bits --> 1111111110110010
+_______________________________
+
+b)-101 em binário --> 01100101
+
+em 8bits  --> 10011011
+
+em 16bits --> 1111111110011011
+______________________________
+
+c) 83 em binário --> 01010011
+
+em 8bits  --> 10101101
+
+em 16bits --> 0000000001010011
+______________________________
+
+d)-43 em binário --> 00101011
+
+em 8bits  --> 11010011
+
+em 16bits --> 1111111111010011
+
+_____________________________________________________________________________________________________________________________________________________
+20)
+
+ a) -78,50
+            Simples = 1 10000101 00111010000000000000000
+
+
+            Dupla = 1 10000000101 0011101000000000000000000000000000000000000000000000
+
+_________________________________________________________________________________________________
+b) -101,125
+
+            Simples = 1 10000101 10010100100000000000000
+
+            Dupla = 1 10000000101 1001010010000000000000000000000000000000000000000000
+
+__________________________________________________________________________________________________
+c) -97,750
+             Simples = 1 10000101 10000111000000000000000
+
+
+             Dupla = 1 10000000101 1000011100000000000000000000000000000000000000000000
+________________________________________________________________________________________________________________________________________________________________________
+

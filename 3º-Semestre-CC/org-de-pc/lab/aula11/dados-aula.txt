@@ -1,0 +1,12 @@
+;***** bank.inc *******
+
+BANK0	macro	; Macro bank0
+ 	bcf STATUS, RP0	; Reset RP0 bit = Bank0
+ 	endm	; End of macro
+ 	 	 
+BANK1	macro	; Macro bank1
+ 	bsf STATUS, RP0	; Set RP0 bit = Bank1
+ 	endm	; End of macro
+;*************************
+
+
