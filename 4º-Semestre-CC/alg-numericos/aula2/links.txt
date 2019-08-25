@@ -1,0 +1,3 @@
+https://pt.wikipedia.org/wiki/IEEE_754
+
+https://www.ufrgs.br/reamat/CalculoNumerico/livro-py/rdneadm-notacao_cientifica_e_notacao_normalizada.html

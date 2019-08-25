@@ -1,8 +1,11 @@
 # include <stdio.h>
 
+// contadores para as duas funçoes, a ruim e a boa(dinamica)
 long long int  contador_ruim = 0;
 
 long long int contador_bom = 0;
+
+
 
 //função fibonacci
 long long int fibo(int n){
@@ -16,6 +19,7 @@ long long int fibo(int n){
     else return fibo(n-1) + fibo(n-2);
 
 }
+
 
 
 //fib dinamico que usa um vetor para armazenar resultados previos , afim de ganhar mais tempo
@@ -33,7 +37,7 @@ long long int fib_dinamico( int n, long long int *vetor){
         return 1;
     }
 
-    else if (vetor[n] == -1){
+    else if (vetor[n-1] == -1){
         vetor[n]  = fib_dinamico(n-1, vetor) + fib_dinamico(n-2, vetor);
 
     }
@@ -41,6 +45,7 @@ long long int fib_dinamico( int n, long long int *vetor){
     return vetor[n];
 
 }
+
 
 // preenche um vetor de -1 de acordo com usa entrada
 void preenche_saporra(long long int *vetor, int tamanho){
@@ -52,21 +57,23 @@ void preenche_saporra(long long int *vetor, int tamanho){
 }
 
 
+
 int main(){
 
     int coisa;
 
-    printf("Digita ai Bazilao \n");
+    printf("Digita ai Bazilao um numero para calcular o fibonacci, gloria a Tayrone! S2 \n");
 
     scanf("%d", &coisa);
 
     long long int  vetor_coisa[coisa];
 
     preenche_saporra(vetor_coisa, coisa);
-    printf("Fibo ruim: %lld", fibo(coisa));
-    printf("\nContador ruim: %lld", contador_ruim));
+    printf("\n Fibo resulta em: %lld \n", fibo(coisa));
+    printf("\n Contador ruim: %lld \n", contador_ruim);
+    printf("\n Fibo rapidao : %lld \n",fib_dinamico(coisa, vetor_coisa));
+    printf("\n Contador bom: %lld \n", contador_bom);
     fib_dinamico(coisa, vetor_coisa);
-    
 
     return 0;
 }
