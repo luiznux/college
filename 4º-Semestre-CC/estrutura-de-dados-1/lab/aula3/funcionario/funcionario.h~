@@ -1,0 +1,34 @@
+#ifndef EMPRESA_H
+#define EMPRESA_H
+
+#include <string>
+using namespace std;
+
+
+class funcionario{
+
+private:
+
+    string nome , cargo;
+
+    int cpf, horas_trab, int mes;
+
+    float salario, valor_hora;
+
+    int meses_do_ano[12] = {0,0,0,0,0,0,0,0,0,0,0,0};
+
+
+public:
+
+    funcionario(string nome, string cargo, float valor_hora,  int cpf, float salario);
+    ~funcionario();
+    void set_horas_de_trampo(int horas_trab, int mes);
+    int salario_bruto(int valor);
+    int salario_liquido(int valor);
+    void imprime();
+
+};
+
+#endif
+
+

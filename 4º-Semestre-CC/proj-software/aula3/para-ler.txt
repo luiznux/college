@@ -1,0 +1,3 @@
+Leia - Capítulos 2 (Processo de Desenvolvimento de Software) e 4 (Modelagem de Casos de Uso) do livro BEZERRA, E. Princípios de Análise e Projeto de Sistemas com UML
+
+Leia - Capitulo 9 - Casos de Uso do livro: FOWLER, M. (2014). UML Essencial: um breve guia para linguagem padrão. Bookman Editora. Disponível na Biblioteca - ebook (Livros Eletronicos) - Minha Biblioteca

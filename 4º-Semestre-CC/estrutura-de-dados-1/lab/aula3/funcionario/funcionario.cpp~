@@ -1,0 +1,24 @@
+#include 'empresa.h'
+
+funcionario::funcionario(string nome, string cargo, float valor_hora,  int cpf){
+    this.nome = nome;
+    this.cargo = cargo;
+    this.valor_hora = valor_hora;
+    this.cpf = cpf;
+    this.salario = salario;
+
+}
+
+
+funcionario::~funcionario(){
+}
+
+
+// para um mes
+void funcionario::set_horas_de_trampo(int horas_trab, int mes){
+    meses_do_ano[mes-1] = horas_trab;
+}
+
+void funcionario::salario_bruto
+
+

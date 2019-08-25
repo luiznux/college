@@ -1,0 +1,29 @@
+Problema do corte da haste de aço
+=================================
+
+Cortar uma barra a fim de obter  o valor maximo,
+por exemplo
+ se cortar uma barra de 5 metros em 
+
+ pedaço 2 e pedaço 3, vai valer 13 , de acordo com os valores para a barra da 
+ tabela para o tamanho 2 e 3 .
+
+ O programa deve obter o maior valor de cada tamanho sendo que nao é linear
+ o tamanho das barras 
+
+ temos que comparar os valores ja obtidos a fim de deixar maior o custo da bar
+
+
+-> Como endereçar todos os casos(e compara-los) do problema?
+
+1) Matematicamente 
+
+2)Algoritimo 
+
+3) programa em C
+
+====================================================
+Respostas
+
+
+1) 

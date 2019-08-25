@@ -1,0 +1,104 @@
+Diagrama de caso  de usos
+
+
+1- Bucas de filme
+
+
+    Sumário:
+    Usuário busca filme por titulo
+
+    Ator primario:
+    Usuário
+
+    Ator secudario:
+    Sistema catalagador de filmes
+
+    Pre-condições:
+    Estar loggado no sistema
+
+
+Fluxo principal:
+
+    usuário digita o nome de seu filme/série a ser buscado 
+    sistema procura no banco de dados o nome buscado
+    sistema verifica a RD-idade
+
+    Se encontrado, retorna o filme, caso contrario, retorna uma proposta de outros 
+    filmes similares.
+
+
+Fluxo excessão:
+
+    RD-Vip
+
+       
+Fluxo de  alternativo
+    
+    Caso o usuário seja uma crinaça, a busca retorna filmes que possuem palavras se-
+    melhantes ao mesmo, porem para crianças.
+
+
+Regra de neogcio(RD):
+
+RD-idade verifica tipo do perfil do usuário (criança ou adulto).
+
+=================================================================================
+
+2 - Download de filme
+
+    Sumário:
+    Usuário solicita um download de filme/série
+
+    Ator primario:
+    Usuário
+
+    Ator secudario:
+    Banco de dados do filme
+
+    Pre-condições:
+    Estar loggado no sistema
+
+
+Fluxo Principal:
+
+    Usuário faz uma solicitação de um download de filme/série
+    Sistema verifica  se o usuário tem espaço no sistema
+    Baixa o arquivo e exibe uma mensagem
+
+
+Fluxo alternativo 
+
+1)  Se o usuário estiver usando dadoa moveis(3G)  
+    Sistema pergunta se deseja mesmo usar o 3G
+
+2) SE O usuario quer fazer download depois quando se conectar a uma rede wifi
+
+3) caso nao tiver memoria , deixa na fila de espera.
+
+3- minha lista
+==================================================================================
+
+3- Solicita o  ver a lista
+
+    sumario 
+    usuarui solicita ver a minha lista
+
+    ator pri.
+    usuario
+
+    ator sec.
+    sistema catalog.
+
+    pre-cond
+    estar logado no sistema
+
+
+fluxo prin.
+
+    usuario seleciona uma das opcoes da sua lista favorita de filmes
+    logo apos exibe os filmes favoritos
+
+fluxo alternativo.
+
+1) se nao tiver filme retorna uma lista vazia
+

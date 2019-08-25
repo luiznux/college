@@ -1,0 +1,41 @@
+1 -recompilar o kernel, /usr/src/tools -> make 
+
+2- depois dar um make hdboot -> ele vai copiar o arquivo para o /minix com o novo
+release que criamos com o novo kernel :
+
+3 -Dar reboot  $ reboot
+
+4 - ir para  o /usr/src/kernel e identificar o arquivo que gerencia os processo
+
+5 -vi proc.c
+
+6 - task tarefaq, servrq(so em rede), userq, com prioridades crescentes 
+
+uma fila para cada tipo de processo 
+rdy_head[] cabeça
+
+rdy_tail[] rabo
+
+7 - mudar o task para server e o server para task
+
+8 - assert(..) 
+
+==================================================
+
+EXTERN --> signifca que variavel em questao so foi declaradaA
+
+  	            declares? 	defines? 	initializes?
+int x = 5; 	    yes 	      yes 	       yes, 5
+
+int x; 	        yes 	       yes 	        no
+
+extern int x; 	yes 	       no 	        no
+
+declara --> afirma a existemcia de uma variavel de um determinado tipo
+
+define --> aloca memoria para a variavel de acordo com o tipo
+
+inicializa -> atribui um valor na regiao de memoria alocada da variavel
+
+
+

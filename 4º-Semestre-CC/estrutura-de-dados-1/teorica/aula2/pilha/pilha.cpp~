@@ -1,0 +1,85 @@
+#include "pilha.h"
+#include <iostream>
+
+/*este metodo imprime o vetor, n�o a pilha!*/
+void Pilha::imprime () {
+  int i;
+  for(i=0;i<contador;i++)
+    std::cout<<vetorpilha[i]<<" ";
+}
+
+
+// Verifica se a pilha é vazia
+bool Pilha::vazia()
+{
+  /*Se a Stack esta vazia, retorna true, se nao, retorna false*/
+  if(contador>0) return false;
+  return true;
+}
+
+
+// Verifica se a pilha esta cheia
+bool Pilha::cheia(){
+    if(tamanho == contador) return true;
+    return false;
+}
+
+
+// insere elemento na pilha
+bool Pilha::pop(){
+
+    /* ou usando um metodo da classe
+   if(ehvazia() == true){
+   return false;
+    }
+    */
+
+  /*Se a Stack nao esta vazia, topo da pilha eh removido.
+   Se a pilha esta vazia um codigo de erro de underflow eh retornado*/
+  if(contador==0)
+     return false;
+  else{
+    --contador;
+    return true;
+  }
+}
+
+
+// insere na pilha
+bool Pilha::push(int item){
+    if(ehcheia())
+}
+
+
+// remove da pilha
+bool Pilha::top(int &item)
+{
+  /*Se a Stack nao esta vazia, topo da pilha eh retornado. Se a pilha esta vazia
+  um codigo de erro de underflow eh retornado*/
+  if(contador ==0)
+     return false;
+  else{
+     item = vetorpilha[contador-1];
+     return true;
+  }
+}
+
+
+bool Pilha::equal(Pilha &S){
+}
+
+
+void Pilha::reverse(){
+
+}
+
+void Pilha::inverte_outra_pilha(Pilha &S){
+
+}
+
+void Pilha::copia(Pilha &){
+
+}
+
+
+

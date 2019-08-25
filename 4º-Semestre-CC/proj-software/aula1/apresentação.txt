@@ -1,0 +1,19 @@
+Ao final desta disciplina, você deverá ser capaz de:
+
+    Conhecer os conceitos do paradigma orientado a objetos.
+    Reconhecer o paradigma orientado a objetos como um paradigma importante na sua formação profissional.
+    Conhecer a Linguagem de Modelagem Unificada (UML).
+    Distinguir os diferentes diagramas oferecidos pela UML para a especificação de sistemas de informação.
+    Compreender os objetivos das etapas de análise, projeto e prototipação de um sistema de informação.
+    Compreender o papel da modelagem para a qualidade do processo de desenvolvimento de sistemas.
+    Compreender a importância dos modelos UML para a comunicação entre desenvolvedores e com os usuários dos sistemas de informação e clientes demandantes de serviços de desenvolvimento.
+
+    Analisar um problema organizacional ou social especificando uma solução computacional capaz de resolvê-lo em todo ou parte, compreendendo seu alcance e limitações.
+    Abstrair um problema organizacional ou social usando os conceitos do paradigma orientado a objetos.
+    Especificar sistemas de informação para a solução de um problema organizacional ou social utilizando os conceitos do paradigma orientado a objetos, construindo diagramas UML pertinentes à solução de forma correta e consistente em diferentes níveis de detalhamento (negócio/sistema/implementação).
+    Prototipar um sistema de informação usando o paradigma de orientação a objetos e modelos UML como base de sua especificação
+    Promover o uso e construção de soluções tecnológicas para o benefício de organizações e da sociedade, destacando como sistemas de informação podem ser meios eficazes e eficientes para trazer mudanças
+    Elaborar argumentações de forma clara, justificando decisões.
+    Comunicar-se efetivamente usando ferramentas e veículos adequados ao contexto e ao propósito comunicativo.
+    Respeitar compromissos assumidos em atividades profissionais colaborando para atingir metas definidas.
+

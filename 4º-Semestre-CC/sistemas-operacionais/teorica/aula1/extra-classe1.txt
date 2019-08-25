@@ -1,0 +1,29 @@
+Unix:
+
+Multiprocessos, systema de calls, shel, bahs como enterpretador, multithread
+
+==============================================================================
+
+Linux:
+
+Baseado em no Unix, possui escalonador de processos, gerenciador de memoria, 
+sistema de arquivos diretorio raiz o "/", interface de rede , codigo fonte es
+crito em C, possui o  master boot record como primeira etapa do boot para  a 
+bios procurar o primeiro bloco que possuia um sistema operacional. O carregador
+padrão do sistema operacional é o GRUB.
+
+==============================================================================
+Windows:
+
+O diretorio do padrao é o c:, windows boot maneger para carregar o sistema 
+operacional, foi baseado no DOS, com uma interface grafica, gerenciador de arq
+, um file system nao muito bom.
+
+==============================================================================
+ O processo de boot começa quando  o procesador procura a BIOS na placa mae, a BIOS realiza o POST( um processo que verifica quais dispositivos estao conec
+ tados, tais como placa de video, teclado, mouse), os resultados do POST sao
+ comparados com os guardados no chip CMOS(chip que armazena a informação dos 
+ ultimos dispositivos conectados e tambem detecta novos), entao a BIOS procura
+ no disco rigido o sistema operacional e começa a carregar para  a memoria 
+ principal
+

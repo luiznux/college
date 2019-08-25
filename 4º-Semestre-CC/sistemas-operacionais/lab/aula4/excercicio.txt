@@ -1,0 +1,1 @@
+ponteiro para a cabeça proc *rdy_head[]

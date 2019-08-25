@@ -1,0 +1,4 @@
+Para construir um software precisamos saber oq ele vai fazer e para quem , isso 
+determina o rumo e todo o resto do projeto.
+
+Diagrama de casos de uso 
