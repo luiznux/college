@@ -5,7 +5,7 @@ const double EULER = 2.71828182845904523536;
 // contador para saber quantas vezes entra na função
 int contador;
 
-/*
+
 // função do fatorial
 int fatorial(int n){
     contador++;
@@ -16,20 +16,7 @@ int fatorial(int n){
         return n * fatorial(n-1);
     }
 }
-*/
 
-long int result[1000] = {0};
-
-long int fatorial(int n) {
-    contador ++;
-   if (n >= 0) {
-      result[0] = 1;
-      for (int i = 1; i <= n; ++i) {
-         result[i] = i * result[i - 1];
-      }
-      return result[n];
-   }
-}
 
 
 // o x é o f(x) e o n é ate onde vc quer que calcule a somatoria
@@ -47,7 +34,6 @@ double euler_de_x(int  x, int n){
 
     return somatoria;
 }
-
 
 
 
