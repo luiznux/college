@@ -1,4 +1,0 @@
-Amostra Aleatoria(Simples)
-
-Numpy Random
-docs.scipy.orgl/doc/numpy/reference/routines.random.htm
