@@ -148,7 +148,7 @@ message *m_ptr;			/* pointer to message */
 }
 
 /*===========================================================================*
- *				mini_send				     * 
+ *				mini_send				     *
  *===========================================================================*/
 PRIVATE int mini_send(caller_ptr, dest, m_ptr)
 register struct proc *caller_ptr;	/* who is trying to send a message? */
@@ -303,11 +303,11 @@ PRIVATE void pick_proc()
 
   register struct proc *rp;	/* process to run */
 
-  if ( (rp = rdy_head[TASK_Q]) != NIL_PROC) {
+  if ( (rp = rdy_head[SERVER_Q]) != NIL_PROC) {
 	proc_ptr = rp;
 	return;
   }
-  if ( (rp = rdy_head[SERVER_Q]) != NIL_PROC) {
+  if ( (rp = rdy_head[TASK_Q]) != NIL_PROC) {
 	proc_ptr = rp;
 	return;
   }

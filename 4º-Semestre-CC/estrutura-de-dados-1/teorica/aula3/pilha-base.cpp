@@ -1,7 +1,7 @@
-#include <stdio.h>
 #include <iostream>
 
 #define tamanho 10
+
 using namespace std;
 class Pilha{
      private:

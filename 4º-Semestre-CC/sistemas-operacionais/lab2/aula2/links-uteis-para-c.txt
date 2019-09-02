@@ -1,0 +1,12 @@
+ponteiros http://www.inf.pucrs.br/~pinho/PRGSWB/Ponteiros/ponteiros.html
+
+
+vetores http://www.inf.pucrs.br/~pinho/LaproI/Vetores/Vetores.htm
+
+
+struct http://www.inf.pucrs.br/~pinho/LaproI/Structs/Structs.htm
+
+
+link make file 
+
+https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html

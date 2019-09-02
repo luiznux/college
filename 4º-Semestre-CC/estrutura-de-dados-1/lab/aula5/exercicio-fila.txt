@@ -1,0 +1,21 @@
+Exercício 5 - Resolver o problema abaixo utilizando TAD Fila.
+
+Implemente uma programa para controlar uma fila de jobs a serem executados em um servidor.
+O elemento da fila deve ser do tipo int cujo valor representa o tempo em milisegundos que o job deverá consumir.
+
+O sistema de controle deverá fornecer o seguinte menu ao operador do servidor:
+
+0 - encerrar o programa
+1 - incluir um job na fila (deve pedir o tempo de processamenro)
+2 - encaminhar o próximo job para execução.
+3 - identificar o job de maior tempo de processamento e passar na frente dos demais.
+4 - identificar o job de menor tempo de processamento e passar na frente dos demais.
+5 - listar os jobs da fila.
+6 - calcular o tempo de fila para executar um determinado job (determinada posição na fila)
+
+Dicas:
+* O programa deverá ter 2 filas: a fila titular e a fila para remover e acondicionar os itens que
+estão na frente do que vai ser atendido (para atender os itens 3 e 4 do menu).
+* O operador tem o poder de escolher que fila atender primeiro, mas se essa escolha não for feita, o sistema deverá
+atender primeiramente a fila 2 (os itens que foram passados para trás)
+* para o item 6 calcule a somatória dos tempos do primeiro item até o item de interesse.

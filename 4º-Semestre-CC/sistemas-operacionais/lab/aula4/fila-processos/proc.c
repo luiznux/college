@@ -18,8 +18,9 @@
 #include <minix/callnr.h>
 #include <minix/com.h>
 #include "proc.h"
+#include <stdlib>
 
-PRIVATE unsigned char switching;	/* nonzero to inhibit interrupt() */
+Private unsigned char switching;	/* nonzero to inhibit interrupt() */
 
 FORWARD _PROTOTYPE( int mini_send, (struct proc *caller_ptr, int dest,
 		message *m_ptr) );
@@ -111,7 +112,7 @@ int task;			/* number of task to be started */
 }
 
 /*===========================================================================*
- *				sys_call				     * 
+ *				sys_call				     *
  *===========================================================================*/
 PUBLIC int sys_call(function, src_dest, m_ptr)
 int function;			/* SEND, RECEIVE, or BOTH */
@@ -132,7 +133,7 @@ message *m_ptr;			/* pointer to message */
   rp = proc_ptr;
 
   if (isuserp(rp) && function != BOTH) return(E_NO_PERM);
-  
+
   /* The parameters are ok. Do the call. */
   if (function & SEND) {
 	/* Function = SEND or BOTH. */
@@ -179,7 +180,7 @@ message *m_ptr;			/* pointer to message buffer */
   vhi = (vb + MESS_SIZE - 1) >> CLICK_SHIFT;	/* vir click for top of msg */
   if (vlo < caller_ptr->p_map[D].mem_vir || vlo > vhi ||
       vhi >= caller_ptr->p_map[S].mem_vir + caller_ptr->p_map[S].mem_len)
-        return(EFAULT); 
+        return(EFAULT);
 #else
   /* Check for messages wrapping around top of memory or outside data seg. */
   vb = (vir_bytes) m_ptr;
@@ -232,7 +233,7 @@ message *m_ptr;			/* pointer to message buffer */
 }
 
 /*===========================================================================*
- *				mini_rec				     * 
+ *				mini_rec				     *
  *===========================================================================*/
 PRIVATE int mini_rec(caller_ptr, src, m_ptr)
 register struct proc *caller_ptr;	/* process trying to get message */
@@ -242,7 +243,7 @@ message *m_ptr;			/* pointer to message buffer */
 /* A process or task wants to get a message.  If one is already queued,
  * acquire it and deblock the sender.  If no message from the desired source
  * is available, block the caller.  No need to check parameters for validity.
- * Users calls are always sendrec(), and mini_send() has checked already.  
+ * Users calls are always sendrec(), and mini_send() has checked already.
  * Calls from the tasks, MM, and FS are trusted.
  */
 
@@ -292,10 +293,12 @@ message *m_ptr;			/* pointer to message buffer */
 }
 
 /*===========================================================================*
- *				pick_proc				     * 
+ *				pick_proc				     *
  *===========================================================================*/
 PRIVATE void pick_proc()
+
 {
+
 /* Decide who to run now.  A new process is selected by setting 'proc_ptr'.
  * When a fresh user (or idle) process is selected, record it in 'bill_ptr',
  * so the clock task can tell who to bill for system time.
@@ -303,11 +306,11 @@ PRIVATE void pick_proc()
 
   register struct proc *rp;	/* process to run */
 
-  if ( (rp = rdy_head[TASK_Q]) != NIL_PROC) {
+  if ( (rp = rdy_head[SERVER_Q]) != NIL_PROC) {
 	proc_ptr = rp;
 	return;
   }
-  if ( (rp = rdy_head[SERVER_Q]) != NIL_PROC) {
+  if ( (rp = rdy_head[TASK_Q]) != NIL_PROC) {
 	proc_ptr = rp;
 	return;
   }
@@ -323,10 +326,12 @@ PRIVATE void pick_proc()
 }
 
 /*===========================================================================*
- *				ready					     * 
+ *				ready					     *
  *===========================================================================*/
 PRIVATE void ready(rp)
+
 register struct proc *rp;	/* this process is now runnable */
+
 {
 /* Add 'rp' to the end of one of the queues of runnable processes. Three
  * queues are maintained:
@@ -335,10 +340,14 @@ register struct proc *rp;	/* this process is now runnable */
  *   USER_Q   - (lowest priority) for user processes
  */
 
-  if (istaskp(rp)) {
+  if (istaskp(rp)){
 	if (rdy_head[TASK_Q] != NIL_PROC)
-		/* Add to tail of nonempty queue. */
-		rdy_tail[TASK_Q]->p_nextready = rp;
+        //o apotador recebe uma prioridade aletoria
+        rp = q_priority;
+
+		// o tail aponta para o proximo processo pronto
+		rdy_tail[TASK_Q] -> p_nextready = rp;
+
 	else {
 		proc_ptr =		/* run fresh task next */
 		rdy_head[TASK_Q] = rp;	/* add to empty queue */
@@ -347,7 +356,7 @@ register struct proc *rp;	/* this process is now runnable */
 	rp->p_nextready = NIL_PROC;	/* new entry has no successor */
 	return;
   }
-  if (isservp(rp)) {		/* others are similar */
+  if (isservp(rp)){		/* others are similar */
 	if (rdy_head[SERVER_Q] != NIL_PROC)
 		rdy_tail[SERVER_Q]->p_nextready = rp;
 	else
@@ -366,10 +375,11 @@ register struct proc *rp;	/* this process is now runnable */
 }
 
 /*===========================================================================*
- *				unready					     * 
+ *				unready					     *
  *===========================================================================*/
 PRIVATE void unready(rp)
 register struct proc *rp;	/* this process is no longer runnable */
+
 {
 /* A process has blocked. */
 
@@ -424,7 +434,7 @@ register struct proc *rp;	/* this process is no longer runnable */
 }
 
 /*===========================================================================*
- *				sched					     * 
+ *				sched					     *
  *===========================================================================*/
 PRIVATE void sched()
 {

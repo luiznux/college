@@ -10,24 +10,21 @@ class Pilha{
 
         //variavel que gerencia os indices
         int contador;
-
         int vetorpilha[tamanho];
 
      public:
 
-        Pilha(){
-          /* a pilha eh inicializada para estar vazia*/
-            contador=0;}
-
+        Pilha();
         bool vazia();
         bool cheia();
-        bool pop();
+        float pop();
         bool top(int &item);
-        bool push(int item);
+        bool push(float item);
         bool equal(Pilha &S);
         void reverse();
         void inverte_outra_pilha(Pilha &S);
         void copia(Pilha &);
         void imprime();
 };
+
 #endif

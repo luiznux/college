@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main(void){
+
+ int canal[2]; //canal[0]: leitura de dados; canal[1]: escrita
+ pipe(canal); //pipe = canal que conecta PAI e FILHO
+ 
+ if (fork() == 0) {
+ 	 char msg[11] = "Using PIPE";
+	 printf(" CHILD: writing to the pipe\n");
+	 close(canal[0]);//close the read channel
+	 write(canal[1], msg, sizeof(msg));
+	 printf(" CHILD: exiting\n");
+	 exit(0);
+ } else {
+	 printf("PARENT: reading from pipe\n");
+     char buffer[11];
+	 close(canal[1]);//close the write channel
+	 read(canal[0], buffer, sizeof(buffer));
+	 printf("PARENT: read \"%s\"\n", buffer);
+	 wait(NULL);
+ }
+ return 0;
+}
+

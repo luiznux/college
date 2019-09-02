@@ -1,0 +1,16 @@
+
+Estruturas para entendimento do codigo:
+
+--> pr <-- apontador para o processo pronto para ser executado
+
+
+EXTERN struct proc *rdy_head[NQ];	//ponteiro para a cabeça da lista de
+                                    processos prontos
+
+EXTERN struct proc *rdy_tail[NQ];	//ponteiro para o final da lista de
+                                    processos prontos
+
+
+int q_priority = rand() %10; //prioridade para a fila de processos
+                             atribuida aleatoriamente de 0 a 10
+

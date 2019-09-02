@@ -1,11 +1,10 @@
 #include "pilha.h"
 #include <iostream>
 
-/*este metodo imprime o vetor, n�o a pilha!*/
-void Pilha::imprime () {
-  int i;
-  for(i=0;i<contador;i++)
-    std::cout<<vetorpilha[i]<<" ";
+
+Pilha::Pilha(){
+  /* a pilha eh inicializada para estar vazia*/
+  contador=0;
 }
 
 
@@ -26,42 +25,40 @@ bool Pilha::cheia(){
 
 
 //remove primeiro elemento(tira)
-bool Pilha::pop(){
+float Pilha::pop(){
 
-    /* ou usando um metodo da classe
-   if(ehvazia() == true){
-   return false;
-    }
-    */
+    float aux;
 
   /*Se a Stack nao esta vazia, topo da pilha eh removido.
    Se a pilha esta vazia um codigo de erro de underflow eh retornado*/
   if(contador==0)
-     return false;
+      return -1;
+
   else{
-    --contador;
-    return true;
-  }
+      aux = vetorpilha[contador];
+      contador --;
+      return aux;
+    }
 }
 
 
 // insere no topo da pilha
-bool Pilha::push(int item){
+bool Pilha::push(float item){
     if(cheia() == false)
         return false;
     else{
         vetorpilha[contador] = item;
         contador ++;
+        std::cout << "Inseriu com sucesso" << std::endl;
         return true;
     }
 }
 
 
 // consulta o primeiro elemento da pilha
-bool Pilha::top(int &item)
-{
-  /*Se a Stack nao esta vazia, topo da pilha eh retornado. Se a pilha esta vazia
-  um codigo de erro de underflow eh retornado
+bool Pilha::top(int &item){
+/*Se a Stack nao esta vazia, topo da pilha eh retornado. Se a pilha esta vazia
+  um codigo de erro de underflow eh retornado */
 
   if(contador ==0)
      return false;
@@ -69,9 +66,8 @@ bool Pilha::top(int &item)
      item = vetorpilha[contador-1];
      return true;
   }
-  }*/
 
-    if( vazia())
+  if( vazia())
         return false;
     else{
         item = vetorpilha[contador -1];
@@ -155,52 +151,20 @@ void Pilha::inverte_outra_pilha(Pilha &S){
     }
 }
 
-/* uso uma pliha aux para para passar da A para aux, e deps da aux para a
-   A e A'
-*/
-void Pilha::copia(Pilha &S){
-    int x;
-    Pilha aux;
-    //laço para colocar na aux a pilha principal
-    while(!vazia()){
-        top(x);
-        pop();
-        aux.push(x);
-    }
 
-    //laço para tirar da aux e passar para A e A'
-    while(!aux.vazia()){
-        aux.top(x);
-        aux.pop();
-        S.push(x);
-    }
-
-
-}
 
 void Pilha::imprime(){
-
-    int x;
-    Pilha aux;
-
-    /*laço para desempilhar a pilha original e imprimir, ao mesmo tempo
-      que eu salvo os itens desempilhados na pilha aux */
-    while(!vazia()){
+     int x;
+     Pilha Paux;
+     while(!vazia()){
         top(x);
-        std::cout << x;
+        std::cout<< x << " ";
         pop();
-        aux.push(x);
-    }
-
-    /*laço para devolver os intens da pilha aux para a original, lembrando
-      que a pliha aux estara ao contrario da pilha original,
-      exemplo orig 1234, aux 4321 */
-    while(!aux.vazia()){
-        aux.top(x);
-        aux.pop();
+        Paux.push(x);
+     }
+     while(!Paux.vazia()){
+        Paux.top(x);
+        Paux.pop();
         push(x);
-    }
+     }
 }
-
-
-
