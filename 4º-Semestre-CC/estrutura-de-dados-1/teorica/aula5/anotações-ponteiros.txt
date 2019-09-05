@@ -1,0 +1,38 @@
+
+int *p; ponteiro que aponta para um endereço de memoria 
+
+int a = 16; valor que a variavel "a" recebe, e é armazenado em seu endereço de memoria 
+
+&a; --> endereço de memoria da variavel "a"
+
+p =&a;  --> p  acessa o endereço de memoria
+
+cout << p*; -->vai retornar o valor de a, que é apontado por p 
+
+*p = 5; modifiquei o valor de "a" atravez do ponteiro
+
+============================================================================
+função(int &x){};
+
+obs: quando passo (int &x) como parametro, quer dizer que estou fazendo uma
+passagem por referencia do endereço de uma variavel 
+
+ -função(*p)
+
+por isso devo dar como argumento um ponteiro que aponte para o endereço de 
+memoria de uma variavel do tipo inteiro
+
+as alterações dessa variavel dentro da função, serao guardadas no endereço da 
+variavel, assim consigo acessar diretamente a variavel que foi passada
+=============================================================================
+
+NO caso de um vetor, nao é necessario atribuir por exemplo:
+
+int vetor[5];
+
+int p*;
+
+p = vetor 
+nesse caso nao preciso do "&" pois o proprio vetor ja é um endereço
+de memoria
+=============================================================================

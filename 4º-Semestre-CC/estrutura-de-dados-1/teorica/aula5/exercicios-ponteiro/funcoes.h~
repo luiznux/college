@@ -1,0 +1,20 @@
+#ifndef FUNCOES_H
+#define FUNCOES_H
+#include <iostream>
+
+int *aloca_vetor(int tamanho);
+
+void preeche_vetor(int *vetor, int tamanho);
+
+void printa_vetor(int *vetor, int tamanho);
+
+float media_vetor(int tamanho,int *vetor);
+
+int maior_elemento(int *vetor, int tamanho);
+
+void max_Heapify(int *vetor, int i, int tamVetor);
+
+void build_Heap(int *vetor, int tamVetor);
+
+
+#endif

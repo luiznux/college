@@ -1,0 +1,59 @@
+T5 EXERCICIOS DE ORIENTAÇÃO  AOBJETOS
+
+
+1)
+a)
+Motorista 
+Passageiro
+Carro
+
+b)
+
+Usuario
+Empresa
+Cartao
+
+
+c)
+
+Usuario
+Mensagens 
+servidor
+
+d)
+Aluno
+Professor
+Disciplinas
+Atividades
+
+e)
+Jogador
+Inimigo
+Arma
+Vida
+
+
+2)
+
+a)
+Objetos de aumento de vizao
+
+b)
+Objetos que transportam agua
+
+c)
+Meios de transporte
+
+d)
+Coisas para fixar 
+
+e)
+Locais de moradia, abrigo
+
+
+3)
+
+a) A,B,C,D,E,G
+
+B)
+
