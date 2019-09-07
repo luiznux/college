@@ -120,4 +120,6 @@ void selection(int *a,int n)
         a[k]=a[loc1];
         a[loc1]=temp;
     }
+    for(k=0;k<n;k++)
+        std::cout<<a[k]<<" ";
 }
