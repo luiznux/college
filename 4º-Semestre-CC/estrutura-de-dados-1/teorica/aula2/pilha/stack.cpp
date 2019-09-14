@@ -1,8 +1,8 @@
-#include "pilha.h"
+#include "stack.h"
 #include <iostream>
 
 /*este metodo imprime o vetor, n�o a pilha!*/
-void Pilha::imprime () {
+void Stack::imprime () {
   int i;
   for(i=0;i<contador;i++)
     std::cout<<vetorpilha[i]<<" ";
@@ -10,7 +10,7 @@ void Pilha::imprime () {
 
 
 // Verifica se a pilha é vazia
-bool Pilha::vazia()
+bool Stack::vazia()
 {
   /*Se a Stack esta vazia, retorna true, se nao, retorna false*/
   if(contador>0) return false;
@@ -19,14 +19,14 @@ bool Pilha::vazia()
 
 
 // Verifica se a pilha esta cheia
-bool Pilha::cheia(){
+bool Stack::cheia(){
     if(tamanho == contador) return true;
     return false;
 }
 
 
 //remove primeiro elemento(tira)
-bool Pilha::pop(){
+bool Stack::pop(){
 
     /* ou usando um metodo da classe
    if(ehvazia() == true){
@@ -46,7 +46,7 @@ bool Pilha::pop(){
 
 
 // insere no topo da pilha
-bool Pilha::push(int item){
+bool Stack::push(int item){
     if(cheia() == false)
         return false;
     else{
@@ -58,7 +58,7 @@ bool Pilha::push(int item){
 
 
 // consulta o primeiro elemento da pilha
-bool Pilha::top(int &item)
+bool Stack::top(int &item)
 {
   /*Se a Stack nao esta vazia, topo da pilha eh retornado. Se a pilha esta vazia
   um codigo de erro de underflow eh retornado
@@ -80,9 +80,9 @@ bool Pilha::top(int &item)
 }
 
 
-bool Pilha::equal(Pilha &S){
+bool Stack::equal(Stack &S){
 
-    Pilha auxiliar;
+    Stack auxiliar;
 
     int v1, v2,vaux;
 
@@ -112,10 +112,10 @@ bool Pilha::equal(Pilha &S){
 }
 
 
-void Pilha::reverse(){
+void Stack::reverse(){
     int x;
-    Pilha aux;
-    Pilha aux2;
+    Stack aux;
+    Stack aux2;
 
     while(!vazia()){
         top(x);
@@ -137,9 +137,9 @@ void Pilha::reverse(){
 
 }
 
-void Pilha::inverte_outra_pilha(Pilha &S){
+void Stack::inverte_outra_pilha(Stack &S){
     int x;
-    Pilha aux;
+    Stack aux;
 
     while(!vazia()){
         top(x);
@@ -158,9 +158,9 @@ void Pilha::inverte_outra_pilha(Pilha &S){
 /* uso uma pliha aux para para passar da A para aux, e deps da aux para a
    A e A'
 */
-void Pilha::copia(Pilha &S){
+void Stack::copia(Stack &S){
     int x;
-    Pilha aux;
+    Stack aux;
     //laço para colocar na aux a pilha principal
     while(!vazia()){
         top(x);
@@ -178,10 +178,10 @@ void Pilha::copia(Pilha &S){
 
 }
 
-void Pilha::imprime(){
+void Stack::imprime(){
 
     int x;
-    Pilha aux;
+    Stack aux;
 
     /*laço para desempilhar a pilha original e imprimir, ao mesmo tempo
       que eu salvo os itens desempilhados na pilha aux */

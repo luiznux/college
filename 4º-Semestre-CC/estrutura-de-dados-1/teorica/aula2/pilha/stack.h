@@ -1,10 +1,10 @@
-#ifndef PILHA_H
-#define PILHA_H
+#ifndef STACK_H
+#define STACK_H
 
 
 #define tamanho 10
 
-class Pilha{
+class Stack{
 
      private:
 
@@ -15,7 +15,7 @@ class Pilha{
 
      public:
 
-        Pilha(){
+        Stack(){
           /* a pilha eh inicializada para estar vazia*/
             contador=0;}
 
@@ -24,10 +24,10 @@ class Pilha{
         bool pop();
         bool top(int &item);
         bool push(int item);
-        bool equal(Pilha &S);
+        bool equal(Stack &S);
         void reverse();
-        void inverte_outra_pilha(Pilha &S);
-        void copia(Pilha &);
+        void inverte_outra_pilha(Stack &S);
+        void copia(Stack &);
         void imprime();
 };
 
