@@ -11,6 +11,23 @@ EXTERN struct proc *rdy_tail[NQ];	//ponteiro para o final da lista de
                                     processos prontos
 
 
+struct proc *p_nextready;	/* pointer to next ready process */
+
+
 int q_priority = rand() %10; //prioridade para a fila de processos
                              atribuida aleatoriamente de 0 a 10
 
+Fazer uma fila de processos com prioridade
+
+define prioriadade -> define um valor aleatorio para o processo
+
+-> Fazer um metodo para comparar as prioridades quando for inserir um
+processo novo na fila
+
+-> como rodar a lista?
+
+interar o head ate o tail  e comparar um por um a prioridade
+crio um i para armazear a cabeça e um j para armazear o proximo 
+ * se  prioridade for maior do q do atual, colo antes dele
+
+ * se " "  se for maior q a cabeça, ele vira  a nova cabeça
