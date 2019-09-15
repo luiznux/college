@@ -1,21 +1,22 @@
-#ifndef PILHA_H
-#define PILHA_H
+#ifndef STACK_H
+#define STACK_H
 #include "node.h"
+#include <iostream>
+
 class Stack{
 
 private:
-    Node *top_stack;
 
+    Node *top_stack;
 
 public:
 
     Stack();
     ~Stack();
     bool empty();
-    bool push(int item);
+    bool push(float item);
     bool pop();
-    bool top(int &item);
+    bool top(float &item);
     void print();
 };
-
 #endif

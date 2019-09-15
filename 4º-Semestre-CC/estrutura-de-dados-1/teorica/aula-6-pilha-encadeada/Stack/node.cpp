@@ -2,7 +2,7 @@
 
 Node::Node(float item, Node *new_node){
 
-    valor = item;
+    value = item;
     next = new_node;
 }
 

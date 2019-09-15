@@ -3,6 +3,7 @@
 
 class Node{
 
+
 private:
 
     float value;
@@ -10,7 +11,8 @@ private:
 
 public:
 
-    Node(int item, Node *new_node);
+    Node(float item, Node *new_node);
+
     ~Node();
 };
 #endif
