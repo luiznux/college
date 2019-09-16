@@ -341,6 +341,7 @@ register struct proc *rp;	/* this process is now runnable */
  */
 
   if (istaskp(rp)){
+
       if (rdy_head[TASK_Q] != NIL_PROC){
 
         //referenciando uma prioridade do processo
@@ -349,11 +350,27 @@ register struct proc *rp;	/* this process is now runnable */
         struct proc i = rdy_head[TASK_Q];
         struct proc j = rdy_head[TASK_Q];
 
-        //verifica se o elemento que esta sendo analisado é menor do que
-        //o que esta sendo inserindo.
+        /*
+        *Se caso o elemento novo for maior que a cabeça, o mesmo vai
+        *virar a nova cabeça, que aponta para o elemento menor
+        */
+        if (rp > rdy_tail[TASK_Q]){
 
-       // estou interando a lista
-        // em quanto o anterior
+            //armazeno a cabeça antiga
+            struct proc old_head = p_nextready;
+
+            //seto a novca cabeça para rp(processo a ser inserido)
+            rdy_head[TASK_Q] -> rp;
+
+            //rp aponta para a nova cabeça
+            rp -> old_head;
+        }
+
+       /*
+       *verifica se o elemento que esta sendo analisado é maior do que
+       *o que esta sendo inserindo, caso seja maior vou inseri-lo na
+       *frente
+       */
         while(j != rdy_tail[TASK_Q]){
 
         }

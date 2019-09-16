@@ -27,7 +27,7 @@ processo novo na fila
 -> como rodar a lista?
 
 interar o head ate o tail  e comparar um por um a prioridade
-crio um i para armazear a cabeça e um j para armazear o proximo 
+crio um i para armazear a cabeça e um j para armazear o proximo
  * se  prioridade for maior do q do atual, colo antes dele
 
  * se " "  se for maior q a cabeça, ele vira  a nova cabeça
