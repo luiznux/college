@@ -306,11 +306,11 @@ PRIVATE void pick_proc()
 
   register struct proc *rp;	/* process to run */
 
-  if ( (rp = rdy_head[SERVER_Q]) != NIL_PROC) {
+  if ( (rp = rdy_head[TASK_Q]) != NIL_PROC) {
 	proc_ptr = rp;
 	return;
   }
-  if ( (rp = rdy_head[TASK_Q]) != NIL_PROC) {
+  if ( (rp = rdy_head[SERVER_Q]) != NIL_PROC) {
 	proc_ptr = rp;
 	return;
   }
@@ -328,6 +328,7 @@ PRIVATE void pick_proc()
 /*===========================================================================*
  *				ready					     *
  *===========================================================================*/
+
 PRIVATE void ready(rp)
 
 register struct proc *rp;	/* this process is now runnable */
@@ -340,78 +341,252 @@ register struct proc *rp;	/* this process is now runnable */
  *   USER_Q   - (lowest priority) for user processes
  */
 
+/*
+ *Implementação de uma fila para cada sub fila de processos, e cada novo processo recebe uma prioridade
+ *aleatória de 0 a 10, atravez de um metodo no arquivo "proc.h" la linha 45 "int q_priority = rand() %10".
+*/
+
+//referenciando uma prioridade do processo
+  rp -> q_priority;
+
+  //
   if (istaskp(rp)){
 
+      //se a fila nao for vazia
       if (rdy_head[TASK_Q] != NIL_PROC){
 
-        //referenciando uma prioridade do processo
-        rp -> q_priority;
-
+       //armazeno a cabeça em uma nova estrutura
         struct proc i = rdy_head[TASK_Q];
-        struct proc j = rdy_head[TASK_Q];
 
+       //j aponta para o proximo da cabeça
+        struct proc j = rdy_head[TASK_Q] -> p_nextready;
+
+
+        //1 CASO
         /*
         *Se caso o elemento novo for maior que a cabeça, o mesmo vai
         *virar a nova cabeça, que aponta para o elemento menor
         */
-        if (rp > rdy_tail[TASK_Q]){
+        //estou comparando as prioridades 
+        if (rp -> q_priority > rdy_head[TASK_Q] -> q_priority){
 
-            //armazeno a cabeça antiga
-            struct proc old_head = p_nextready;
+          //seto a novca cabeça para rp(processo a ser inserido)
+          rdy_head[TASK_Q] = rp;
 
-            //seto a novca cabeça para rp(processo a ser inserido)
-            rdy_head[TASK_Q] -> rp;
-
-            //rp aponta para a nova cabeça
-            rp -> old_head;
+          //rp aponta para o proximo
+          rp -> p_nexyready = i;
         }
 
+
+        //2 CASO
        /*
        *verifica se o elemento que esta sendo analisado é maior do que
        *o que esta sendo inserindo, caso seja maior vou inseri-lo na
-       *frente
+       *frente, e para quando chegar no final da lista (NULO)
        */
-        while(j != rdy_tail[TASK_Q]){
+        while(j != NULL){
 
+            //se a prioridade do rp for maior doq a do J
+            if(rp -> q_priority > j -> q_priority){
+
+                // o n anterior vai apontar para o rp
+                i -> p_nextready = rp;
+
+                //o processo inserido aponta para o proximo
+                rp -> p_nextready = j;
+
+                //paro para caso nao continuar rodando deps que trocar;
+                break;
+            }
+            //anda na lista
+            i = i -> p_nextready; //i vai para o proximo
+            j = j -> p_nextready;
         }
 
-        for(; ; i = i-> p_nextready){
 
-            if()
-
+        //3 CASO
+        /*
+        Caso a prioridade do rp for a menor de todas, ele tem que ser
+        inserido no final da fila (tail)
+        */
+        if( j == NULL){
+            i -> p_nextready = rp;
+            rdy_tail[TASK_Q] = rp;
         }
 
+        free i;
+        free j;
+      }//fim do if de caso a fila nao for vazia
 
-		// o tail aponta para o proximo processo pronto
-		rdy_tail[TASK_Q] -> p_nextready = rp;
-      }
 
+    //CASO A FILA ESTIVER VAZIA
+    /*
+    Como ela esta vazia, terei que inserir o rp na cabeça
+    */
 	else {
-		proc_ptr =		/* run fresh task next */
 		rdy_head[TASK_Q] = rp;	/* add to empty queue */
+        rdy_tail[TASK_Q] = rp;
 	}
-	rdy_tail[TASK_Q] = rp;
-	rp->p_nextready = NIL_PROC;	/* new entry has no successor */
-	return;
-  }
-  if (isservp(rp)){		/* others are similar */
-	if (rdy_head[SERVER_Q] != NIL_PROC)
-		rdy_tail[SERVER_Q]->p_nextready = rp;
-	else
-		rdy_head[SERVER_Q] = rp;
-	rdy_tail[SERVER_Q] = rp;
-	rp->p_nextready = NIL_PROC;
-	return;
-  }
-  /* Add user process to the front of the queue.  (Is a bit fairer to I/O
-   * bound processes.)
-   */
-  if (rdy_head[USER_Q] == NIL_PROC)
-	rdy_tail[USER_Q] = rp;
-  rp->p_nextready = rdy_head[USER_Q];
-  rdy_head[USER_Q] = rp;
-}
 
+
+  //FILA DO TIPO SERVER
+  if (isservp(rp)){
+
+      //se a fila nao for vazia
+      if (rdy_head[SERVER_Q] != NIL_PROC){
+
+       //armazeno a cabeça em uma nova estrutura
+        struct proc i = rdy_head[SERVER_Q];
+
+       //j aponta para o proximo da cabeça
+        struct proc j = rdy_head[SERVER_Q] -> p_nextready;
+
+
+        //1 CASO
+        /*
+        *Se caso o elemento novo for maior que a cabeça, o mesmo vai
+        *virar a nova cabeça, que aponta para o elemento menor
+        */
+        if (rp -> q_priority > rdy_head[USER_Q] -> q_priority){
+
+          //seto a novca cabeça para rp(processo a ser inserido)
+          rdy_head[SERVER_Q] = rp;
+
+          //rp aponta para o proximo
+          rp -> p_nexyready = i;
+        }
+
+
+        //2 CASO
+       /*
+       *verifica se o elemento que esta sendo analisado é maior do que
+       *o que esta sendo inserindo, caso seja maior vou inseri-lo na
+       *frente, e para quando chegar no final da lista (NULO)
+       */
+        while(j != NULL){
+
+            //se a prioridade do rp for maior doq a do J
+            if(rp -> q_priority > j -> q_priority){
+
+                // o n anterior vai apontar para o rp
+                i -> p_nextready = rp;
+
+                //o processo inserido aponta para o proximo
+                rp -> p_nextready = j;
+
+                //paro para caso nao continuar rodando deps que trocar;
+                break;
+            }
+            //anda na lista
+            i = i -> p_nextready; //i vai para o proximo
+            j = j -> p_nextready;
+        }
+
+        //3 CASO
+        /*
+        Caso a prioridade do rp for a menor de todas, ele tem que ser
+        inserido no final da fila (tail)
+        */
+        if( j == NULL){
+            i -> p_nextready = rp;
+            rdy_tail[TASK_Q] = rp;
+        }
+
+        free i;
+        free j;
+      }//fim do if de caso a fila nao for vazia
+
+
+    //CASO A FILA ESTIVER VAZIA
+    /*
+    Como ela esta vazia, terei que inserir o rp na cabeça
+    */
+	else {
+		rdy_head[SERVER_Q] = rp;	/* add to empty queue */
+        rdy_tail[SERVER_Q] = rp;
+	}
+  }//fim  da fila do processo tipo server
+
+
+
+         //-----------FILA DO TIPO USUÁRIO--------------//
+  if (rdy_head[USER_Q] == NIL_PROC){
+
+      //se a fila nao for vazia
+      if (rdy_head[USER_Q] != NIL_PROC){
+
+       //armazeno a cabeça em uma nova estrutura
+        struct proc i = rdy_head[USER_Q];
+
+       //j aponta para o proximo da cabeça
+        struct proc j = rdy_head[USER_Q] -> p_nextready;
+
+
+        //1 CASO
+        /*
+        *Se caso o elemento novo for maior que a cabeça, o mesmo vai
+        *virar a nova cabeça, que aponta para o elemento menor
+        */
+        if (rp -> q_priority > rdy_head[USER_Q] -> q_priority){
+
+          //seto a novca cabeça para rp(processo a ser inserido)
+          rdy_head[USER_Q] = rp;
+
+          //rp aponta para o proximo
+          rp -> p_nexyready = i;
+        }
+
+
+        //2 CASO
+       /*
+       *verifica se o elemento que esta sendo analisado é maior do que
+       *o que esta sendo inserindo, caso seja maior vou inseri-lo na
+       *frente, e para quando chegar no final da lista (NULO)
+       */
+        while(j != NULL){
+
+            //se a prioridade do rp for maior doq a do J
+            if(rp -> q_priority > j -> q_priority){
+
+                // o n anterior vai apontar para o rp
+                i -> p_nextready = rp;
+
+                //o processo inserido aponta para o proximo
+                rp -> p_nextready = j;
+
+                //paro para caso nao continuar rodando deps que trocar;
+                break;
+            }
+            //anda na lista
+            i = i -> p_nextready; //i vai para o proximo
+            j = j -> p_nextready;
+        }
+
+        //3 CASO
+        /*
+        Caso a prioridade do rp for a menor de todas, ele tem que ser
+        inserido no final da fila (tail)
+        */
+        if( j == NULL){
+            i -> p_nextready = rp;
+            rdy_tail[USER_Q] = rp;
+        }
+
+        free i;
+        free j;
+      }//fim do if de caso a fila nao for vazia
+
+
+    //CASO A FILA ESTIVER VAZIA
+    /*
+    Como ela esta vazia, terei que inserir o rp na cabeça
+    */
+	else {
+		rdy_head[USER_Q] = rp;	/* add to empty queue */
+        rdy_tail[USER_Q] = rp;
+	}
+  }
+}
 /*===========================================================================*
  *				unready					     *
  *===========================================================================*/

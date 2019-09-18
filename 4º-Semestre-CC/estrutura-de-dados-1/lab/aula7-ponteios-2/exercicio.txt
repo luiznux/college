@@ -1,0 +1,25 @@
+Exercício 7
+
+Modifique o exercício 1 do exercício anterior (ex. 6) para que o vetor recebido seja um vetor de ponteiros para objetos de uma classe chamada Numero que tem o atributo int valor e os métodos int getValor() e bool setValor(int n).
+
+A assinatura do método deverá ser: Numero * localiza(Numero *v, int tamanho, int n)
+
+Este método deve localizar o objeto cujo valor seja igual a n e retornar o ponteiro do objeto.
+
+O método localiza pode ficar no mesmo arquivo do main()
+
+No método main() inicie criando o vetor (defina um tamanho) e instancie os objetos para preencher todas as posições, cada um com um valor qualquer. Não pode ter repetições.
+
+Crie um menu com as opções:
+
+    0 - sair
+    1 - alterar um elemento.
+
+Nesta opção 1:
+
+    Solicite o valor a localizar.
+    Chame o metodo localiza com um numero fornecido. Se não encontrar, retorna NULL.
+    Solicite o novo valor.
+    Chame o metodo setValor().
+    Este metodo setValor() devera ter uma verificação de duplicidade antes de fazer a alteração. Se não houver duplicidade, altera e retorna true, caso contrario retorna false.
+

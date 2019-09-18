@@ -1,0 +1,17 @@
+Exercício 6 (profa. Valéria)
+
+1. Escreva uma função que recebe como parâmetros um vetor de inteiros v, o número de elementos dele N e ponteiros para variáveis nas quais devem ser armazenados os valores maximo e minimo do vetor.
+
+Sua assinatura deve ser:
+    void maximoMinimo(int *v, int N, int *maximo, int *minimo).
+
+Escreva também uma função main que use essa função.
+2. Escreva uma função chamada troca que troca os valores dos parâmetros recebidos.
+Sua assinatura deve ser:
+    void troca(float *a, float *b).
+3. Faça um programa, utilizando funções e alocação dinâmica de memória para:
+
+     preencher 2 vetores de float de tamanho dado pelo usuário
+     criar um terceiro vetor que seja a concatenação dos outros dois
+     imprima o vetor resultante
+

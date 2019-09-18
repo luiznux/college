@@ -1,0 +1,6 @@
+Problema da moeda em algoritmos gulosos
+
+
+Enunciado:
+
+Use o menor numer

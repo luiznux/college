@@ -1,0 +1,67 @@
+Nome Luiz Fernando Tagliaferro   TIA 3186180-6
+
+
+Exercicio de Implementação de uma fila de prioridades dentro das filas:
+
+Server, Task e User
+
+O objetivo é que cada processo novo que chege, deve receber uma prioridade
+aleatória e ser inserido em uma fila.
+
+Afim de nao utilizar o metodo padrao do minix de first in first out
+
+
+
+
+---------------ANOTAÇÕES DO CODIGO----------------------------------
+
+Estruturas para entendimento do codigo:
+
+--> rp <-- apontador para o processo pronto para ser executado
+
+
+EXTERN struct proc *rdy_head[NQ];	//ponteiro para a cabeça da lista de
+                                    processos prontos
+
+EXTERN struct proc *rdy_tail[NQ];	//ponteiro para o final da lista de
+                                    processos prontos
+
+
+struct proc *p_nextready;	/* pointer to next ready process */
+
+
+int q_priority = rand() %10; //prioridade para a fila de processos
+                             atribuida aleatoriamente de 0 a 10
+
+
+---------------Logica do Codigo----------------------------------
+
+1)Fazer uma fila de processos com prioridade
+
+define prioriadade -> define um valor aleatorio para o processo
+OBS: Antes de começar a lista, o processo novo (RP) deve receber a 
+prioridade com o metodo criado
+
+
+-> Fazer um metodo para comparar as prioridades quando for inserir um
+processo novo na fila
+
+-> como rodar a lista?
+
+--->interar o head ate o tail  e comparar um por um a prioridade
+crio um i para armazear a cabeça e um j para armazear o proximo
+
+*CASO 1 
+- se a prioridade for maior q a cabeça, ele vira  a nova cabeça
+
+*CASO 2 
+- se  prioridade for maior do que o elemento que estou comparado,
+colo o novo processo na frente dele.
+
+*CASO 3
+- se a prioridade do processo que estou inserindo for menor do que todas as 
+outras prioridades da fila, então ele se tornara o novo "tail"
+
+*E caso a fila for vazia, coloco ele no começo
+
+
