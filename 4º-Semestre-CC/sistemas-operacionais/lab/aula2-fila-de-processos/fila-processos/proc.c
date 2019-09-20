@@ -427,7 +427,8 @@ register struct proc *rp;	/* this process is now runnable */
 	else {
 		rdy_head[TASK_Q] = rp;	// add to empty queue
         rdy_tail[TASK_Q] = rp;
-        rp -> p_priority = NIL_PROC;
+        rp -> p_nextready = NIL_PROC;
+
 	}
 
 
@@ -455,7 +456,7 @@ register struct proc *rp;	/* this process is now runnable */
           rdy_head[SERVER_Q] = rp;
 
           //rp aponta para o proximo
-          rp -> p_nexyready = i;
+          rp -> p_nextready = i;
         }
 
 
@@ -538,7 +539,7 @@ register struct proc *rp;	/* this process is now runnable */
           rdy_head[USER_Q] = rp;
 
           //rp aponta para o proximo
-          rp -> p_nexyready = i;
+          rp -> p_nextready = i;
         }
 
 
