@@ -492,6 +492,8 @@ register struct proc *rp;	/* this process is now runnable */
         if( j == NIL_PROC){
             i -> p_nextready = rp;
             rdy_tail[TASK_Q] = rp;
+            rp -> p_nextready = NIL_PROC;
+
         }
 
         free(i);
@@ -573,6 +575,8 @@ register struct proc *rp;	/* this process is now runnable */
         if( j == NIL_PROC){
             i -> p_nextready = rp;
             rdy_tail[USER_Q] = rp;
+            rp -> p_nextready = NIL_PROC;
+
         }
 
         free(i);
