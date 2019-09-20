@@ -11,8 +11,6 @@ aleatória e ser inserido em uma fila.
 Afim de nao utilizar o metodo padrao do minix de first in first out
 
 
-
-
 ---------------ANOTAÇÕES DO CODIGO----------------------------------
 
 Estruturas para entendimento do codigo:

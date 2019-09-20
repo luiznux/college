@@ -356,10 +356,10 @@ register struct proc *rp;	/* this process is now runnable */
       if (rdy_head[TASK_Q] != NIL_PROC){
 
        //armazeno a cabeça em uma nova estrutura
-        struct proc i = rdy_head[TASK_Q];
+        struct proc *i = rdy_head[TASK_Q];
 
        //j aponta para o proximo da cabeça
-        struct proc j = rdy_head[TASK_Q] -> p_nextready;
+        struct proc *j = rdy_head[TASK_Q] -> p_nextready;
 
 
         //1 CASO
@@ -367,7 +367,7 @@ register struct proc *rp;	/* this process is now runnable */
         *Se caso o elemento novo for maior que a cabeça, o mesmo vai
         *virar a nova cabeça, que aponta para o elemento menor
         */
-        //estou comparando as prioridades 
+        //estou comparando as prioridades
         if (rp -> q_priority > rdy_head[TASK_Q] -> q_priority){
 
           //seto a novca cabeça para rp(processo a ser inserido)
@@ -384,7 +384,7 @@ register struct proc *rp;	/* this process is now runnable */
        *o que esta sendo inserindo, caso seja maior vou inseri-lo na
        *frente, e para quando chegar no final da lista (NULO)
        */
-        while(j != NULL){
+        while(j != NIL_PROC){
 
             //se a prioridade do rp for maior doq a do J
             if(rp -> q_priority > j -> q_priority){
@@ -400,7 +400,7 @@ register struct proc *rp;	/* this process is now runnable */
             }
             //anda na lista
             i = i -> p_nextready; //i vai para o proximo
-            j = j -> p_nextready;
+            j = j -> p_nextready; // j vai para o proximo
         }
 
 
@@ -409,13 +409,14 @@ register struct proc *rp;	/* this process is now runnable */
         Caso a prioridade do rp for a menor de todas, ele tem que ser
         inserido no final da fila (tail)
         */
-        if( j == NULL){
+        if( j == NIL_PROC){
             i -> p_nextready = rp;
             rdy_tail[TASK_Q] = rp;
+            rp -> p_nextready = NIL_PROC;
         }
 
-        free i;
-        free j;
+        free(i);
+        free(j);
       }//fim do if de caso a fila nao for vazia
 
 
@@ -424,8 +425,9 @@ register struct proc *rp;	/* this process is now runnable */
     Como ela esta vazia, terei que inserir o rp na cabeça
     */
 	else {
-		rdy_head[TASK_Q] = rp;	/* add to empty queue */
+		rdy_head[TASK_Q] = rp;	// add to empty queue
         rdy_tail[TASK_Q] = rp;
+        rp -> p_priority = NIL_PROC;
 	}
 
 
@@ -436,10 +438,10 @@ register struct proc *rp;	/* this process is now runnable */
       if (rdy_head[SERVER_Q] != NIL_PROC){
 
        //armazeno a cabeça em uma nova estrutura
-        struct proc i = rdy_head[SERVER_Q];
+        struct proc *i = rdy_head[SERVER_Q];
 
        //j aponta para o proximo da cabeça
-        struct proc j = rdy_head[SERVER_Q] -> p_nextready;
+        struct proc *j = rdy_head[SERVER_Q] -> p_nextready;
 
 
         //1 CASO
@@ -463,7 +465,7 @@ register struct proc *rp;	/* this process is now runnable */
        *o que esta sendo inserindo, caso seja maior vou inseri-lo na
        *frente, e para quando chegar no final da lista (NULO)
        */
-        while(j != NULL){
+        while(j != NIL_PROC){
 
             //se a prioridade do rp for maior doq a do J
             if(rp -> q_priority > j -> q_priority){
@@ -487,13 +489,13 @@ register struct proc *rp;	/* this process is now runnable */
         Caso a prioridade do rp for a menor de todas, ele tem que ser
         inserido no final da fila (tail)
         */
-        if( j == NULL){
+        if( j == NIL_PROC){
             i -> p_nextready = rp;
             rdy_tail[TASK_Q] = rp;
         }
 
-        free i;
-        free j;
+        free(i);
+        free(j);
       }//fim do if de caso a fila nao for vazia
 
 
@@ -504,6 +506,7 @@ register struct proc *rp;	/* this process is now runnable */
 	else {
 		rdy_head[SERVER_Q] = rp;	/* add to empty queue */
         rdy_tail[SERVER_Q] = rp;
+        rp -> p_nextready = NIL_PROC;
 	}
   }//fim  da fila do processo tipo server
 
@@ -516,10 +519,10 @@ register struct proc *rp;	/* this process is now runnable */
       if (rdy_head[USER_Q] != NIL_PROC){
 
        //armazeno a cabeça em uma nova estrutura
-        struct proc i = rdy_head[USER_Q];
+        struct proc *i = rdy_head[USER_Q];
 
        //j aponta para o proximo da cabeça
-        struct proc j = rdy_head[USER_Q] -> p_nextready;
+        struct proc *j = rdy_head[USER_Q] -> p_nextready;
 
 
         //1 CASO
@@ -543,7 +546,7 @@ register struct proc *rp;	/* this process is now runnable */
        *o que esta sendo inserindo, caso seja maior vou inseri-lo na
        *frente, e para quando chegar no final da lista (NULO)
        */
-        while(j != NULL){
+        while(j != NIL_PROC){
 
             //se a prioridade do rp for maior doq a do J
             if(rp -> q_priority > j -> q_priority){
@@ -567,13 +570,13 @@ register struct proc *rp;	/* this process is now runnable */
         Caso a prioridade do rp for a menor de todas, ele tem que ser
         inserido no final da fila (tail)
         */
-        if( j == NULL){
+        if( j == NIL_PROC){
             i -> p_nextready = rp;
             rdy_tail[USER_Q] = rp;
         }
 
-        free i;
-        free j;
+        free(i);
+        free(j);
       }//fim do if de caso a fila nao for vazia
 
 
@@ -584,6 +587,7 @@ register struct proc *rp;	/* this process is now runnable */
 	else {
 		rdy_head[USER_Q] = rp;	/* add to empty queue */
         rdy_tail[USER_Q] = rp;
+        rp -> p_nextready = NIL_PROC;
 	}
   }
 }
