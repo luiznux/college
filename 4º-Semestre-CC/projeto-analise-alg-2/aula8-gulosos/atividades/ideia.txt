@@ -1,0 +1,5 @@
+
+A ideia do programa guloso(para as atividades) é selecionar sempre a ativida
+de de menor duração e intercalar uma proxima atividade proxima do fim da ul
+tima atividade, de forma de evitar a ociosidade do espaço. Assim o espaço 
+ficara na maioria do tempo, com eventos ocorrendo
