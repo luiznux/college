@@ -1,4 +1,9 @@
-Nome Luiz Fernando Tagliaferro   TIA 3186180-6
+Nome
+
+*Luiz Fernando Tagliaferro   TIA 3186180-6
+
+*Bruno Severo Camilo         TIA 4178161-9
+
 
 
 Exercicio de Implementação de uma fila de prioridades dentro das filas:
