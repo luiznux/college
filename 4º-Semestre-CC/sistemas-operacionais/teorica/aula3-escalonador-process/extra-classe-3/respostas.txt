@@ -1,0 +1,13 @@
+Defina o funcionamete dos algoritimos:
+
+Filas de retorno multinivel 
+
+Múltiplas Filas é um tipo de algoritmo de escalonamento, no qual são usadas filas de processos. Cada fila tem um determinado nível de prioridade. Sendo um dos mais antigos agendadores de prioridade, estava presente no CTSS (Compatible Time-Sharing System - Sistema Compatível de Divisão por Tempo).
+
+No algoritmo de Múltiplas Filas, também pode ser aplicado particularmente, em cada fila, diferentes algoritmos como por exemplo, o algoritmo Round-robin ou FCFS (First-come, first-served).
+
+
+Inversao de prioridade 
+
+
+
