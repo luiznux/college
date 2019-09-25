@@ -1,0 +1,39 @@
+ 
+Windows
+Clipboard
+COM
+Data Copy
+DDE
+File Mapping
+Mailslots
+Pipes
+RPC
+Windows Sockets
+
+
+Linux
+Signals
+Anonymous Pipes
+Named Pipes or FIFOs
+SysV Message Queues
+POSIX Message Queues
+SysV Shared memory
+POSIX Shared memory
+SysV semaphores
+POSIX semaphores
+FUTEX locks
+File-backed and anonymous shared memory using mmap
+UNIX Domain Sockets
+Netlink Sockets
+Network Sockets
+Inotify mechanisms
+FUSE subsystem
+D-Bus subsystem
+Android
+Intents
+Binders
+Anonymous Shared Memory
+
+Quando um processo lança uma requisição para um outro processo e precisa de uma resposta do mesmo para prosseguir. Por exemplo, quando é solicitado um input de um usuário, o input espera uma produção de uma entrada para alimentar o consumidor input.
+Quando existem processos que consomem a mesma aplicação, o jantar dos filósofos é uma aplicação prática para evitar que o sistema entre em deadlock, a organização do jantar dos filósofos em si, já é uma aplicação para evitar travamento. Ele possibilita que o fluxo de processos continue seguindo, sem interrupções.
+

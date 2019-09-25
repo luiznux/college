@@ -1,0 +1,34 @@
+1) 10 o tempo medio
+
+
+Defina o funcionamete dos algoritimos:
+
+Filas de retorno multinivel 
+
+Múltiplas Filas é um tipo de algoritmo de escalonamento, no qual são usadas filas de processos. Cada fila tem um determinado nível de prioridade. Sendo um dos mais antigos agendadores de prioridade, estava presente no CTSS (Compatible Time-Sharing System - Sistema Compatível de Divisão por Tempo).
+
+No algoritmo de Múltiplas Filas, também pode ser aplicado particularmente, em cada fila, diferentes algoritmos como por exemplo, o algoritmo Round-robin ou FCFS (First-come, first-served).
+
+
+Inversao de prioridade
+
+-> As prioridades sao literalmente invertidas, os processos que seriam de alta,
+viram os processos de baixa e os de baixa viram os processos de alta.
+
+a logica é que como os processos de alta prioridade agora sao leves(por serem
+anteriormente de baixa), eles serao executados rapidamente , assim os processos
+de baixa que demorarao mais para executar, evitando startvation
+
+
+2 Niveis de escalonamente
+
+-> É um nivel de de escalonamento, dentro de um escalonamento, como por exemplo
+o projeto que realizamos no minix, alem da prioridade normal (server,user),
+temos a prioridade de cada processo a ser comparada.
+
+
+4)A Vantagem de usar o esquema é que com uma fila de processos de espera, proces
+sos que antes tinham que esperar muito tempo, agora pode voltar a rodar sem ter 
+que esperar uma fila inteira, por serem varias filas , podemos implementar priori
+dade para ficar ainda mais rapido.
+

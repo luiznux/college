@@ -92,3 +92,16 @@ Windows
 
 
 
+MAC OS
+
+Mac OS X escalona os processos baseado numa variante do algoritmo de múltiplas filas com realimentação, porém divide as filas de prioridades em 4 grupos de processos, agrupados de acordo com suas características.
+Normal: Prioridade das aplicações normais do usuário.
+Sistema: Prioridade das aplicações do sistema, com prioridade superior as threads normais de usuário.
+Kernel: Classe reservada para threads em espaço de kernel que necessitam rodar
+Com uma prioridade superior às threads de sistema.
+Tempo real Threads nas quais a prioridade está baseada na necessidade de reservar
+uma fração pré-definida de ciclos de clock, independente de outras
+atividades sendo executadas no sistema.
+
+
+

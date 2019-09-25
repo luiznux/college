@@ -1,0 +1,34 @@
+//produtor
+
+item nextProduced;
+while(1){
+	while((freE_index+1)%buff_max == full_index);
+	down();
+	shared_buff[free_index] = nextProduced;
+	free_index = (free_index+1) % buff_max;
+	up();
+}
+
+//consumidor
+
+item nextConsumed;
+
+while(1){
+	while((free_index == full_index));
+	down();
+	nextConsumed = shared_buff[full_index];
+	full_index = (full_index+1) % buff_max;
+	up();
+}
+
+//O código a seguir é só uma "base", ela não faz muito sentido, mas é só para tomar a ideia de que um elemento espera o outro ser executado para finalizar a si
+
+down(){
+	wait(up);
+	exit(0);
+}
+
+up(){
+	wait(down);
+	exit(0);
+}

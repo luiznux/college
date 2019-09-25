@@ -1,0 +1,18 @@
+O a memoria recebe um programa, o programa é convertido para um executavel do ti-
+elf e esse executavel vira um job e posteriormente ele vira um processo 
+
+
+
+-Em alto nivel , o programa é selecionado. O mesmo é compilado pelo compilador e 
+é convertido para o tipo elf
+
+-Nesse momento ele vira um job na fila, que apos ser selecionado, ele vira um pro
+cesso mesmo que pode utilizar a cpu com os binarios do .elf
+
+A criação do procesos é feito em alto nivel pelo fork e em baixo nivel(Kernel)
+é feito pelo sys_fork() que chama o do_fork().
+
+O minix cria processos através do processo de “forkeamento”, ou seja, apenas um processo realmente é iniciado, todos os outros são processos clonados deste processo raiz e modificados para seu uso específico.
+O processo iniciado é o processo INIT e a partir dele o sistema faz fork()’s ou vfork()’s clonando este processo, copiando todos seus atributos igualmente e então alterando para seu atributo desejado, como os do VI, por exemplo.
+ 
+
