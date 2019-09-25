@@ -1,7 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-
+//tamanho fixo
 #define tamanho 10
 
 class Stack{

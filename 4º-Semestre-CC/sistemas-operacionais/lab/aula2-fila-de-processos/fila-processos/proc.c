@@ -370,7 +370,7 @@ register struct proc *rp;	/* this process is now runnable */
         //estou comparando as prioridades
         if (rp -> q_priority > rdy_head[TASK_Q] -> q_priority){
 
-          //seto a novca cabeça para rp(processo a ser inserido)
+          //seto a nova cabeça para rp(processo a ser inserido)
           rdy_head[TASK_Q] = rp;
 
           //rp aponta para o proximo

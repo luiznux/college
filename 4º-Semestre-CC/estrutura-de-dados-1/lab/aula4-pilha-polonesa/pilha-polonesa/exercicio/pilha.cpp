@@ -67,8 +67,9 @@ bool Pilha::top(int &item){
      return true;
   }
 
-  if( vazia())
+  if(vazia())
         return false;
+
     else{
         item = vetorpilha[contador -1];
         return true;
