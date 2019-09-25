@@ -1,0 +1,2 @@
+#!/bin/sh
+./mkmanifest -v minix-current -t hd-64MB.img.gz -o hd.img pack.manifest

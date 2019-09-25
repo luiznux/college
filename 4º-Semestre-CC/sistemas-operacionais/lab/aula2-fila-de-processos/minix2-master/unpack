@@ -1,0 +1,24 @@
+#!/bin/sh
+set -e
+
+sudo mount hd.img mnt -o loop,offset=512
+linkfile=/tmp/$$.linkfile
+trap "sudo umount mnt; rm -f $linkfile" EXIT
+
+sudo rsync -av \
+    --hard-links \
+    --delete \
+    --whole-file \
+    --no-specials \
+    --chown $(whoami) \
+    --exclude 'dev' \
+    --exclude 'etc/ttytab' \
+    --exclude 'etc/mtab' \
+    --exclude 'etc/utmp' \
+    --exclude 'usr/adm' \
+    --exclude 'boot' \
+    mnt/ \
+    minix-current/fs/ \
+    > $linkfile
+
+awk '/ => / { print "ln -sfr ./" $3 " " $1 }' $linkfile | (cd minix-current/fs && sh)

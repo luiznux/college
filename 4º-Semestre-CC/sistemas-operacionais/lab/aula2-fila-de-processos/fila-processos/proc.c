@@ -346,9 +346,6 @@ register struct proc *rp;	/* this process is now runnable */
  *aleatória de 0 a 10, atravez de um metodo no arquivo "proc.h" la linha 45 "int q_priority = rand() %10".
 */
 
-//referenciando uma prioridade do processo
-  rp -> q_priority;
-
   //
   if (istaskp(rp)){
 
@@ -450,7 +447,7 @@ register struct proc *rp;	/* this process is now runnable */
         *Se caso o elemento novo for maior que a cabeça, o mesmo vai
         *virar a nova cabeça, que aponta para o elemento menor
         */
-        if (rp -> q_priority > rdy_head[USER_Q] -> q_priority){
+        if (rp -> q_priority > rdy_head[SERVER_Q] -> q_priority){
 
           //seto a novca cabeça para rp(processo a ser inserido)
           rdy_head[SERVER_Q] = rp;
@@ -492,7 +489,7 @@ register struct proc *rp;	/* this process is now runnable */
         */
         if( j == NIL_PROC){
             i -> p_nextready = rp;
-            rdy_tail[TASK_Q] = rp;
+            rdy_tail[SERVER_Q] = rp;
             rp -> p_nextready = NIL_PROC;
 
         }
