@@ -26,17 +26,22 @@ long long int fibo(int n){
 long long int fib_dinamico( int n, long long int *vetor){
 
     contador_bom++;
-
+    
+    //caso seja chamado o fib de 0
     if(n == 0){
         vetor[0] = 0;
         return 0;
     }
-
+    
+    //caso seja chamado o fib de 1 e 2
     else if( n == 1 || n == 2){
         vetor[n] = 1;
         return 1;
     }
-
+    
+    //3 caso que nao tenho pre calculado o fibonacci, tenho que fazer a conta
+    //porem ja possuo os valores anteriores guardados, evitando o recalculo
+    //ai que esta a programação dinamica 
     else if (vetor[n-1] == -1){
         vetor[n]  = fib_dinamico(n-1, vetor) + fib_dinamico(n-2, vetor);
 
@@ -49,7 +54,7 @@ long long int fib_dinamico( int n, long long int *vetor){
 
 // preenche um vetor de -1 de acordo com usa entrada
 void preenche_saporra(long long int *vetor, int tamanho){
-
+    
     for(int i =0; i < tamanho; i++){
         vetor[i] = -1;
     }
