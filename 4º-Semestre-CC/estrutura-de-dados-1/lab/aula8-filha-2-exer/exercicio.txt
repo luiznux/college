@@ -1,0 +1,5 @@
+Utilizando Pilha Encadeada, desenvolver dois algoritmos para:
+
+a) transformar um número da base 10 na base 2.
+
+b) inverter uma pilha nela mesma (sem criar uma pilha auxiliar).

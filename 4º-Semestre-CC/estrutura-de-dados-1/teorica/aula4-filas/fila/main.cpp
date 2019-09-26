@@ -24,14 +24,9 @@ int main()
            case 2: if(F.remove()==0) cout<<"\nUnderflow\n";
                    else  cout<<"Remocao realizada com sucesso";
                   break;
-           case 3: if(F.consulta(x)==1) cout<<"\nPrimeiro elemento = "<<x<<endl;
-                   else  cout<<"\nUnderflow\n";
+           case 3:
+               F.printa();
                   break;
-           case 4: cout<<"Copia para uma fila auxiliar";
-                   F.copia(Fcopy);
-                  if(F.iguais(Fcopy)==true) cout<<"\nFilas iguais";
-                  else cout<<"\nFilas diferentes";
-                   break;
            case 0: cout<<"saindo...\n";
                   break;
            default: cout<<"opcao invalida\n";
