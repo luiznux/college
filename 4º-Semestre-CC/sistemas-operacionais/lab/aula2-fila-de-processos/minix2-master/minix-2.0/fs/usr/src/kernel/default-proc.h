@@ -41,10 +41,6 @@ struct proc {
   pid_t p_pid;			/* process id passed in from MM */
   int p_priority;		/* task, server, or user process */
 
-  //prioridade para fila, com numeros aleatorios de 0 a 10
-  int q_priority = rand() %10;
-
-
   clock_t user_time;		/* user time in ticks */
   clock_t sys_time;		/* sys time in ticks */
   clock_t child_utime;		/* cumulative user time of children */

@@ -18,9 +18,8 @@
 #include <minix/callnr.h>
 #include <minix/com.h>
 #include "proc.h"
-#include <stdlib>
 
-Private unsigned char switching;	/* nonzero to inhibit interrupt() */
+PRIVATE unsigned char switching;	/* nonzero to inhibit interrupt() */
 
 FORWARD _PROTOTYPE( int mini_send, (struct proc *caller_ptr, int dest,
 		message *m_ptr) );
@@ -112,7 +111,7 @@ int task;			/* number of task to be started */
 }
 
 /*===========================================================================*
- *				sys_call				     *
+ *				sys_call				     * 
  *===========================================================================*/
 PUBLIC int sys_call(function, src_dest, m_ptr)
 int function;			/* SEND, RECEIVE, or BOTH */
@@ -133,7 +132,7 @@ message *m_ptr;			/* pointer to message */
   rp = proc_ptr;
 
   if (isuserp(rp) && function != BOTH) return(E_NO_PERM);
-
+  
   /* The parameters are ok. Do the call. */
   if (function & SEND) {
 	/* Function = SEND or BOTH. */
@@ -149,7 +148,7 @@ message *m_ptr;			/* pointer to message */
 }
 
 /*===========================================================================*
- *				mini_send				     *
+ *				mini_send				     * 
  *===========================================================================*/
 PRIVATE int mini_send(caller_ptr, dest, m_ptr)
 register struct proc *caller_ptr;	/* who is trying to send a message? */
@@ -180,7 +179,7 @@ message *m_ptr;			/* pointer to message buffer */
   vhi = (vb + MESS_SIZE - 1) >> CLICK_SHIFT;	/* vir click for top of msg */
   if (vlo < caller_ptr->p_map[D].mem_vir || vlo > vhi ||
       vhi >= caller_ptr->p_map[S].mem_vir + caller_ptr->p_map[S].mem_len)
-        return(EFAULT);
+        return(EFAULT); 
 #else
   /* Check for messages wrapping around top of memory or outside data seg. */
   vb = (vir_bytes) m_ptr;
@@ -233,7 +232,7 @@ message *m_ptr;			/* pointer to message buffer */
 }
 
 /*===========================================================================*
- *				mini_rec				     *
+ *				mini_rec				     * 
  *===========================================================================*/
 PRIVATE int mini_rec(caller_ptr, src, m_ptr)
 register struct proc *caller_ptr;	/* process trying to get message */
@@ -243,7 +242,7 @@ message *m_ptr;			/* pointer to message buffer */
 /* A process or task wants to get a message.  If one is already queued,
  * acquire it and deblock the sender.  If no message from the desired source
  * is available, block the caller.  No need to check parameters for validity.
- * Users calls are always sendrec(), and mini_send() has checked already.
+ * Users calls are always sendrec(), and mini_send() has checked already.  
  * Calls from the tasks, MM, and FS are trusted.
  */
 
@@ -293,12 +292,10 @@ message *m_ptr;			/* pointer to message buffer */
 }
 
 /*===========================================================================*
- *				pick_proc				     *
+ *				pick_proc				     * 
  *===========================================================================*/
 PRIVATE void pick_proc()
-
 {
-
 /* Decide who to run now.  A new process is selected by setting 'proc_ptr'.
  * When a fresh user (or idle) process is selected, record it in 'bill_ptr',
  * so the clock task can tell who to bill for system time.
@@ -326,13 +323,10 @@ PRIVATE void pick_proc()
 }
 
 /*===========================================================================*
- *				ready					     *
+ *				ready					     * 
  *===========================================================================*/
-
 PRIVATE void ready(rp)
-
 register struct proc *rp;	/* this process is now runnable */
-
 {
 /* Add 'rp' to the end of one of the queues of runnable processes. Three
  * queues are maintained:
@@ -341,264 +335,41 @@ register struct proc *rp;	/* this process is now runnable */
  *   USER_Q   - (lowest priority) for user processes
  */
 
-/*
- *Implementação de uma fila para cada sub fila de processos, e cada novo processo recebe uma prioridade
- *aleatória de 0 a 10, atravez de um metodo no arquivo "proc.h" la linha 45 "int q_priority = rand() %10".
-*/
-
-  //
-  if (istaskp(rp)){
-
-      //se a fila nao for vazia
-      if (rdy_head[TASK_Q] != NIL_PROC){
-
-       //armazeno a cabeça em uma nova estrutura
-        struct proc *i = rdy_head[TASK_Q];
-
-       //j aponta para o proximo da cabeça
-        struct proc *j = rdy_head[TASK_Q] -> p_nextready;
-
-
-        //1 CASO
-        /*
-        *Se caso o elemento novo for maior que a cabeça, o mesmo vai
-        *virar a nova cabeça, que aponta para o elemento menor
-        */
-        //estou comparando as prioridades
-        if (rp -> q_priority > rdy_head[TASK_Q] -> q_priority){
-
-          //seto a nova cabeça para rp(processo a ser inserido)
-          rdy_head[TASK_Q] = rp;
-
-          //rp aponta para o proximo
-          rp -> p_nexyready = i;
-        }
-
-
-        //2 CASO
-       /*
-       *verifica se o elemento que esta sendo analisado é maior do que
-       *o que esta sendo inserindo, caso seja maior vou inseri-lo na
-       *frente, e para quando chegar no final da lista (NULO)
-       */
-        while(j != NIL_PROC){
-
-            //se a prioridade do rp for maior doq a do J
-            if(rp -> q_priority > j -> q_priority){
-
-                // o n anterior vai apontar para o rp
-                i -> p_nextready = rp;
-
-                //o processo inserido aponta para o proximo
-                rp -> p_nextready = j;
-
-                //paro para caso nao continuar rodando deps que trocar;
-                break;
-            }
-            //anda na lista
-            i = i -> p_nextready; //i vai para o proximo
-            j = j -> p_nextready; // j vai para o proximo
-        }
-
-
-        //3 CASO
-        /*
-        Caso a prioridade do rp for a menor de todas, ele tem que ser
-        inserido no final da fila (tail)
-        */
-        if( j == NIL_PROC){
-            i -> p_nextready = rp;
-            rdy_tail[TASK_Q] = rp;
-            rp -> p_nextready = NIL_PROC;
-        }
-
-        free(i);
-        free(j);
-      }//fim do if de caso a fila nao for vazia
-
-
-    //CASO A FILA ESTIVER VAZIA
-    /*
-    Como ela esta vazia, terei que inserir o rp na cabeça
-    */
+  if (istaskp(rp)) {
+	if (rdy_head[TASK_Q] != NIL_PROC)
+		/* Add to tail of nonempty queue. */
+		rdy_tail[TASK_Q]->p_nextready = rp;
 	else {
-		rdy_head[TASK_Q] = rp;	// add to empty queue
-        rdy_tail[TASK_Q] = rp;
-        rp -> p_nextready = NIL_PROC;
-
+		proc_ptr =		/* run fresh task next */
+		rdy_head[TASK_Q] = rp;	/* add to empty queue */
 	}
-
-
-  //FILA DO TIPO SERVER
-  if (isservp(rp)){
-
-      //se a fila nao for vazia
-      if (rdy_head[SERVER_Q] != NIL_PROC){
-
-       //armazeno a cabeça em uma nova estrutura
-        struct proc *i = rdy_head[SERVER_Q];
-
-       //j aponta para o proximo da cabeça
-        struct proc *j = rdy_head[SERVER_Q] -> p_nextready;
-
-
-        //1 CASO
-        /*
-        *Se caso o elemento novo for maior que a cabeça, o mesmo vai
-        *virar a nova cabeça, que aponta para o elemento menor
-        */
-        if (rp -> q_priority > rdy_head[SERVER_Q] -> q_priority){
-
-          //seto a novca cabeça para rp(processo a ser inserido)
-          rdy_head[SERVER_Q] = rp;
-
-          //rp aponta para o proximo
-          rp -> p_nextready = i;
-        }
-
-
-        //2 CASO
-       /*
-       *verifica se o elemento que esta sendo analisado é maior do que
-       *o que esta sendo inserindo, caso seja maior vou inseri-lo na
-       *frente, e para quando chegar no final da lista (NULO)
-       */
-        while(j != NIL_PROC){
-
-            //se a prioridade do rp for maior doq a do J
-            if(rp -> q_priority > j -> q_priority){
-
-                // o n anterior vai apontar para o rp
-                i -> p_nextready = rp;
-
-                //o processo inserido aponta para o proximo
-                rp -> p_nextready = j;
-
-                //paro para caso nao continuar rodando deps que trocar;
-                break;
-            }
-            //anda na lista
-            i = i -> p_nextready; //i vai para o proximo
-            j = j -> p_nextready;
-        }
-
-        //3 CASO
-        /*
-        Caso a prioridade do rp for a menor de todas, ele tem que ser
-        inserido no final da fila (tail)
-        */
-        if( j == NIL_PROC){
-            i -> p_nextready = rp;
-            rdy_tail[SERVER_Q] = rp;
-            rp -> p_nextready = NIL_PROC;
-
-        }
-
-        free(i);
-        free(j);
-      }//fim do if de caso a fila nao for vazia
-
-
-    //CASO A FILA ESTIVER VAZIA
-    /*
-    Como ela esta vazia, terei que inserir o rp na cabeça
-    */
-	else {
-		rdy_head[SERVER_Q] = rp;	/* add to empty queue */
-        rdy_tail[SERVER_Q] = rp;
-        rp -> p_nextready = NIL_PROC;
-	}
-  }//fim  da fila do processo tipo server
-
-
-
-         //-----------FILA DO TIPO USUÁRIO--------------//
-  if (rdy_head[USER_Q] == NIL_PROC){
-
-      //se a fila nao for vazia
-      if (rdy_head[USER_Q] != NIL_PROC){
-
-       //armazeno a cabeça em uma nova estrutura
-        struct proc *i = rdy_head[USER_Q];
-
-       //j aponta para o proximo da cabeça
-        struct proc *j = rdy_head[USER_Q] -> p_nextready;
-
-
-        //1 CASO
-        /*
-        *Se caso o elemento novo for maior que a cabeça, o mesmo vai
-        *virar a nova cabeça, que aponta para o elemento menor
-        */
-        if (rp -> q_priority > rdy_head[USER_Q] -> q_priority){
-
-          //seto a novca cabeça para rp(processo a ser inserido)
-          rdy_head[USER_Q] = rp;
-
-          //rp aponta para o proximo
-          rp -> p_nextready = i;
-        }
-
-
-        //2 CASO
-       /*
-       *verifica se o elemento que esta sendo analisado é maior do que
-       *o que esta sendo inserindo, caso seja maior vou inseri-lo na
-       *frente, e para quando chegar no final da lista (NULO)
-       */
-        while(j != NIL_PROC){
-
-            //se a prioridade do rp for maior doq a do J
-            if(rp -> q_priority > j -> q_priority){
-
-                // o n anterior vai apontar para o rp
-                i -> p_nextready = rp;
-
-                //o processo inserido aponta para o proximo
-                rp -> p_nextready = j;
-
-                //paro para caso nao continuar rodando deps que trocar;
-                break;
-            }
-            //anda na lista
-            i = i -> p_nextready; //i vai para o proximo
-            j = j -> p_nextready;
-        }
-
-        //3 CASO
-        /*
-        Caso a prioridade do rp for a menor de todas, ele tem que ser
-        inserido no final da fila (tail)
-        */
-        if( j == NIL_PROC){
-            i -> p_nextready = rp;
-            rdy_tail[USER_Q] = rp;
-            rp -> p_nextready = NIL_PROC;
-
-        }
-
-        free(i);
-        free(j);
-      }//fim do if de caso a fila nao for vazia
-
-
-    //CASO A FILA ESTIVER VAZIA
-    /*
-    Como ela esta vazia, terei que inserir o rp na cabeça
-    */
-	else {
-		rdy_head[USER_Q] = rp;	/* add to empty queue */
-        rdy_tail[USER_Q] = rp;
-        rp -> p_nextready = NIL_PROC;
-	}
+	rdy_tail[TASK_Q] = rp;
+	rp->p_nextready = NIL_PROC;	/* new entry has no successor */
+	return;
   }
+  if (isservp(rp)) {		/* others are similar */
+	if (rdy_head[SERVER_Q] != NIL_PROC)
+		rdy_tail[SERVER_Q]->p_nextready = rp;
+	else
+		rdy_head[SERVER_Q] = rp;
+	rdy_tail[SERVER_Q] = rp;
+	rp->p_nextready = NIL_PROC;
+	return;
+  }
+  /* Add user process to the front of the queue.  (Is a bit fairer to I/O
+   * bound processes.)
+   */
+  if (rdy_head[USER_Q] == NIL_PROC)
+	rdy_tail[USER_Q] = rp;
+  rp->p_nextready = rdy_head[USER_Q];
+  rdy_head[USER_Q] = rp;
 }
+
 /*===========================================================================*
- *				unready					     *
+ *				unready					     * 
  *===========================================================================*/
 PRIVATE void unready(rp)
 register struct proc *rp;	/* this process is no longer runnable */
-
 {
 /* A process has blocked. */
 
@@ -653,7 +424,7 @@ register struct proc *rp;	/* this process is no longer runnable */
 }
 
 /*===========================================================================*
- *				sched					     *
+ *				sched					     * 
  *===========================================================================*/
 PRIVATE void sched()
 {
