@@ -1,0 +1,114 @@
+# Edison Aguiar Neto - 31812295
+# Luiz Tagliaferro - 31861806
+
+> M = matrix(data = 1:9, nrow = 3, ncol = 3)
+>
+> print(M)
+[,1] [,2] [,3]
+[1,] 1 4 7
+[2,] 2 5 8
+[3,] 3 6 9
+> M2 = matrix(data = 1:9, nrow = 3, ncol = 3, byrow = TRUE)
+>
+> print(M2)
+[,1] [,2] [,3]
+[1,] 1 2 3
+[2,] 4 5 6
+[3,] 7 8 9
+>
+> V3 = c(12, 23, 34, 45, 56, 67)
+>
+> M3 = matrix(data = V3, nrow = 3)
+>
+> print(M3)
+[,1] [,2]
+[1,] 12 45
+[2,] 23 56
+[3,] 34 67
+>
+> M4 = matrix(data = 0, nrow = 3, ncol = 5)
+>
+> print(M4)
+[,1] [,2] [,3] [,4] [,5]
+[1,] 0 0 0 0 0
+[2,] 0 0 0 0 0
+[3,] 0 0 0 0 0
+>
+> M5 = matrix(nrow = 4, ncol = 5)
+>
+> print(M5)
+[,1] [,2] [,3] [,4] [,5]
+[1,] NA NA NA NA NA
+[2,] NA NA NA NA NA
+[3,] NA NA NA NA NA
+[4,] NA NA NA NA NA
+>
+> M6 = matrix(c(2, 3, 5, 6), nrow = 2)
+>
+> M7 = matrix(c(5, 3, 8, 2), nrow = 2)
+>
+> M8 = matrix(c(2, 4, 6, 2, 0,1), nrow = 2, ncol = 3)
+>
+> M9 = matrix(c(1, 0.5, 0.3, 0.5, 1, 0.9, 0.3, 0.9, 1), nrow = 3, ncol = 3)
+>
+> M_soma = M7 + M6
+>
+> print(M_soma)
+[,1] [,2]
+[1,] 7 13
+[2,] 6 8
+>
+> M_subt = M7 - M6
+>
+> print(M_subt)
+[,1] [,2]
+[1,] 3 3
+[2,] 0 -4
+>
+> M_prod_escalar = 42 * M9
+>
+> print(M_prod_escalar)
+[,1] [,2] [,3]
+[1,] 42.0 21.0 12.6
+[2,] 21.0 42.0 37.8
+[3,] 12.6 37.8 42.0
+>
+> M_prod_elemento = M6 * M7
+>
+> print(M_prod_elemento)
+[,1] [,2]
+[1,] 10 40
+[2,] 9 12
+>
+> M_prod = M6 %*% M8
+> print(M_prod)
+[,1] [,2] [,3]
+[1,] 24 22 5
+[2,] 30 30 6
+>
+> M_transp = t(M8)
+>
+> print(M_transp)
+[,1] [,2]
+[1,] 2 4
+[2,] 6 2
+[3,] 0 1
+>
+> det(M7)
+[1] -14
+>
+> M_inversa = solve(M6)
+>
+>
+> print(M_inversa)
+[,1] [,2]
+[1,] -2 1.6666667
+[2,] 1 -0.6666667
+>
+> solve(M6)%*%M6
+[,1] [,2]
+[1,] 1 0
+[2,] 0 1
+>
+> sum(diag(M6))
+[1] 8
