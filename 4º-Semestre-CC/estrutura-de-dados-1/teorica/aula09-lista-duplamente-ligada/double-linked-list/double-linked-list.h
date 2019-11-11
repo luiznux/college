@@ -14,6 +14,7 @@ public:
     Double_linked_list();
     ~Double_linked_list();
     bool IsEmpty();
+    bool Insert(float value);
     bool Insert_start(float value);
     bool Insert_end(float value);
     bool Remove_first();

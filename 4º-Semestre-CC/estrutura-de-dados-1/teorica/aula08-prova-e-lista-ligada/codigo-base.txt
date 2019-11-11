@@ -1,0 +1,174 @@
+#include <iostream.h>
+#include <stdlib.h>
+
+struct Node {
+// data members
+int info;
+Node *proximo;
+// constructors
+Node(int el, Node *ptr = NULL){ info = el; proximo =ptr;};
+};
+
+class ListaSimples{
+  public:
+	ListaSimples(){
+		primeiro=0;
+	}
+	~ListaSimples();
+	int isEmpty(){
+		return primeiro==0;
+	}
+    bool insere(int);//insere ordenado
+    bool inserepos(int,int);//insere em determinada posicao
+	bool remove(int); //remove o elemento passado por par�metro
+	bool estanaLista(int); //verifica se um determinado elemento (passado por par�metro) est� na lsita
+    float media();//retorna a m�dia dos elementos da lista
+	void printLista();//imprime os elementos da lista
+  private:
+	Node *primeiro;
+};
+
+ListaSimples::~ListaSimples(){
+ Node *p;
+ while(!isEmpty()){
+   p = primeiro;
+   primeiro = primeiro->proximo;
+   delete p;
+ }
+}
+
+bool ListaSimples::inserepos(int el,int pos){
+  Node *novoNo, *anterior, *atual;
+  novoNo = new Node(el);
+  if(novoNo == NULL) return false;
+  anterior = NULL;
+  atual = primeiro;
+  int p = 0;
+  while(atual!=NULL && pos>p){
+     anterior = atual;
+     atual = atual->proximo;
+     p++;
+  }
+  if(anterior == NULL){
+    novoNo->proximo = primeiro;
+    primeiro = novoNo;
+  }
+  else {
+    anterior->proximo=novoNo;
+    novoNo->proximo = atual;
+  }
+  return true;
+}
+
+
+float ListaSimples::media()
+{
+  int soma=0, cont = 0;
+  float m;
+  Node *aux=primeiro;
+  while(aux!=NULL){
+    cont++;
+    soma+=aux->info;
+  }
+  if(cont>0){
+    m = soma/(float)cont;
+    return m;
+  }
+  else
+    return 0;
+}
+bool ListaSimples::insere(int el){
+  Node *novoNo, *anterior, *atual;
+  novoNo = new Node(el);
+  if(novoNo == NULL) return false;
+  anterior = NULL;
+  atual = primeiro;
+  while(atual!=NULL && el>atual->info){
+     anterior = atual;
+     atual = atual->proximo;
+  }
+  if(anterior == NULL){
+    novoNo->proximo = primeiro;
+    primeiro = novoNo;
+  }
+  else{
+    anterior->proximo=novoNo;
+    novoNo->proximo = atual;
+  }
+  return true;
+}
+
+bool ListaSimples::remove(int el){
+  if(isEmpty()) return false;
+  Node *anterior=NULL, *atual=primeiro;
+  while(atual!=NULL && atual->info!=el){
+    anterior = atual;
+    atual = atual->proximo;
+  }
+  if(anterior == NULL){//remove o primeiro
+        primeiro = primeiro->proximo;
+		delete atual;
+  }
+  else if(atual==NULL) return false;//elemento n�o encontrado
+  else{
+     anterior->proximo = atual->proximo;
+     delete atual;
+  }
+  return true;
+}
+
+bool ListaSimples::estanaLista(int el){
+ Node *tmp=primeiro;
+ while(tmp!=NULL && tmp->info!=el){
+  tmp = tmp->proximo;
+ }
+ return tmp!=NULL;
+}
+
+void ListaSimples::printLista()
+{
+  Node *tmp;
+  for(tmp=primeiro;tmp!=0;tmp=tmp->proximo)
+	cout<<tmp->info<<" ";
+  cout<<"\n";
+  delete tmp;
+}
+
+
+void main()
+{
+
+    ListaSimples L;
+    int opcao=0,numero,pos;
+    do{
+      cout<<"\n1 - Insere \n2 - Remove\n3 - insere pos\n4 - consultar\n0 - Sair";
+      cin>>opcao;
+      switch(opcao)
+      {
+       case 1: cout<<"Digite o numero que deseja inserir";cin>>numero;
+	       L.insere(numero);
+	       L.printLista();
+	       break;
+       case 2: cout<<"Digite o numero que deseja remover";cin>>numero;
+	       L.remove(numero);
+	       L.printLista();
+	       break;
+       case 3: cout<<"Digite o numero que deseja inserir";cin>>numero;
+              cout<<"Digite a posicao do numero que deseja inserir";cin>>pos;
+            L.inserepos(numero,pos);
+            L.printLista();
+            break;
+       case 4: cout<<"\nDigite o numero que deseja consultar";cin>>numero;
+               if(L.estanaLista(numero)==true) cout<<"encontrado\n";
+               else cout<<"n�o encontrado\n";
+               break;
+       case 0: cout<<"saindo...";
+      }
+    }while(opcao!=0);
+    system("PAUSE");
+    return 0;
+
+}
+
+
+

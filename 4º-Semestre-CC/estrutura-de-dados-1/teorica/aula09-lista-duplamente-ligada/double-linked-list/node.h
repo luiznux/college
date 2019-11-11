@@ -15,8 +15,6 @@ struct Node{
 
     Node(int value, Node *p, Node *n){
 
-        p = NULL, n = NULL;
-
         item = value; next = n, preview = p;
     }
 };
