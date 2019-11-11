@@ -1,0 +1,11 @@
+(µ)taxa de atendimento -> 7 p/ h
+
+(λ)taxa de chegada -> 5p/h
+
+
+Tempo Médio na Fila => λ /  µ( µ - λ)  <->  5 / 7(7-5)  <-> 0,357142 x 60(1h) <-> 
+
+-> 21,4 minutos
+
+
+Taxa de ocupação (ρ) -> λ / µ  <-> 

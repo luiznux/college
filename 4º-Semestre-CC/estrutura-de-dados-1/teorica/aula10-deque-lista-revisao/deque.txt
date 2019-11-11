@@ -1,0 +1,14 @@
+Deque:
+
+-> È uma generalização de uma fila em que a inserção, remoção e a con-
+sulta ocorrem pelas duas extremidades.
+Assim, as principais operações sao:
+
+Insere inicio
+Insere final
+Remove inicio 
+Remove final 
+Consulta Inicio 
+Consuta final 
+
+
