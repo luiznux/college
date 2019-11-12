@@ -1,6 +1,7 @@
 # include <stdio.h>
 
 // contadores para as duas funçoes, a ruim e a boa(dinamica)
+// para ver a diferença de uso de funções 
 long long int  contador_ruim = 0;
 
 long long int contador_bom = 0;
@@ -23,6 +24,8 @@ long long int fibo(int n){
 
 
 //fib dinamico que usa um vetor para armazenar resultados previos , afim de ganhar mais tempo
+//recebo um n que é ate onde calculculo a função fibonacci
+//e um vetor para armazenar os resutlados
 long long int fib_dinamico( int n, long long int *vetor){
 
     contador_bom++;
@@ -42,17 +45,16 @@ long long int fib_dinamico( int n, long long int *vetor){
     //3 caso que nao tenho pre calculado o fibonacci, tenho que fazer a conta
     //porem ja possuo os valores anteriores guardados, evitando o recalculo
     //ai que esta a programação dinamica 
+    //vou verificar se  n-1 ja foi calculado(igual a  -1)
     else if (vetor[n-1] == -1){
+
         vetor[n]  = fib_dinamico(n-1, vetor) + fib_dinamico(n-2, vetor);
-
     }
-
     return vetor[n];
-
 }
 
 
-// preenche um vetor de -1 de acordo com usa entrada
+// preenche um vetor de -1 
 void preenche_saporra(long long int *vetor, int tamanho){
     
     for(int i =0; i < tamanho; i++){
@@ -73,11 +75,16 @@ int main(){
 
     long long int  vetor_coisa[coisa];
 
-    preenche_saporra(vetor_coisa, coisa);
+    preenche_saporra(vetor_coisa, coisa); //preenche o vetor com -1
+
     printf("\n Fibo resulta em: %lld \n", fibo(coisa));
+
     printf("\n Contador ruim: %lld \n", contador_ruim);
+
     printf("\n Fibo rapidao : %lld \n",fib_dinamico(coisa, vetor_coisa));
+
     printf("\n Contador bom: %lld \n", contador_bom);
+
     fib_dinamico(coisa, vetor_coisa);
 
     return 0;

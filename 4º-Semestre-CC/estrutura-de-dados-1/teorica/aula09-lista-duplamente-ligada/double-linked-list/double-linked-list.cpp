@@ -1,6 +1,5 @@
 #include "double-linked-list.h"
 
-
 Double_linked_list::Double_linked_list(){
 
     head = tail = NULL;
@@ -64,6 +63,7 @@ bool Double_linked_list::Remove_first(){
     Node *aux = head->next;
     delete head;
     head = aux;
+    aux->preview = NULL;
     return true;
 }
 
@@ -72,6 +72,7 @@ bool Double_linked_list::Remove_last(){
     Node *aux = tail->preview;
     delete tail;
     tail = aux;
+    tail->next = NULL;
     return  true;
 
 }
@@ -97,7 +98,7 @@ bool Double_linked_list::Is_in_List(float value){
 
 void Double_linked_list::print_List(){
 
-    for(Node *aux = head; aux->next != NULL; aux = aux->next){
+    for(Node *aux = head; aux != NULL; aux = aux->next){
         std::cout << aux->item << " "<< std::endl;
     }
 }

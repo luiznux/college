@@ -13,7 +13,5 @@ int main(){
 
     teste.Remove_first();
 
-    teste.print_List();
-
     return 0;
 }
