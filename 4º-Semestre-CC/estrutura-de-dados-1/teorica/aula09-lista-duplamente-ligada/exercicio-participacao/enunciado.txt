@@ -1,0 +1,5 @@
+Atividade_nota_participação
+
+1. Faça um programa em C++ que manipule uma lista duplamente encadeada de forma que percorra ao mesmo tempo do início para o final e do final para o início e encontre o valor do meio da lista. Se existirem dois elementos no "meio" da lista, apresente a média.
+
+2. Faça um programa em C++ que coloque os elementos de uma lista duplamente encadeada com conteúdo de inteiros em ordem crescente. Utilize o método de ordenação por inserção.

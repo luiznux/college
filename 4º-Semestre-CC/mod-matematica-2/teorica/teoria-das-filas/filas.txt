@@ -1,0 +1,21 @@
+Nesta seção será apresentada uma nova técnica que é a Teoria de Filas.
+
+Esta área, como o próprio nome já diz, estuda sistemas em que as filas se mostram relevantes do ponto de vista de desempenho do sistema.
+
+Há inúmeras aplicações para a Teoria de Filas nas mais diferentes áreas de atividades, conforme poderá ser visto pelos exemplos e exercícios que serão desenvolvidos.
+
+Dentre essas áreas de aplicação, pode-se destacar:
+
+. Logística - Filas em armazéns, portos, etc
+
+. Transportes - Filas em pedágios, terminais de transporte, congestionamentos urbanos, etc
+
+. Indústria - Filas em linhas de produção
+
+. Administração - Filas de documentos em processos administrativos
+
+. Computação - Filas em redes, acesso a bancos de dados, etc.
+
+. Telecomunicações - Filas em ligações telefônicas
+
+. etc.

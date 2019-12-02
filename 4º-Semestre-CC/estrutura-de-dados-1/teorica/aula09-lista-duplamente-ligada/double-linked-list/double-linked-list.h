@@ -23,5 +23,8 @@ public:
     bool Is_in_List(float value);
     void print_List();
     void inverse_print_List();
+    float middle_value();
+    void insertionSort(float *arr, int n);
+    void sort_list();
 };
 #endif
