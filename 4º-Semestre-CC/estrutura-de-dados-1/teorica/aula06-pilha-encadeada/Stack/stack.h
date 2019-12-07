@@ -3,7 +3,8 @@
 #include "node.h"
 #include <iostream>
 
-class Stack{
+class Stack
+{
 
 private:
 

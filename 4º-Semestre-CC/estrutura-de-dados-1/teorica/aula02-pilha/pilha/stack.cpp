@@ -155,7 +155,7 @@ void Stack::inverte_outra_pilha(Stack &S){
     }
 }
 
-/* uso uma pliha aux para para passar da A para aux, e deps da aux para a
+/* uso uma pliha aux  para passar da A para aux, e deps da aux para a
    A e A'
 */
 void Stack::copia(Stack &S){
