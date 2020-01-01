@@ -185,3 +185,9 @@ void Double_linked_list::sort_list(){
         aux->item = vector[i];
     }
 }
+
+
+
+
+
+
