@@ -1,0 +1,54 @@
+Engenharia de Software -  Cap. 1 
+Introdução
+    • Muitos setores da sociedade e do mercado são informatizados.
+
+    • Softwares são abstratos, não possuem limitações físicas ou de materiais, e por isso podem se tornar extremamente complexos de maneira muito rápida.
+
+    • Todas aplicações necessitam da engenharia de software, desde as mais simples até as mais complexas, cada uma deve ter uma abordagem diferente para melhores resultados.
+
+    • Ocorrem muitas falhas de software, e por isso a engenharia de software é criticada por não atender mais a grande demanda de desenvolvimento moderno de software, porém muitas dessas falhas estão associadas a dois fatores:
+
+    1. Aumento da demanda, os sistemas têm que ser construídos e desenvolvidos mais rapidamente, além de se exigir sistemas mais complexos.
+    2. Expectativas baixas, muitas empresas foram forçadas a desenvolver seus softwares a medida que seus serviços e produtos evoluíram, portanto não foram utilizados métodos da engenharia de software e consequentemente seus softwares ficaram mais caros para manutenção e menos confiáveis.
+
+    • Tipos de produto de software:
+
+    1. Produtos genéricos, sistemas stand-alone que são vendidos no mercado para qualquer cliente interessado, como exemplo pacotes gráficos, ferramentas de banco de dados, etc.
+    2. Produtos sob encomenda, sistemas encomendados por um cliente em particular, como por exemplo um sistema para apoiar um processo específico da empresa.
+
+
+    • Perguntas e respostas:
+    • O que é software?
+É um programa de computador e sua documentação associada.
+
+    • Quais são os atributos de um bom software?
+Prover as funcionalidades e desempenho requeridos pelo cliente.
+
+    • O que é engenharia de software?
+É uma disciplina que se preocupa com todos os aspectos de produção de software
+
+    • Principais atividades da engenharia de software (Importante)?
+Especificação do software, desenvolvimento do software, validação do software e evolução do software conforme a demanda do mercado e do cliente.
+
+    • Ciências da Computação X Engenharia de Software
+Ciências da computação se importa com a teoria e os fundamentos, já a engenharia de software se preocupa com o lado prático do desenvolvimento.
+
+    • Engenharia de Sistemas X Engenharia de Software
+Engenharia de sistemas se importa com o software, hardware, software e processo, já a engenharia de software foca apenas em uma parte (software).
+
+    • Principais desafios da Engenharia de Software (Importante)?
+    1. Heterogeneidade, que seria desenvolver para sistemas distribuídos.
+    2. Mudança de negócio e social, que seria acompanhar as demandas do mercado e da sociedade de forma rápida.
+    3. Segurança, que seria impedir que usuários maliciosos ataquem o software.
+
+    • Quais diferenças foram feitas pela Internet na Engenharia de Software?
+A internet possibilitou o desenvolvimento de sistemas altamente distribuídos, já que sistemas baseados em Web geraram avanços em linguagens de programação e reuso de software.
+
+    • Atributos esperados de um software:
+    1. Manutenibilidade, o software deve ser escrito de forma que possa se evoluir de acordo com a necessidade do cliente.
+    2. Confiança, o software não deve causar prejuízos físicos ou econômicos em caso de falha de sistema, além de que usuários maliciosos não devem ser capazes de prejudicar o sistema.
+    3. Eficiência, o software não deve desperdiçar recursos do sistema, como por exemplo memória.
+    4. Eficacia,  o software deve cumprir seus objetivos e metas estabelecidas.
+    5. Aceitabilidade, o software deve ser aceitável para o tipo de usuário que foi projetado.
+
+
