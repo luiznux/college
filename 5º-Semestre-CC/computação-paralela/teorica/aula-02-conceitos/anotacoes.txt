@@ -1,0 +1,27 @@
+17/02/2020
+
+*O que é computação paralela?
+-> é a computação que utiliza varios elementeso de processamente simultaneamente de modo cooperativo para resolver um problema computacional
+
+** razao do paralelismo -> DESEMPENHO 
+
+*Processamento paralelo
+-> Obviamente que é necesario possuir os hardwares necessarios para executar o programa, caso contrario mesmo que seu codigo 
+esteja escrito paralelamente, ele sera executado em somente um core 
+O hardware é completamente necesario para que o paralelismo funcione 
+
+* Concorrencia 
+->Para executar uma atividade paralela, nao podera haver dependencia pois estarao ocorrendo ao memso tempo
+
+* Dependencia 
+1-> se uma tarefa requer resultados produzidos por outra tarefa, ha uma dependencia
+2_> se duas tarefas sao dependentes elas nao sao concorrentes 
+
+
+Concorrencia vs paralelismo
+
+* Paralelismo = concorrencia + hardware paralelo
+- ambos sao necessarios
+
+
+
