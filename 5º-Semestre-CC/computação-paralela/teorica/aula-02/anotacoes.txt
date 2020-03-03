@@ -1,0 +1,53 @@
+02/03/2020
+
+Ao em vez de aumentar a frequencia(fasendo com que os limites fisicos sejam atindigidos), vamos aumentar o numeros de cores, e aumentar pouco a frequencia
+
+Taxonomia de Flynn
+
+SISD -> maquina serial! uma unica instrução por vez.
+
+SIMD -> uma unica instrução(simultaneas) opera multiplos dados(vetor de registradores).
+
+MISD -> ..
+
+MIMD -> multiplas instruçôes muiltiplos dados(mais commum no paralelismo)
+
+
+-------------------------------
+Tipos de arquiteturas paralelas
+-------------------------------
+
+-> instrução
+
+-> procesadores vetoriais
+
+-> SMP multiplos procesadores acesam a memoria
+
+-> Multicomputador(conectados por rede)
+
+-> MPP procesadores massivamente paralelos
+
+
+
+--------------------------
+Expectativas de Desempenho
+--------------------------
+
+MKFLOPS ->
+
+Problema -> se leva 100 segundos em um procesador , DEVERIA LEVAR 10 SEGUNDOS em 10 procesadores....
+
+Deveria, mas na pratica isso nao acontece pois uma serie de fatores podem mudar esse tempo
+
+
+Escalabilidade
+
+-> um problema pode escalonar para utilizar muitos processadores
+
+
+
+->Pensar no algoritmo de maneira paralela, como assim?
+
+*evitar o sincronismo, por exemplo : dois programas precisam acesar a mesma regiao de memoria, fazendo com que haja uma dependencia.
+*Nesse caso é impossivel paralelizar pelo fato de que apenas um processo acessa a are por vez.
+*Pensar em evitar ao mximo no algoritmo situações do tipo descrito, afim de manter a paralelização.
