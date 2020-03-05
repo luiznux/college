@@ -1,0 +1,6 @@
+Processos
+
+->memoria compartilhada
+->troca de mensagens
+
+Caso o PID do filho seja 0 zero, signfica que é o filho, caso contrario é o pai 

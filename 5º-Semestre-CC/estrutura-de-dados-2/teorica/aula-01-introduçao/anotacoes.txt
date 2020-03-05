@@ -1,0 +1,9 @@
+TAD -> tipo abstrato de dados
+
+-Arvores! ->Conceito recursivo
+
+- o maior niver corresponde ao nivel da arvore
+- nos sem filhos, conhecidos como folhas
+- grau de um nó -> maximo de filhos q um no da arvore possui
+
+Arvore binaria -> possui grau 2 , cada um do no da arvore possui no maximo 2 filhos

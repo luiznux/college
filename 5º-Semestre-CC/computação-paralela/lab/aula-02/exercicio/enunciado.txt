@@ -1,0 +1,3 @@
+Partindo do código do exemplo dado na aula de 03/03/2020, implemente o esquema de memória compartilhada, utilizando a instrução shmget(), para que a instrução cout do processo pai apresente as alterações realizadas pelo processo filho nas variáveis x e y.
+
+Obs.: a sintaxe da instrução shmget() não foi explicada em aula, portanto você deve pesquisar e estudar o seu funcionamento para poder resolver o exercício (na aba "Processos" você encontra teoria e exemplos).

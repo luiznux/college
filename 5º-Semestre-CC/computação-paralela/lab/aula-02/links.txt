@@ -1,0 +1,9 @@
+https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/3_Processes.html
+
+https://en.wikipedia.org/wiki/Process_control_block
+
+http://www.csl.mtu.edu/cs4411.ck/www/NOTES/process/process.html
+
+http://users.cs.cf.ac.uk/Dave.Marshall/C/node27.html
+
+http://www.csl.mtu.edu/cs4411.ck/www/NOTES/process/shm/example-1.html
