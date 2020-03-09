@@ -17,7 +17,7 @@ public:
     node *get_root();
     void print_in_order(node *node);
     void print_in_pre_order(node *node);
-    void print_normal_order(node *node);
+    void print_pos_order(node *node);
 
 };
 #endif

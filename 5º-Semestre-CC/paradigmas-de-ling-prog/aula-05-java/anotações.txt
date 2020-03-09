@@ -1,0 +1,5 @@
+A linguagem orientada a objetos possui a abstração de tipos ou tipo abstratos de dados(TAD)
+
+->O encapsulamento permite que todas as constantes logicas relacionadas sejam agrupadas em uma entidade(classe)
+
+

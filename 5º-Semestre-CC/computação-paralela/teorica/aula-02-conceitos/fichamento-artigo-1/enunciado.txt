@@ -1,0 +1,5 @@
+1. Dentre os tipos de memória abordados no artigo, ele fala que quando páginas de memória são colocadas em swap o uso de memória virtual pode ser significantemente mais lento. Explique porque uma página de memória pode ser removida e colocada em disco?
+
+2. Um dos pontos de destaque do artigo é a reutilização de dados. Explique a estratégia apresentada para melhorar o desempenho da multiplicação de duas matrizes. Explique também porque ela funciona.
+
+3. Um dos conceitos explorados no artigo é o da hierarquia de memória. Neste conceito, a posição da memória em relação ao processador indica também seu desempenho em termos de transferência de dados. Em contraste com o desempenho maior da memória próxima ao processador está a sua capacidade, ou seja, ela tem menor capacidade. Por conta desta limitação de capacidade, o programador deve ser esforçar para utilizar e reutilizar ao máximo o dado que está nas memórias mais próximas ao processador. Explique estes conceitos, e indique o que o programador deve fazer para conseguir isso.

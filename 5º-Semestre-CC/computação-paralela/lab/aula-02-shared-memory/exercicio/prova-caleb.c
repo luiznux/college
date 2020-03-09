@@ -33,13 +33,13 @@ int   main(int  argc, char *argv[])
     //criei um processo pai, gerou regiao de memoria
 
     //ALOQUEI UMA REGIAO DE MEMORIA COMPARTILHADA PARA O PROCESSO PAI
-    ShmID = shmget(IPC_PRIVATE, 4*sizeof(int), IPC_CREAT | 0666);
+    ShmID = shmget(IPC_PRIVATE, 1*sizeof(int), IPC_CREAT | 0666);
 
     if (ShmID < 0){ //os if serve para verificar se deu certo a alocação
         printf("*** shmget error (server) ***\n");
         exit(1);
     }
-    printf("Server has received a shared memory of four integers...\n");
+    printf("Server has received a shared memory of one integer...\n");
 
     // salvo nessa variavl o ponteiro para a regiao de mememoria compartilhada
     ShmPTR = (int *) shmat(ShmID, NULL, 0);
@@ -59,13 +59,15 @@ int   main(int  argc, char *argv[])
     if (pid < 0) { //verifico se o fork funcionou
         printf("*** fork error (server) ***\n");
         exit(1);
+
     }else if (pid == 0) { //se funcionou vou chamar a função de filho e fazer as alterações
         ClientProcess(ShmPTR);
         exit(0);
     }
 
-    //agora vou mostrrar os valores do pai alterado
+    //agora vou mostrar os valores do pai alterado
     wait(&status);
+    printf("Valor do pai após o fork %d \n",ShmPTR[0]);
     printf("O valor do pai foi alterado %d \n",ShmPTR[0] = ShmPTR[0] +1);
     printf("Server has detected the completion of its child...\n");
     shmdt((void *) ShmPTR);
