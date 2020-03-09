@@ -1,0 +1,7 @@
+1. Quais são os princípios básicos de paralelismo que o artigo apresenta na sua Introdução?
+
+2. Quando se aborda a paralelização de um código, que tipo de consideração deve ser feita com relação aos dados que o programa manipula?
+
+3. Os dados que uma thread manipula são privativos, isto é, não compartilhados. Mas a linha de cache onde estes dados estão é compartilhada. Ou seja, os dados não são explicitamente compartilhados, mas a linha de cache é. Como é o nome deste fenômeno e o que ele pode provocar?
+
+4. Um outro fator importante no desempenho e otimização, no que diz respeito ao uso da memória é o alinhamento dos dados. Explique sucintamente o que é e como conseguir?

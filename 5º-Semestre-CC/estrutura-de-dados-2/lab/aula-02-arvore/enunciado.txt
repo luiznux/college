@@ -1,0 +1,19 @@
+Com base no código fornecido na aula teórica, implemente um programa para manipulação interativa de uma árvore binária. O menu do usuário deve ter as seguintes opções:
+
+0 - sair do programa
+
+1 - inserir um elemento
+
+2 - imprimir a árvore em ordem
+
+3 - imprimir a árvore em pré-ordem
+
+4 - imprimir a árvore em pós-ordem
+
+5 - contar os elementos (sem impressao)
+
+6 - localizar um elemento pelo seu valor
+
+7 - achar o menor elemento (menor valor)
+
+8 - achar o maior elemento (maior valor)

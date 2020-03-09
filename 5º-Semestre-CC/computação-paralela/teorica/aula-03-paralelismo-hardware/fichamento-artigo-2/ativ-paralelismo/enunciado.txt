@@ -1,0 +1,11 @@
+Paralelismo em Hardware
+
+Considere as possibilidades de se conseguir paralelismo em hardware (Paralelismo em nível de instrução - ILP, Paralelismo de dados, Paralelismo de processador, Paralelismo no sistema de memória, Paralelismo na comunicação), conforme slide 6 de Aula - 2 - Arquiteturas Paralelas.
+
+Para cada uma destas abordagens, responda:
+
+1. Quais as alternativas de paralelismo?
+
+2. Exemplos e explicações sobre estas alternativas.
+
+3. Implicações (consequências, resultados, etc).
