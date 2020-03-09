@@ -3,7 +3,7 @@
 /*
   Construdor da classe arvore, cria uma arvore com raiz nula
  */
-tree::tree(){
+Tree::Tree(){
     root = NULL;
 }
 
@@ -11,11 +11,11 @@ tree::tree(){
 /*
   metodo para inserir um valor na arvore, utilizado quando sua raiz é  vazia
  */
-void tree::insert(int value){
+void Tree::insert(int value){
 
     //verifica se a raiz esta vazia
     if(root == NULL)
-        root = new node(value); //crio uma raiz vazia
+        root = new Node(value); //crio uma raiz vazia
 
     else
         insert(root, value); //chamada recursiva da função abaixoo
@@ -24,7 +24,7 @@ void tree::insert(int value){
 
 /*
  */
-void tree::insert(node *node, int value){
+void Tree::insert(Node *node, int value){
 
     //se o valor a ser inserido vor menor que  o valor presente no nó atual
     if(value < node->get_data()){
@@ -32,7 +32,7 @@ void tree::insert(node *node, int value){
         //verifica se o nó da esquerda é nulo
         if(node->get_left() == NULL){
 
-            class node *new_node = new class node(value);
+            Node *new_node = new Node(value);
             node->set_left(new_node); //seto um novo nó para a esquerda
 
         } else {
@@ -48,7 +48,7 @@ void tree::insert(node *node, int value){
         //verifica se o nó da direta é nulo
         if(node->get_right() == NULL){
 
-            class node *new_node = new class node(value);
+            Node *new_node = new Node(value);
             node->set_right(new_node); //seto o novo nó na direita
 
         } else {
@@ -64,12 +64,12 @@ void tree::insert(node *node, int value){
 /*
   Metodo para consultar a raiz da arvore
  */
-node* tree::get_root(){
+Node* Tree::get_root(){
 
     return root;
 }
 
-void tree::print_in_order(node *node){
+void Tree::print_in_order(Node *node){
 
     if(node != NULL){
         print_in_order(node->get_left());
@@ -79,7 +79,7 @@ void tree::print_in_order(node *node){
 }
 
 
-void tree::print_in_pre_order(node *node){
+void Tree::print_in_pre_order(Node *node){
 
     if(node != NULL){
         std::cout << node->get_data() << " ";
@@ -88,7 +88,7 @@ void tree::print_in_pre_order(node *node){
     }
 }
 
-void tree::print_pos_order(node *node){
+void Tree::print_pos_order(Node *node){
 
     if(node != NULL){
         std::cout << node->get_data() << " ";

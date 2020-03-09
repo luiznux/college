@@ -2,22 +2,22 @@
 #define TREE_H
 #include "node.h"
 
-class tree
+class Tree
 {
 
 private:
 
-    node *root;
+    Node *root;
 
 public:
 
-    tree();
+    Tree();
     void insert(int value);
-    void insert(node *node, int value);
-    node *get_root();
-    void print_in_order(node *node);
-    void print_in_pre_order(node *node);
-    void print_pos_order(node *node);
+    void insert(Node *node, int value);
+    Node *get_root();
+    void print_in_order(Node *node);
+    void print_in_pre_order(Node *node);
+    void print_pos_order(Node *node);
 
 };
 #endif

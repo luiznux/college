@@ -2,21 +2,21 @@
 #define NODE_H
 #include <iostream>
 
-class node
+class Node
 {
 
 private:
-    node *left, *right;
+    Node *left, *right;
     int data;
 
 public:
 
-    node(int data);
+    Node(int data);
     int get_data();
-    node *get_left();
-    node *get_right();
-    void set_left(node *node);
-    void set_right(node *node);
+    Node *get_left();
+    Node *get_right();
+    void set_left(Node *node);
+    void set_right(Node *node);
 
 };
 #endif
