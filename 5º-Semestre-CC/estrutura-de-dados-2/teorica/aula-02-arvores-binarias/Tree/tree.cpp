@@ -7,6 +7,56 @@ Tree::Tree(){
     root = NULL;
 }
 
+/*
+  Metodo para consultar a raiz da arvore
+ */
+Node* Tree::get_root(){
+    return root;
+}
+
+/*
+  metodo para consutar se a raiz é nula, retornando um booleano
+ */
+bool Tree::is_null(Tree tree){
+
+    if(root == NULL) return true;
+    return false;
+}
+
+/*
+  Metodo para contar quantos elementos a arvore possui, retornando um inteiro
+  como resultado
+ */
+int Tree::counter(Tree tree){
+
+    //verifica se é nula
+    if(is_null(tree)== true) return 0;
+
+    int number;
+
+    return number;
+}
+
+/*
+ */
+int  Tree::min_value(Tree tree){
+
+}
+
+/*
+ */
+int  Tree::max_value(Tree tree){
+
+}
+
+/*
+  Metodo para verificar se o valor dado como parametro esta ou nao na arvore
+  retornando um booleano
+ */
+bool Tree::locate_value(int value){
+
+    return false;
+}
 
 /*
   metodo para inserir um valor na arvore, utilizado quando sua raiz é  vazia
@@ -21,8 +71,9 @@ void Tree::insert(int value){
         insert(root, value); //chamada recursiva da função abaixoo
 }
 
-
 /*
+  Metodo para inserir em uma arvore binária caso a mesma não se encontre vazia
+  Utiliza-se o metodo de inserção de uma arvore binaria
  */
 void Tree::insert(Node *node, int value){
 
@@ -60,14 +111,6 @@ void Tree::insert(Node *node, int value){
     //se for igaul, nao sera possivel inserir, pois nao pode existir 2 values =
 }
 
-
-/*
-  Metodo para consultar a raiz da arvore
- */
-Node* Tree::get_root(){
-
-    return root;
-}
 
 void Tree::print_in_order(Node *node){
 
