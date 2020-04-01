@@ -1,10 +1,10 @@
 #include "tree.h"
 
 /*
-  Construdor da classe arvore, cria uma arvore com raiz nula
+ Construdor da classe arvore, cria uma arvore com raiz nula
  */
 Tree::Tree(){
-    root = NULL;
+     root = NULL;
 }
 
 /*
@@ -17,7 +17,7 @@ Node* Tree::get_root(){
 /*
   metodo para consutar se a raiz é nula, retornando um booleano
  */
-bool Tree::is_null(Tree tree){
+bool Tree::is_null(Node tree){
 
     if(root == NULL) return true;
     return false;
@@ -27,13 +27,16 @@ bool Tree::is_null(Tree tree){
   Metodo para contar quantos elementos a arvore possui, retornando um inteiro
   como resultado
  */
-int Tree::counter(Tree tree){
+int Tree::counter(Node root){
 
     //verifica se é nula
-    if(is_null(tree)== true) return 0;
+    if(is_null(root)== true) return 0;
 
-    int number;
+    int number = 0;
 
+	if (root != NULL){
+		 number = 1+ counter(root->get_left()) + counter(root->get_right());
+	}
     return number;
 }
 

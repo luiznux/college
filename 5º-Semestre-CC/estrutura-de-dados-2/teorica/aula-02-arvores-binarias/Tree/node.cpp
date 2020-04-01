@@ -1,5 +1,8 @@
 #include "node.h"
 
+Node::Node(){
+    left = right = NULL;
+}
 /*
   Construtor da classe node, recebe um valor inteiro e cria um nó com o valor inserido, juntamente com as duas direções(esq e dir) definidas como nulo
  */

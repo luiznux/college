@@ -2,7 +2,7 @@
 #define TREE_H
 #include "node.h"
 
-class Tree
+class Tree : public Node
 {
 
 private:
@@ -13,8 +13,10 @@ public:
 
     Tree();
     Node *get_root();
-    bool is_null(Tree tree);
-    int counter(Tree tree);
+//    Tree *get_left();
+//    Tree *get_righti();
+    bool is_null(Node tree);
+    int counter(Node tree);
     void min_value();
     void max_value();
     bool locate_value(int value);

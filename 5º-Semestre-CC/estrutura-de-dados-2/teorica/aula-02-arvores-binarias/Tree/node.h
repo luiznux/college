@@ -18,5 +18,6 @@ public:
     void set_left(Node *node);
     void set_right(Node *node);
 
+    friend class Tree;
 };
 #endif

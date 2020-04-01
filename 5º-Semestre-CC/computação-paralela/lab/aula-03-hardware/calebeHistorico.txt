@@ -1,0 +1,124 @@
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela$ l
+multiplicacaoMatrizes*  multiplicacaoMatrizes.c  sharedMemory*  sharedMemory.c  sharedMemory.o
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela$ mkdir calebe
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela$ cd calebe/
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ l
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.4.0-1ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ vi mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ gcc mm.c -o mm
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ ./mm
+15 18 21 
+42 54 66 
+69 90 111 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ ./mm
+15 18 21 
+42 54 66 
+69 90 111 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ !vi
+vi mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ gcc mm.c -o mm1000
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ ls -la
+total 36
+drwxrwxr-x 2 wendell wendell 4096 mar 10 20:28 .
+drwxr-xr-x 3 wendell wendell 4096 mar 10 20:17 ..
+-rwxrwxr-x 1 wendell wendell 8424 mar 10 20:27 mm
+-rwxrwxr-x 1 wendell wendell 8376 mar 10 20:28 mm1000
+-rw-rw-r-- 1 wendell wendell  527 mar 10 20:28 mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ time -p ./mm1000 
+2121018208
+real 9,82
+user 9,79
+sys 0,03
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ time -p ./mm1000 
+2121018208
+real 10,08
+user 10,06
+sys 0,02
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ vi mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ gcc mm.c -o mm1000-ikj
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ ls -la
+total 48
+drwxrwxr-x 2 wendell wendell 4096 mar 10 20:44 .
+drwxr-xr-x 3 wendell wendell 4096 mar 10 20:17 ..
+-rwxrwxr-x 1 wendell wendell 8424 mar 10 20:27 mm
+-rwxrwxr-x 1 wendell wendell 8376 mar 10 20:28 mm1000
+-rwxrwxr-x 1 wendell wendell 8376 mar 10 20:44 mm1000-ikj
+-rw-rw-r-- 1 wendell wendell  527 mar 10 20:44 mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ time -p ./mm1000-ikj 
+2121018208
+real 4,73
+user 4,69
+sys 0,04
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ !vi
+vi mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ gcc mm.c -O3 -o mm1000-O3
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ ls -la
+total 60
+drwxrwxr-x 2 wendell wendell 4096 mar 10 20:48 .
+drwxr-xr-x 3 wendell wendell 4096 mar 10 20:17 ..
+-rwxrwxr-x 1 wendell wendell 8424 mar 10 20:27 mm
+-rwxrwxr-x 1 wendell wendell 8376 mar 10 20:28 mm1000
+-rwxrwxr-x 1 wendell wendell 8376 mar 10 20:44 mm1000-ikj
+-rwxrwxr-x 1 wendell wendell 8384 mar 10 20:48 mm1000-O3
+-rw-rw-r-- 1 wendell wendell  527 mar 10 20:47 mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ time -p ./mm1000-O3 
+2121018208
+real 1,64
+user 1,60
+sys 0,03
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ !vi
+vi mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ gcc mm.c -O3 -o mm1000-ikj-O3
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ time -p ./mm1000-ikj-O3 
+2121018208
+real 0,83
+user 0,76
+sys 0,06
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ l
+mm*  mm1000*  mm1000-ikj*  mm1000-ikj-O3*  mm1000-O3*  mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ ls -la
+total 72
+drwxrwxr-x 2 wendell wendell 4096 mar 10 20:49 .
+drwxr-xr-x 3 wendell wendell 4096 mar 10 20:17 ..
+-rwxrwxr-x 1 wendell wendell 8424 mar 10 20:27 mm
+-rwxrwxr-x 1 wendell wendell 8376 mar 10 20:28 mm1000
+-rwxrwxr-x 1 wendell wendell 8376 mar 10 20:44 mm1000-ikj
+-rwxrwxr-x 1 wendell wendell 8384 mar 10 20:49 mm1000-ikj-O3
+-rwxrwxr-x 1 wendell wendell 8384 mar 10 20:48 mm1000-O3
+-rw-rw-r-- 1 wendell wendell  527 mar 10 20:49 mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ rm mm
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ rm mm1000*
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ ll
+total 12
+drwxrwxr-x 2 wendell wendell 4096 mar 10 20:55 ./
+drwxr-xr-x 3 wendell wendell 4096 mar 10 20:17 ../
+-rw-rw-r-- 1 wendell wendell  527 mar 10 20:49 mm.c
+wendell@wendel:~/documentos/Mack/git/College/C/ComputacaoParalela/calebe$ 
