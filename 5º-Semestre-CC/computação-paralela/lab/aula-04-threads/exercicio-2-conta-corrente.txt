@@ -1,0 +1,51 @@
+Experimentação de conta corrente
+
+Neste experimento, construa alguns programas usando PThreads que reproduzam um problema clássico de condição de corrida no contexto de uma conta corrente e uma respectiva solução.
+
+Garanta que os resultados entre uma solução com condição de corrida seja diferente de uma solução sem condição de corrida.
+
+Preparação:
+
+Construa um programa que seja seu baseline para as próximas fases do experimento. Esse programa deve se assemelhar a:
+
+main() {
+
+  ....
+
+  saldo = 1000.00;
+
+  depositos(); // realiza uma "infinidade" de depositos, e.g. 2147483000 depositos de 5.0 unidades monetárias
+
+  saques(); // realiza uma "infinidade" de saques, e.g. 2147483000 saques de 2.0 unidades monetárias
+
+  printf("Saldo final: %.2lf\n", saldo);
+
+  ....
+
+}
+
+Fase 1
+
+Construa uma outra versão da solução anterior usando a biblioteca PThreads e que tenha condição de corrida no saque/deposito da conta corrente. Nesta solução, o resultado do saldo final não será igual a versão baseline. Exemplo:
+
+main() {
+
+  ....
+
+  saldo = 1000.00;
+
+  pthread_create(..., depositos, ...); // a mesma funcao depositos() anterior
+
+  phtread_create(..., saques, ...); // a mesma funcao saques() anterior
+
+  ....
+
+  printf("Saldo final: %.2lf\n", saldo);
+
+  ....
+
+}
+
+Fase 2
+
+Construa uma nova solução da versão anterior resolvendo o problema da condição de corrida com seção crítica (mutex). Garanta que o saldo final apresentado nesta fase do experimento seja igual ao baseline e, consequentemente, diferente da fase 1.
