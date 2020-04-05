@@ -1,0 +1,3 @@
+Fichamento do artigo "Putting Your Data and Code in Order: Optimization and Memory – Part 1"
+
+1)
