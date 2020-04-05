@@ -1,3 +1,18 @@
 
 1) O artigo apresenta os seguintes principios:
 Shared Memory, threads, computação distrubuida, MPI, memoria distrubuida computacionalmente.
+
+2) Devemos estudar a possibilidade se ele pode ser paralelisado, se pode haver dependencia de dados
+entre as threads, caso haja, um mecanismo de controle deve ser adotado para gerenciar o acesso as
+areas compartilhadas, garantindo a consistencia dos dados.
+Também é valido estudar se a escalabilidade do processo sera otimizada  mesmo.
+
+3) Concorrencia. Ele pode causar incosistencia de dados no cache, pois uma thread pode alterar o valor
+de alguma variavel ou dado no cache, ao mesmo tempo que outra thread altera o mesmo valor, tornando o mesmo
+inconsistente e desatualizado
+
+4) Fazer com que o dado no cache se mantenha atualizado independende das alterações que foram feitas
+nesse valor pelas outras threads.
+Para chegar nesse estado, é necesario implementar um semaforo, que nada mais é que uma maneira de
+controlar o uso de uma regiao de memoria, ou seja, caso uma theread acesse uma variavel/dado, nenhuma
+outra podera alterar ou ler  o valor em quanto a primeira não terminar sua tarefa
