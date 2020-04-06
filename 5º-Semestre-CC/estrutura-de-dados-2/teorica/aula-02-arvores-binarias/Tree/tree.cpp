@@ -114,7 +114,9 @@ void Tree::insert(Node *node, int value){
     //se for igaul, nao sera possivel inserir, pois nao pode existir 2 values =
 }
 
-
+/*
+  esquerda raiz direita
+ */
 void Tree::print_in_order(Node *node){
 
     if(node != NULL){
@@ -125,6 +127,9 @@ void Tree::print_in_order(Node *node){
 }
 
 
+/*
+  raiz esquerda direta 
+ */
 void Tree::print_in_pre_order(Node *node){
 
     if(node != NULL){
@@ -134,6 +139,9 @@ void Tree::print_in_pre_order(Node *node){
     }
 }
 
+/*
+  esquerda direta raiz
+*/
 void Tree::print_pos_order(Node *node){
 
     if(node != NULL){

@@ -1,0 +1,32 @@
+Olá a todos! Espero que estejam bem, dentro das possibilidades.
+
+Vejam este pequeno vídeo: https://youtu.be/7h4Xv9xso6M
+
+Por favor, leiam um arquivo chamado mensagem.txt e sigam este documento.
+
+Objetivos desta semana: Revisar e Consolidar o aprendizado em Árvores Binárias, Árvores Binárias de Busca, Árvores AVL.
+
+Temas da semana: Árvores Binárias, Árvores Binárias de Busca, Árvores AVL.
+
+Recursos do estudo:
+
+* Material disponibilizado no Moodle nas aulas anteriores (texto)
+
+* Leitura das páginas 278 a 367 do Livro 1 da Referência (acesso Biblioteca Virtual)
+
+* Vídeos:
+
+   Árvore Binária: https://www.youtube.com/watch?v=PgZflufXGUU
+
+   Árvore Binária de Busca: https://www.youtube.com/watch?v=XZ0MEDhb4oE
+
+   Percurso em Árvore Binária: https://www.youtube.com/watch?v=FLp8qXM2010&t=568s
+
+   Árvore AVL: https://www.youtube.com/watch?v=3zmjQlJhBLM
+
+*Lista de exercícios: VALENDO NOTA
+
+* Referência; Bibloteca Virtual do Mackenzie
+
+    ASCENCIO, A. F. G., & ARAÚJO, G. S. D. (2010). Estruturas de Dados: algoritmos, análise da complexidade e implementações em JAVA e C/C++. São Paulo: Perarson Prentice Halt, 3.
+A

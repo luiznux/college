@@ -1,0 +1,26 @@
+Slide 13
+
+1) grafo (1) task 4, task 6 e task 7
+   grafo (2) task 1, task 5, task 6 e task 7
+
+2) grafo (1) -> 27
+   grafo (2) -> 34
+
+3) grafo(1)-> 4 e grafo(2)-> 3
+
+4) grafo(1) ->2  e grafo(2)-> 1
+
+5) soma de todas as tarefas / pelo caminho minimo
+   63/27 = 2.33
+   64/34 = 1.88
+
+
+Slide 15
+
+2) Todos os caminhos tem o mesmo tamanho
+
+3) todos os caminhos tem o mesmo tempo
+
+4)
+
+5)

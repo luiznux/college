@@ -7,9 +7,9 @@ entre as threads, caso haja, um mecanismo de controle deve ser adotado para gere
 areas compartilhadas, garantindo a consistencia dos dados.
 Também é valido estudar se a escalabilidade do processo sera otimizada  mesmo.
 
-3) Concorrencia. Ele pode causar incosistencia de dados no cache, pois uma thread pode alterar o valor
-de alguma variavel ou dado no cache, ao mesmo tempo que outra thread altera o mesmo valor, tornando o mesmo
-inconsistente e desatualizado
+3) Concorrencia, falso compartilhamento de dados. Ele pode causar incosistencia de dados no cache, pois uma
+thread pode alterar o valor de alguma variavel ou dado no cache, ao mesmo tempo que outra thread altera o
+mesmo valor, tornando o mesmo inconsistente e desatualizado.
 
 4) Fazer com que o dado no cache se mantenha atualizado independende das alterações que foram feitas
 nesse valor pelas outras threads.

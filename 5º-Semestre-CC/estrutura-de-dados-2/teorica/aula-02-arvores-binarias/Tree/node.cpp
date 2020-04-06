@@ -45,4 +45,4 @@ void Node::set_left(Node *node){
  */
 void Node::set_right(Node *node){
     right = node;
-}
+
