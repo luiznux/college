@@ -10,7 +10,7 @@ private:
     int data;
 
 public:
-
+    Node();
     Node(int data);
     int get_data();
     Node *get_left();

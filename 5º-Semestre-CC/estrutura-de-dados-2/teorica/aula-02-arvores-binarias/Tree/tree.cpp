@@ -4,7 +4,7 @@
  Construdor da classe arvore, cria uma arvore com raiz nula
  */
 Tree::Tree(){
-     root = NULL;
+    root = NULL;
 }
 
 /*
@@ -14,43 +14,63 @@ Node* Tree::get_root(){
     return root;
 }
 
+
 /*
   metodo para consutar se a raiz é nula, retornando um booleano
  */
-bool Tree::is_null(Node tree){
-
-    if(root == NULL) return true;
-    return false;
+bool Tree::is_null(){
+    return root == NULL;
 }
+
 
 /*
   Metodo para contar quantos elementos a arvore possui, retornando um inteiro
   como resultado
  */
-int Tree::counter(Node root){
+int Tree::count_nodes(Node *node){
 
-    //verifica se é nula
-    if(is_null(root)== true) return 0;
+    //verifica se é nula(condição de parada)
+    if(node == NULL) return 0;
 
-    int number = 0;
+    int counter = 0;
 
-	if (root != NULL){
-		 number = 1+ counter(root->get_left()) + counter(root->get_right());
-	}
-    return number;
+	counter = 1+ count_nodes(node->get_left()) + count_nodes(node->get_right());
+
+    return counter;
 }
+
 
 /*
+  encontra e retorna o menor valor
+  percorro  arvore ate o nó mais a esquerda
  */
-int  Tree::min_value(Tree tree){
+int  Tree::min_value(){
 
+    if(this->root == NULL) return -1;
+    Node *aux;
+    aux = this->root;
+    while(aux->left != NULL){
+        aux = aux->left;
+    }
+    return aux->data;
 }
+
 
 /*
+  encontra e retorna o maior valor
+  percorro a arvore ate o nó mais a direta
  */
-int  Tree::max_value(Tree tree){
+int  Tree::max_value(){
 
+    if(this->root == NULL) return -1;
+    Node *aux;
+    aux = this->root;
+    while(aux->right != NULL){
+        aux = aux->left;
+    }
+    return aux->data;
 }
+
 
 /*
   Metodo para verificar se o valor dado como parametro esta ou nao na arvore
@@ -58,20 +78,20 @@ int  Tree::max_value(Tree tree){
  */
 bool Tree::locate_value(int value){
 
+    Node *aux = root;
+    //verifico se o proximo da esquerda/direta é nulo
+    while(aux != NULL){
+        if(aux->data < value){
+            aux = aux->left;
+
+        }else if(aux->data > value){
+            aux = aux->right;
+
+        }else{
+            return true;
+        }
+    }
     return false;
-}
-
-/*
-  metodo para inserir um valor na arvore, utilizado quando sua raiz é  vazia
- */
-void Tree::insert(int value){
-
-    //verifica se a raiz esta vazia
-    if(root == NULL)
-        root = new Node(value); //crio uma raiz vazia
-
-    else
-        insert(root, value); //chamada recursiva da função abaixoo
 }
 
 /*
@@ -80,7 +100,7 @@ void Tree::insert(int value){
  */
 void Tree::insert(Node *node, int value){
 
-    //se o valor a ser inserido vor menor que  o valor presente no nó atual
+    //se o valor a ser inserido for menor que o valor presente no nó atual
     if(value < node->get_data()){
 
         //verifica se o nó da esquerda é nulo
@@ -93,7 +113,7 @@ void Tree::insert(Node *node, int value){
 
         //caso contrario, vou continuar percorrendo(recursivamente) ate encontrar um
         // nó a esquerda que esteja nulo
-        insert(node->get_right(), value);
+        insert(node->get_left(), value);
         }
 
         //se o valor a ser inserido for maior doq o do nó atual
@@ -111,8 +131,23 @@ void Tree::insert(Node *node, int value){
             insert(node->get_right(), value);
         }
     }
-    //se for igaul, nao sera possivel inserir, pois nao pode existir 2 values =
+    //se for igual, nao sera possivel inserir, pois nao pode existir 2 values =
 }
+
+
+/*
+  metodo para inserir um valor na arvore, utilizado quando sua raiz é  vazia
+ */
+void Tree::insert(int value){
+
+    //verifica se a raiz esta vazia
+    if(root == NULL)
+        root = new Node(value); //crio uma raiz vazia
+
+    else
+        insert(root, value); //chamada recursiva da função abaixoo
+}
+
 
 /*
   esquerda raiz direita
@@ -126,9 +161,8 @@ void Tree::print_in_order(Node *node){
     }
 }
 
-
 /*
-  raiz esquerda direta 
+  raiz esquerda direta
  */
 void Tree::print_in_pre_order(Node *node){
 
@@ -138,6 +172,7 @@ void Tree::print_in_pre_order(Node *node){
         print_in_order(node->get_right());
     }
 }
+
 
 /*
   esquerda direta raiz
