@@ -1,1 +1,0 @@
-Faça um programa usando PThreads que encontre todos os números primos até N. Aproveite e defina uma função que recebe 2 parâmetros J e K (seja explícito, ou por vetor), indicando o número de início e de fim dessa pequisa.
