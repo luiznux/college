@@ -1,0 +1,17 @@
+Plano de Estudos
+Objetivo da semana:
+
+- Estudarmos alguns algoritmos de Ordenação Buble Sorte e derivados
+O tema da semana é Algoritmos de Ordenação Paralelos
+
+Para esta semana, utilizamos como referência as seções 9.3 e 9.4 do capítulo 9 (Sorting) do nosso livro-texto: 
+
+Introduction to Parallel Computing, Second Edition
+By Ananth Grama, Anshul Gupta , George Karypis, Vipin Kumar
+Ações desta semana:
+
+- Estudar o conteúdo em Slides (Algoritmos de Ordenação ), com atenção especial para a leitura das seções indicadas (no livro-texto)
+
+- Fazer e submeter as atividades propostas.
+
+- Tirar dúvidas com o Professor via mensagens, Fórum, ou no encontro virtual de 13/04/2020, no BBB

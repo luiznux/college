@@ -11,7 +11,7 @@ def metodonewton(f,flin,x0,e,iteracoes):
 
   print("k\t x0\t\t\t\t f(pn-1) \t\t f'(pn-1) \t\t f(pn-1)/f'(pn-1) \t Pn")
   k=1
-  
+
   while k<=iteracoes:
     print ("%d \t%e \t%e \t%e \t%e \t%e" % (k,x0,f(x0),flin(x0),f(x0)/flin(x0),x0-(f(x0)/flin(x0))))
     x1 = x0 - f(x0)/flin(x0)

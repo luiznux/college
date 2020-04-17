@@ -1,0 +1,17 @@
+Plano de Estudos
+Objetivo da semana:
+
+- Entendermos o Projeto de Algoritmos Paralelos com foco na Decomposição de Tarefas
+O tema da semana é Projeto de Algoritmos Paralelos.
+
+Para esta semana, utilizamos como referência as seções 3.1 e 3.2 do capítulo 3 (Principles of Parallel Algorithm Design) do nosso livro-texto: 
+
+Introduction to Parallel Computing, Second Edition
+By Ananth Grama, Anshul Gupta , George Karypis, Vipin Kumar
+Ações desta semana:
+
+- Estudar o conteúdo em Slides (Projeto de Algoritmos Paralelos), com atenção especial para a leitura das seções indicadas (no livro-texto)
+
+- Fazer e submeter as atividades propostas.
+
+- Tirar dúvidas com o Professor via mensagens, Fórum, ou no encontro virtual de 06/04/2020, no BBB
