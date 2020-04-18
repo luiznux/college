@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 int **calloc_matrix(int line, int colum);
 
 void fills_rand_matrix(int** matrix, int l, int c,int rand);
