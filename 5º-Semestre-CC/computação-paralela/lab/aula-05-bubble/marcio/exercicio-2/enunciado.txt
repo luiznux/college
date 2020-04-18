@@ -1,0 +1,3 @@
+Exercício 2:
+No algoritmo, crie uma matriz quadrada (N X N), "popule-a" com números aleatórios e faça um duplo for para contar os elementos maiores que determinado valor (escolha você esses parâmetros). Insira as instruções para capturar o tempo inicial e o tempo final do processo. Imprima o tempo decorrido.
+Salve este código. Como parte II insira as diretivas de paralelização do laço for.

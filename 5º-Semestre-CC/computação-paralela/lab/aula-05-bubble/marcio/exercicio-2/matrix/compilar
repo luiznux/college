@@ -1,0 +1,3 @@
+#!/bin/bash
+
+clang -O3 -g -W -Wall  -fopenmp *.c -o matrix

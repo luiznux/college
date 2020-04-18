@@ -1,0 +1,4 @@
+Exercício 1: 
+No algoritmo, crie 4 vetores de números inteiros, "popule-os" com números aleatórios e os ordene com o método bubble-sort (o menos eficiente). Insira as instruções para capturar o tempo inicial e o tempo final do processo. Imprima o tempo decorrido. Você deve ajustar o tamanho dos vetores para que o tempo de processamento seja observável e também não muito extenso. 
+Salve este código. Como parte II insira as diretivas para paralelizar a ordenação de cada um dos vetores. Imprima o tempo de processamento.
+Você deve entregar estes dois códigos.
