@@ -46,7 +46,7 @@ int main(){
 #pragma omp parallel sections
    {
        /*quadrante superior esquerdo*/
-       #pragma omp parallel section
+#pragma omp parallel section
        {
            inicio_bom_1 = clock();
            for(int i = 0; i < TAM/2; i++){
@@ -58,7 +58,7 @@ int main(){
        }
 
        /*quadrante superior direito*/
-       #pragma omp parallel section
+#pragma omp parallel section
        {
            inicio_bom_2 = clock();
            for(int i = 0; i < TAM/2; i++){
@@ -82,16 +82,18 @@ int main(){
        }
 
        /* quadrante inferior direito */
-       #pragma omp parallel section
+#pragma omp parallel section
        {
+           inicio_bom_4 = clock();
            for(int i = TAM/2; i < TAM; i++){
                for(int j = TAM/2; j < TAM; j++){
                    if(matrix[i][j] > value) count2++;
                }
            }
-           clock_t final_bom  = clock();
+           fim_bom_4  = clock();
        }
    }
+
 
 /*--------------------- Conclusão ---------------------------*/
 
