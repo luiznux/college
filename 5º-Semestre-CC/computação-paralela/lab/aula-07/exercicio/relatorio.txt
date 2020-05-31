@@ -1,3 +1,9 @@
 Relatorio do exercicio de paralelizaçao
 
+Observei que no alg sequencial, o tempo  é relativamente maior se considerarmos  os outros casos.
+
+Utilizadando o metodo while é notavel um ganho de performace substancial referente aos outros metodos 
+por conta do uso subdivisao matricial em quadrantes, tornando o uso da memoria cache mais eficiente.
+
+Conclusao: A paralelizaçao traz ganhos significativos nas execuçoes testadas
 
