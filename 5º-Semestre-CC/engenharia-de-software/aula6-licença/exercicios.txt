@@ -1,0 +1,8 @@
+
+1) Sim, pois existem outras licenças derivadas da gpl que podem ser utilizadas em outras areas.
+
+2) Sim! A GPL linking execpcion para caso de bibliotecas expecificas usadas em projetos que nao necessariamente utilizem a GPL, mas possuem codigos com GPL dentro dos mesmos.
+
+3) Sim, ela permite cobrar pelo download, pois nao necessariamente a utlizaçao do software precisa ser gratuita.
+
+4) Nao, pois qualquer versao criada do software usando a GPL o mesmo necessariamente deve ser livre.
