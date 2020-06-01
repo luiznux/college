@@ -4,7 +4,6 @@
 
 struct Node{
 
-
     float item;
 
     Node *next, *preview;
@@ -18,7 +17,4 @@ struct Node{
         item = value; next = n, preview = p;
     }
 };
-
-
-
 #endif
