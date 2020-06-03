@@ -1,0 +1,4 @@
+Relatorio do exercicio  de comp paralela
+
+Observando os dois casos experimentados, conclui que o algoritmo que utilizou de forma sequencial
+para sua execuçao, resultou menor tempo se comparado com o algoritimo utilizando o laço FOR paralelizado
