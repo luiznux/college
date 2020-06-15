@@ -1,0 +1,15 @@
+Exercícios:
+
+1) Mostre as árvores-B de ordem 4 (máximo de 4 filhos) resultantes da entrada das números na ordem apresentada: 3, 6, 10, 20, 15, 18, 16, 1, 5, 2, 9
+
+2) Em uma árvore B+, M = 5, inserir os valores: 50, 60, 30, 40, 20, 23, 25, 31, 70, 80, 90, 100
+
+3) Faça um algoritmo para encontrar um elemento numa árvore B+
+
+   - Percorro a lista de chaves no nó atual
+             - se o o valor dentro da chave for encontrado, retorno o mesmo.
+             - se o nó atual é uma folha e a chave nao foi encontrada, retorno erro
+             pois o valor nao foi encontrado
+             - caso contrario, sigo para o proximo nó e repito o processo acima
+
+

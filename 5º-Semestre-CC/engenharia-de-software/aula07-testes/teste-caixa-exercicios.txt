@@ -1,0 +1,10 @@
+Qual a diferença entre teste caixa branca e teste caixa preta?
+Dê um exemplo.
+
+Resposta:
+
+Teste caixa preta -> Teste nao tem o conhecimento como foi feito a implementaçao do
+software, a avaliaçao esta preocupada com a arquitetura ou com um componete como um todo. Exemplo teste de componente
+
+Teste de caixa branca -> Teste realizado com o conhecimento da implementaçao do sofware, vizando validar a logica de uma unidade do componete. Exemplo teste unitario
+

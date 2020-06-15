@@ -1,0 +1,25 @@
+Respostas da atividade
+
+1) Porque antes de se entregar um sofware, precisamos construir versoes de testes para verificarmos as integridades de suas
+funcionalidades(como por exemplo nas versoes beta do mesmo), para entao, lançarmos a versao estavel para o cliente.
+
+2) Os testes seguem um roteiro pre-definido em um ambiente controlado, nao prevendo erros de regras de negocio ou variaveis imprevisiveis fora dos testes.
+
+3)
+Partiçoes seriam os casos de testes(as probabilidades)
+Testando partiçoes:
+- frases com caracteres em branco
+- frases com sequencias de caracteres em branco no meio
+- frases " " em branco no inicio
+
+Conjunto de exemplos de testes para o metodo "WhiteSpace"
+
+testar cada partiçao apresentada
+
+*Estou aprendendo a engenharia de sofware(nenhum espaço)
+
+*Estou   aprendendo  a engenharia de sofware(começo da frase)
+
+*Estou  aprendendo  a  engenharia  de  sofware
+
+* etc..

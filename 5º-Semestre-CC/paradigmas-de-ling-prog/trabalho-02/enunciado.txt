@@ -1,0 +1,23 @@
+Entrega: 19/06
+
+Este trabalho pode ser feito em grupo de até 2 integrantes, basta que somente um dos integrantes entregue o codigo fonte com o nome dos integrantes da dupla com o seguinte cabeçalho:
+
+/*
+
+Entrega de trabalho - Nome do trabalho
+
+Nós,
+
+Nome completo 1
+
+Nome completo 2
+
+declaramos que
+
+todas as respostas são fruto de nosso próprio trabalho,
+não copiamos respostas de colegas externos à equipe,
+não disponibilizamos nossas respostas para colegas externos à equipe e
+não realizamos quaisquer outras atividades desonestas para nos beneficiar ou prejudicar outros.
+*/
+
+Este trabalho representa 30% da N2

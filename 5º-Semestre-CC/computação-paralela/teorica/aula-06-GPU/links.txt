@@ -1,0 +1,7 @@
+https://devblogs.nvidia.com/even-easier-introduction-cuda/
+
+https://developer.nvidia.com/openacc
+
+https://nbviewer.jupyter.org/gist/harrism/f5707335f40af9463c43
+
+https://github.com/harrism/numba_examples
