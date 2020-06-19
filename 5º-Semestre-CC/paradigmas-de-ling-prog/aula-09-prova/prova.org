@@ -1,0 +1,46 @@
+
+Nós,
+Bruno Severo Camilo                41781619
+Luiz Fernando Tagliaferro Brito    31861806
+
+Declaramos que
+todas as respostas são fruto de nosso próprio trabalho,
+não copiamos respostas de colegas externos a dupla,
+não disponibilizamos nossas respostas para colegas externos a dupla e
+não realizamos quaisquer outras atividades desonestas para nos beneficiar ou prejudicar
+outros.
+
+* 1)
+** a) (λ x y.x + y)
+   (\ x -> (\y -> (x + y)))10 20
+   => 30
+
+** b)(λ x.x 2)
+   (\x -> x * x)10
+   => 100
+
+** c)(λ x.(λ y. x*y))
+   (\ x -> (\y -> (x * y)))10 20
+   => 200
+
+** d)(λ x.(λ y. x²))
+   (\ x -> (\y -> (x ^ y)))10 20
+   => 100000000000000000000
+
+
+* 2)
+
+tripla x y z
+    | x^2 + y^2 == z^2 = "e uma tripla de Pitagoras"
+    | y^2 + z^2 == x^2 = "e uma tripla de Pitagoras"
+    | z^2 + x^2 == y^2 = "e uma tripla de Pitagoras"
+    | otherwise = "Nao e tripla de Pitagoras"
+
+
+* 3)
+
+duracao inicio fim
+    |inicio < fim = fim-inicio
+    |inicio > fim = (fim+24) - inicio
+    |inicio == fim = 24
+    |otherwise = -1
