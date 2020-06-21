@@ -1,0 +1,11 @@
+Exercícios:
+
+1. Proponha uma estrutura de dados em C++ para armazenar cada entrada de um mapa, suponha que a chave seja uma string para guardar a placa do carro e o valor guarde os dados do carro (modelo, ano, cor).
+
+2. Proponha uma estrutura de dados em C++ para representar um mapa utilizando uma lista ligada simples e a estrutura de entrada (nó) definida anteriormente.
+
+3. Implemente o método de busca no mapa.
+
+4. Implemente o método de inserção no mapa. O método deve inserir somente se o dado ainda não existir na lista.
+
+5. Implemente o método de remoção no mapa.
