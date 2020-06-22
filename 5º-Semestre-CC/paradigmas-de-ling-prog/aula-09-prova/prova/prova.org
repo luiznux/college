@@ -46,9 +46,9 @@ tripla x y z
 
 #+BEGIN_SRC haskell
 duracao inicio fim
-    |inicio < fim = fim-inicio
-    |inicio > fim = (fim+24) - inicio
-    |inicio == fim = 24
+    |inicio < fim = fim-inicio        {- horario normal -}
+    |inicio > fim = (fim+24) - inicio {- passou de 12hrs -}
+    |inicio == fim = 24               {- durou um dia inteiro -}
     |otherwise = -1
 #+END_SRC
 
@@ -56,13 +56,13 @@ duracao inicio fim
 * 4
 Criterio de parada x = 1 e retorno y
 Se x é par, retorno afundando na recursao(nao acresta y na soma)
-Caso contrario, retorno a funçao com o valor somado de y
+Caso contrario, retorno a funçao com o valor somado de y(x é impar)
 
 #+BEGIN_SRC haskell
 multRussa x y
   | (x == 1) = y
   | (mod x 2 == 0) = multRussa (div x 2) y * 2
-  | otherwise = ( y + multRussa (div x 2) y * 2)
+  | otherwise = (y + multRussa (div x 2) y * 2)
 #+END_SRC
 
 
