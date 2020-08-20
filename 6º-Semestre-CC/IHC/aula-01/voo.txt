@@ -1,0 +1,12 @@
+1. Leia o artigo O Voo 965 e responda:
+1a - qual foi o problema de usabilidade detectado na interface?
+1b - qual foi a consequência deste problema de usabilidade?
+1c - qual(is) mudanças você faria na interface para evitar este problema?
+
+
+a) O problema detectado foi a sugestao automática.
+
+b) O acidente do voo 965 como consequência, se colidiu com os Andes
+
+c) O programa deveria solicitar uma confirmaçao visual para o piloto, indicando a rota
+selecionada, juntamente com a remoçao do auto-complete.
