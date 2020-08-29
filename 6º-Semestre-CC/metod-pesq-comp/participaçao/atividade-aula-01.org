@@ -1,0 +1,12 @@
+1. O CNPq utiliza a expressão ​ áreas de conhecimento para apresentar
+   divisões da ciência.
+Existe um catálogo do CNPq para estas áreas, disponível no linkabaixo:
+http://www.cnpq.br/documents/10157/186158/TabeladeAreasdoConhecimento.pdf
+Com base neste documento, descreva como as áreas são classificadas,
+localize a área de Ciência da Computação e descreva suas sub-áreas.
+
+As ciencias estao agrupadas em grandes conjuntos que possuem outros
+subconjuntos onde estao agrupadas as ciencias mais especificas.  A
+ciencia da computação esta contida em Ciencias Exatas e da Terra,
+possuindo um subconjunto exclusivo para a ela mesma, onde estao
+dispostas suas outras areas.

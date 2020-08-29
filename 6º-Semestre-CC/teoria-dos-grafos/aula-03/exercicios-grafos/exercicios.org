@@ -1,0 +1,62 @@
+#+TITLE: Exercicios - Conceitos Basicos
+#+AUTHOR: Dupla: Edison Aguiar - 31812295 Luiz Tagliaferro - 31861806
+
+G = ({v1, v2, v3, v4, v5}, {(v1, v2), (v2, v3), (v3, v3), (v3, v4),
+                            (v4, v2), (v4, v5), (v5, v2), (v5, v2)})
+
+1)
+
+H = ({v2, v3, v5}, {(v2, v3), (v3, v3), (v2, v5), (v5, v2)})
+
+2)
+
+Y = {v 1 , v 2 , v 3 }
+
+a) G[Y] = ({v2, v3, v5}, {(v2, v3), (v3, v3), (v2, v5), (v5, v2)})
+
+b) G -v2 = ({v1,v3, v4, v5}, {(v3, v3), (v3, v4), (v4, v5)})
+
+3. Considerando K = { e 1 , e 2 , e 5 }, apresente:
+b) G- e 1.
+a) G[K] = ({v1,v2,v3,v4}, {v1,v2}, {v2,v3}, {v2,v4})
+
+b) G = ({v1, v2, v3, v4, v5}, {(v2, v3), (v3, v3), (v3, v4),(v4, v2),
+(v4, v5), (v5, v2), (v5, v2)})
+
+4)
+H = ({v1, v2, v3, v4, v5}, {(v1, v2), (v2, v3),(v3, v4),(v4, v2), (v4,
+v5), (v5, v2)})
+
+5)
+Hc = ({v1, v2, v3, v4, v5}, {(v1, v2), (v1, v3), (v1, v4), (v1, v5),
+                             (v2, v3),
+                             (v3, v4), (v3, v5),
+                             (v4, v2), (v4, v5),
+                             (v5, v2)})
+
+6)
+H = ({v1, v2, v3, v4, v5}, {(v1, v2), (v2, v3), (v3, v4), (v4, v5)})
+
+7)
+P = (v1, e1, v2, e2, v3, e3, v3, e4, v4, e6, v5, e7, v2, e8, v5)
+
+8)
+P = (v1, e1, v2, e2, v3, e3, v3, e4, v4, e6, v5, e7, v2)
+Trilha é um passeio sem aresta repetida
+Caminho é um passeio sem vercite repetido
+
+9)
+P = (v1, e1, v2, e2, v3, e4, v4, e6, v5)
+
+10)
+C = (v2, e2, v3, e4, v4, e6, v5, e8, v2)
+
+11) Nao, pois para obtermos um circuito de comprimento 5 teriamos que
+    repetir a aresta e1, o que o desqualificaria como um circuito.
+
+
+
+#+BEGIN_SRC latex
+
+\sigma + y = \delta
+#+END_SRC

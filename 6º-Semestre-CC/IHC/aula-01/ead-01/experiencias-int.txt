@@ -1,0 +1,18 @@
+T2 - Experiências de interação
+
+1) Site do Suframa
+a) Gerar um codigo para autentificaçao de mercadorias na zona franca de Manaus.
+
+b) A resposta do site foi extremamente lenta e sua interface é confusa e desorganizada.
+
+c) Investiria em melhor infra-estrutura(servidores) juntamente com a melhoria de toda
+   a interface, tornando-a mais amigavel e simples onde o usuario consegue interagir com
+   muito mais facilida alem de uma melhoria no layout.
+
+2) Aplicatico Nubank(que na minha opinao é o melhor entre muitos outros que ja utilizei)
+
+a) Layout simples, rapido, compacto e de facil interaçao.
+
+b) Icones simples seguidos de suas funçoes escritas, poucas paginas de navegaçao porem com uma
+   quantidade de informaçoes ideais para nao poluir a tela, funçoes mais utilizadas ficam em evidencia
+   e tambem podem ser customizadas pelo usuario.

@@ -1,0 +1,7 @@
+* Anotaçoes da aula de automatos
+
+** Gramatica é uma sequencida quadrupla G=(N,T,P,S)j
+   ex: G
+
+
+

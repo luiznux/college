@@ -1,0 +1,13 @@
+* Respostas da atividade de lab
+
+** 1)
+   a) 192.168.15.6
+   enp3s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+               inet 192.168.15.6  netmask 255.255.255.0  broadcast 192.168.15.255
+               inet6 2804:431:cff2:e359:aeee:ed7:b035:8547  prefixlen 64  scopeid 0x0<global>
+               inet6 fe80::8353:5627:d855:35ad  prefixlen 64  scopeid 0x20<link>
+               ether 34:97:f6:e9:d6:fb  txqueuelen 1000  (Ethernet)
+               RX packets 422700  bytes 305469723 (291.3 MiB)
+               RX errors 0  dropped 1  overruns 0  frame 0
+               TX packets 308581  bytes 58556640 (55.8 MiB)
+               TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0

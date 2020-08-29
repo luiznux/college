@@ -1,0 +1,94 @@
+#+TITLE: Exercícios - Conceitos Básicos
+#+AUTHOR: Dupla: Edison Aguiar - 31812295, Luiz Tagliaferro - 31861806
+
+$G = (\{v_{1}, v_{2}, v_{3}, v_{4}, v_{5}\}, \{(v_{1}, v_{2}), (v_{2}, v_{3}), (v_{3}, v_{3}), (v_{3}, v_{4}),
+                            (v_{4}, v_{2}), (v_{4}, v_{5}), (v_{5}, v_{2}), (v_{2}, v_{5})\})$
+
+** 1. Apresente um subgrafo de G com todas as seguintes propriedades:
+
+$|VH| = 3$
+
+$|AH| = 4$
+
+$|VH| + |AH| = 7$
+
+$\delta (H) = 2$
+
+$\Delta (H) = 3$
+
+$H = (\{v_{2}, v_{3}, v_{5}\}, \{(v_{2}, v_{3}), (v_{3}, v_{3}), (v_{2}, v_{5}), (v_{5}, v_{2})\})$
+
+** 2. Considerando Y = { v2, v3, v5 }, apresente:
+
+$Y = \{v_{1}, v_{2}, v_{3}\}$
+
+*** a) G[Y]
+
+$G[Y] = (\{v_{2}, v_{3}, v_{5}\}, \{(v_{2}, v_{3}), (v_{3}, v_{3}), (v_{5}, v_{2}), (v_{2}, v_{5})\})$
+
+*** b) G - v2.
+
+$G - v_{2} = (\{v_{1}, v_{3}, v_{4}, v_{5}\}, \{(v_{3}, v_{3}), (v_{3}, v_{4}), (v_{4}, v_{5})\})$
+
+** 3 Considerando K = { e1, e2, e5 }, apresente:
+
+$K = \{e_{1}, e_{2}, e_{5}\}$
+
+*** a) G[K]
+
+$G[K] = (\{v_{1}, v_{2}, v_{3}, v_{4}\}, \{(v_{1}, v_{2}), (v_{2}, v_{3}), (v_{2}, v_{4})\})$
+
+*** b) G - e1
+
+$G - e_{1} = (\{v_{1}, v_{2}, v_{3}, v_{4}, v_{5}\}, \{(v_{2}, v_{3}), (v_{3}, v_{3}),
+(v_{3}, v_{4}), (v_{4}, v_{2}), (v_{4}, v_{5}),
+(v_{5}, v_{2}), (v_{2}, v_{5})\})$
+
+** 4 Apresente um subgrafo gerador H de G tal que H seja um grafo simples
+
+$H = (\{v_{1}, v_{2}, v_{3}, v_{4}, v_{5}\}, \{(v_{1}, v_{2}), (v_{2}, v_{3}), (v_{3}, v_{4}), (v_{4}, v_{2}), (v_{4}, v_{5}), (v_{5}, v_{2})\})$
+
+** 5 Apresente o complemento do grafo obtido na resposta do exercício 4
+
+\[
+Hc = (\{v_{1}, v_{2}, v_{3}, v_{4}, v_{5}\}, \{(v_{1}, v_{2}), (v_{1}, v_{3}), (v_{1}, v_{4}), (v_{1}, v_{5}),
+                                            (v_{2}, v_{3}),
+                                            (v_{3}, v_{4}), (v_{3}, v_{5})
+                                            (v_{4}, v_{2}), (v_{4}, v_{5}),
+                                            (v_{5}, v_{2})\})
+\]
+
+** 6 Apresente um subgrafo gerador H de G tal que sua quantidade de arestas seja mínima e que, para qualquer par { x, y } de vértices de H, exista um caminho de x para y
+
+\[
+H = (\{v_{1}, v_{2}, v_{3}, v_{4}, v_{5}\}, \{(v_{1}, v_{2}), (v_{2}, v_{3}), (v_{3}, v_{4}), (v_{4}, v_{5})\})
+\]
+
+** 7 Apresente uma trilha em G com comprimento igual a 7.
+
+\[
+P = (v_{1}, e_{1}, v_{2}, e_{2}, v_{3}, e_{3}, v_{3}, e_{4}, v_{4}, e_{6}, v_{5}, e_{7}, v_{2}, e_{8}, v_{5})
+\]
+
+** 8 Apresente um passeio em G com comprimento igual a 6.
+
+\[
+P = (v_{1}, e_{1}, v_{2}, e_{2}, v_{3}, e_{3}, v_{3}, e_{4}, v_{4}, e_{6}, v_{5}, e_{7}, v_{2})
+\]
+
+** 9 Apresente um caminho em G com comprimento igual a 5.
+
+\[
+P = (v_{1}, e_{1}, v_{2}, e_{2}, v_{3}, e_{4}, v_{4}, e_{6}, v_{5})
+\]
+
+** 10 Apresente um circuito em G com comprimento igual a 4.
+
+\[
+P = (v_{2}, e_{2}, v_{3}, e_{4}, v_{4}, e_{6}, v_{5}, e_{7}, v_{2})
+\]
+
+** 11 Existe um circuito em G que tenha comprimento igual a 5? Justifique
+
+Não, pois para obtermos um circuito de comprimento 5 teríamos que
+repetir arestas, o que o desqualificaria como um circuito.

@@ -1,0 +1,7 @@
+Leia o texto "Humanos Dispositivos de Interação Estilos de Interação"
+e responda as seguintes questões:
+1. Preencha o quadro síntese anexo com os estilos de interação,
+   descrevendo as vantagens e desvantagens de cada um deles e
+   apontando um exemplo de aplicação.
+2. Faça o ciclo de interação de Norman de um usuário usando o Zoom
+   para uma reunião remota com sua equipe de trabalho.
