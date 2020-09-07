@@ -1,0 +1,97 @@
+#+title: LAB02 - Protocolo HTTP
+#+author: Luiz Tagliaferro - Tia 31861806
+#+description: atividae de laboratorio HTTP
+
+
+* 1)
+  Roda na versao 1.1.
+
+  De acordo com /*[[https://pt.stackoverflow.com/questions/153512/quais-as-diferen%C3%A7as-entre-http-1-1-vs-http-1-0][este link]]*/ :
+
+  " HTTP 1.1 passou exigir um Host Header. Antes era opcional. Com
+  isso ficou fácil rotear a requisição entre servidores mais
+  facilmente e até compartilhar a mesma estrutura para vários sites
+  (virtual hosting).
+
+  Ele passou permitir extensões do padrão para atender demandas
+  específicas.
+
+  Ele passou ter conexões persistentes (Keep-Alive) e pipelining (várias
+  requisições na mesma conexão ocorrendo em paralelo), fundamental para
+  dar melhor performance e facilitar a comunicação entre cliente e
+  servidor. Para isso um header de conexão foi necessário.
+
+  O método OPTIONS foi introduzido.
+
+  Também adicionaram o código de estado 100 onde o servidor informa o
+  cliente que pode enviar o que ele pretendia. Para isso o cliente manda
+  uma prévia da requisição informando o que ele enviará se autorizado,
+  só para citar um exemplo. Foram vários códigos novos (206, 300, 409,
+  410, etc.).
+
+  Também melhorou muito o suporte para cache que agora pode manipulá-lo
+  de forma menos ingênua.
+
+  Melhorou o suporte para compressão.
+
+  Foi adicionado digest authentication para melhorar a
+  segurança. Autenticação de proxy também passou ser possível.
+
+  Alguns recursos foram colocados para melhorar a confiabilidade.
+
+  Passou ter suporte apropriado para lidar com línguas diferentes.
+
+  Os dados puderam ser enviados em partes evitando grandes perdas na
+  ocasião de falhas, além do cliente poder começar renderizar antes de
+  chegar tudo. Passou existir a possibilidade do cliente pedir apenas
+  uma parte do dado.
+
+  Muita coisa que já estava sendo usada no 1.0 foi formalizada no
+  protocolo 1.1. "
+
+  Este /*[[http://www8.org/][documento]]*/ detalha mais as mudanças.
+
+  O servidor executa a versao 1.1.
+
+
+* 2)
+  De acordo com o output:
+#+BEGIN_SRC html
+  Accept-Language: pt-BR,en;q=0.5\r\n
+#+END_SRC
+
+* 3)
+  /*Cliente*/ 192.168.15.6
+
+  /*Servidor*/ 128.119.245.12
+
+* 4)
+  Foram realizadas 2 solicitaçoes pelo cliente(eu).
+
+* 5)
+  Recebi 2 códigos:
+
+** 1°
+   /*200*/
+
+   codigo de confirmaçao(deu tudo certo).
+
+** 2°
+   /*404*/
+
+   codigo que informa que o documento solicitado nao foi encontrado.
+
+* 6)
+  Ele foi modificado pela ultima vez durante a ultima resposta que o
+  servidor enviou.
+
+* 7)
+  /*Cliente*/ Porta 80
+
+  /*Servidor*/ Porta 55528
+
+* 8)
+  Os parametros difertentes seriam:
+ - Horario de last-modified
+ - Ips diferrentes
+ - Header

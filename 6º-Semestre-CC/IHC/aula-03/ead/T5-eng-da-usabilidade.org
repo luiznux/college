@@ -1,0 +1,17 @@
+T5 - EAD - "Engenharia de Usabilidade"
+
+Leia o texto "Engenharia de Usabilidade"
+(Aula3-EngenhariaUsabilidade_completa_v2.pdf) e responda:
+1. O que é usabilidade?
+2. Quais componentes de usabilidade devem constituir o foco de atenção
+   do designer de interfaces?
+3. Quais são os ciclos de vida de uma tecnologia?
+3a. Descreva cada uma delas.  3b. Quais as vantagens e desvantagens de
+cada uma delas.
+4. Descreva o ciclo do Design Centrado no Usuário.
+4a. Quais são seus objetivos?  4b. Quais são seus princípios?
+5. Como coletar informações durante a fase do levantamento de
+   requisitos?
+6. O que são cenários em IHC?
+7. Descreva um cenário para o usuário que utiliza o aplicativo de
+   vídeo conferência Zoom.
