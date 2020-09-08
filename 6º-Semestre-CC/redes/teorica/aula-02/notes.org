@@ -1,0 +1,46 @@
+#+title: Notes da aula de redes 2
+#+author: Luiz Tagliaferro
+
+
+* Redes de acesso de meios fisicos
+
+** Par trançado
+   - pares de fios de cobre e é dividido em 7 categorias
+   - exemplo cat 6, cat 7
+
+** Cabo coaxial
+
+** Fibra otica
+
+* Redes de Acesso Residencial
+
+** Discada(Dialup) via modem
+
+   - acesso direto ao roteador de ate 56kps
+   - Usava a rede telefonica para realizar a conexao
+   - Nao da pra usar a net e o telefone ao mesmo tempo por utilizar o
+     mesmo canal.
+
+
+** ADSL: Asymmetric Digital Sbscriber Line
+
+   - ate 24Mbps e 1Mbps de upload(no começo)
+   - Usa sinais em diferentes frequencias para nao haver conflito,
+   - 1 banda para cada serviço(Download, upload, telefone)
+   - O DSL teve diversas verçoes e evoluçoes ao longo dos anos,
+     aumentando assim a largura de banda.
+   - **Atualmente* o DSL utiliza de varias sub-estaçoes para se
+     conectar com seus clientes,
+
+** Cabo
+   - Utiliza cabo coaxial, fornecendo televisao e internet juntos
+   - A demanda influencia na velocidade da internet.
+
+* Tipos de Redes
+
+** Local
+*** Pessoal
+    - Escritorios
+    - Casas
+
+* Estrutura da Internet: redes de redes

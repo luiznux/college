@@ -1,0 +1,14 @@
+T6 EAD - Análise de Usuários e de Tarefas (individual)
+
+Leia o texto "Analise de Usuários e de Tarefas" e responda:
+1. Por que é importante, num projeto de sistemas, conhecer o perfil dos usuários?
+2. O que queremos saber sobre os usuários quando planejamos um sistema?
+3. Os usuários diferem entre si em função da frequência e da perícia com que utilizam um produto. Esta distinção permite caracterizar os usuários em etapas de utilização. Quais são estas etapas?
+
+4. Personas são descrições ricas de pessoas imaginárias que representam usuários típicos do sistema a ser desenvolvido. Os personas indicam para quem o sistema está sendo desenvolvido. Neste contexto, descreva um persona para uma aplicação chamada "Pauta Mágica", ilustrada no texto, com o objetivo de fornecer uma pauta interativa e inteligente para orientar o músico na composição da música, ensaio e atuação em concerto.
+
+5. Cenários são histórias de pessoas e das suas atividades, que incluem um contexto, um ou mais atores (usuários), um objetivo orientador e um enredo com ações e acontecimentos que perfazem uma ou mais tarefas. Os cenários servem para verificar a validade da solução proposta, na medida que permitem perceber como é que as tarefas irão ser realizadas. Descreva um cenário para a aplicação "Pauta Mágica".
+
+6. Quais os elementos essenciais para se analisar uma tarefa?
+
+7. Siga o roteiro no final do slide "Análise de Usuários e de Tarefas" respondendo as 11 perguntas essenciais que auxiliam na análise de usuários e de tarefas, para analisar os usuários e as tarefas da aplicação "Pauta Mágica".
