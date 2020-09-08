@@ -1,17 +1,119 @@
-T5 - EAD - "Engenharia de Usabilidade"
+#+title: T5 - EAD - "Engenharia de Usabilidade"
+#+author: Luiz Tagliaferro Tia 31861806
 
-Leia o texto "Engenharia de Usabilidade"
-(Aula3-EngenhariaUsabilidade_completa_v2.pdf) e responda:
-1. O que é usabilidade?
-2. Quais componentes de usabilidade devem constituir o foco de atenção
-   do designer de interfaces?
-3. Quais são os ciclos de vida de uma tecnologia?
-3a. Descreva cada uma delas.  3b. Quais as vantagens e desvantagens de
-cada uma delas.
-4. Descreva o ciclo do Design Centrado no Usuário.
-4a. Quais são seus objetivos?  4b. Quais são seus princípios?
-5. Como coletar informações durante a fase do levantamento de
-   requisitos?
-6. O que são cenários em IHC?
-7. Descreva um cenário para o usuário que utiliza o aplicativo de
-   vídeo conferência Zoom.
+
+** 1. O que é usabilidade?
+
+   Sua definição consiste em um limite que um produto pode ser usado
+   por certos usuários para atingir objetivos especificos com
+   eficacia, eficiencia e satisfaçao.
+
+
+** 2. Quais componentes de usabilidade devem constituir o foco de atenção do designer de interfaces?
+
+   Facilidade de aprendizagem, eficiência , memorabilidade, prevençao
+   de erros, satisfaçao.
+
+
+** 3. Quais são os ciclos de vida de uma tecnologia?
+
+*** a. Descreva cada uma delas
+
+    /*Análise de requisitos*/
+
+    Análise das funcionalidades do produto e como essas
+    funcionalidades devem operar
+
+    /*Projeto e especificação*/
+
+    Desenvolvimento da arquitetura, definição de linguagens e
+    ferramentas que serão usadas no projeto
+
+    /*Implementação*/
+
+    Desenvolvimento do serviços/programas que compõe a arquitetura
+    definida na fase de projeto e especificação
+
+    /*Testes*/
+
+    Testes dos requisitos levantados na fase de análise de requisitos
+
+    /*Manutenção*/
+
+    Correção de bugs encontrados depois da entrega do produto
+
+
+*** b) Quais as vantagens e desvantagens de cada uma delas
+
+    /*Análise de requisitos*/
+
+    É possível ter uma visão macro do produto que será entregue.
+
+    Geralmente não é possível levantar todos os requisitos possíveis
+    nessa fase, muito requisitos são apenas levantados na fase de
+    implementação
+
+    /*Projeto e especificação*/
+
+    As funcionalidades já podem ser validadas na visão da arquitetura.
+
+    /*Implementação*/
+
+    Produto é desenvolvido de uma forma mais "palpável" em que todos
+    podem começar a experimentar
+
+    /*Testes*/
+
+    Importante para garantir que o que foi implementado é o que foi
+    solicitado
+
+    Podem "atrasar" o lançamento do produto por demorarem "demais"
+
+    /*Manutenção*/
+
+    Ajuda a garantir a qualidade contínua do produto para os clientes
+
+    Pode não ser eficaz caso as pessoas que darão manutenção podem não
+    ter desenvolvido o sistema
+
+** 4. Descreva o ciclo do Design Centrado no Usuário.
+
+*** a) Quais são seus objetivos?
+
+   O objetivo do Design Centrado no usuário é a geração de produtos
+   fáceis de serem utilizados
+
+*** b) Quais são seus princípios?
+    Alocação das funções entre o sistema e usuário, Usuários devem
+    estar envolvidos ativamente no processo, Design iterativo Equipes
+    multidisciplinares e Desenhos e protótipos
+
+
+** 5. Como coletar informações durante a fase do levantamento de requisitos?
+
+   Entrevistas
+
+   Grupos de foco
+
+   Questionário
+
+   Brainstorming de necessidades e desejos de usuários
+
+   Cenários
+
+   Estudos de campo
+
+   Personas
+
+
+** 6. O que são cenários em IHC?
+
+   Cenários são abordagens informais e mais aplicáveis a sistemas,
+   para imaginar o comportamento do sistema.
+
+
+** 7. Descreva um cenário para o usuário que utiliza o aplicativo de vídeo conferência Zoom.
+
+   O usuário quer participar de um webinar. Eu me inscrevo num evento
+   webinar. Recebo o ID da conferência. Ao insirerir o ID, entro na
+   sessão desejada.
