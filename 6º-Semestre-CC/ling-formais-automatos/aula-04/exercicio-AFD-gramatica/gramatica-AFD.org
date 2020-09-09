@@ -1,0 +1,31 @@
+#+title:Exercicios Gramatica AFD
+#+author:Dupla: Luiz Tagliaferro 31861806 - Edison Neto 31812295
+
+
+* 1) Considerando a seguinte linguagem formal $L_{1} = \{ w \in \{a,b\}* |$ w termina com aa $\}$:
+
+** a) Implemente uma gramática que gere $L_{1}$ . Qual é o tipo da sua gramática?
+
+   $GL_{1}$ = ( {S}, {a,b}, {S→Sa, S→baS, S→a} S)
+
+   Esta gramatica é Regular.
+
+
+** b) Implemente um AFD que reconheça $L_{1}$.
+   #+caption: Grafo L1
+   [[file:jflap/L1.png]]
+
+
+
+* 2) Considerando a seguinte linguagem formal $L_{2} = \{ w \in {a,b}* |$ w começa com ab $\}$:
+
+** a) Implemente uma gramática que gere $L_{2}$. Qual é o tipo da sua gramática?
+
+   $GL_{2}$ = ({S}, {a,b}, {S→ab, S→Sa, S→Sb}, S)
+
+   Esta gramática é regular.
+
+
+** b)Implemente um AFD que reconheça $L_{2}$
+   #+caption: Grafo L2
+   [[file:jflap/L2.png]]

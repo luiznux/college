@@ -1,0 +1,12 @@
+
+* Protocolo FTP
+  - File Transfer Protocol
+  - Protocolo para transferir arquivos com servidor/cliente
+
+
+* Correio Eletronico(EMAIL)
+
+** SMTP
+   - Protocolo de envio de mensagens
+   - usa o *TCP* para transferir de modo confiavel a mgs na porta 25
+   - 
