@@ -1,0 +1,32 @@
+#+title: Representaçao Computacional de grafos - Aula-06
+#+author: Luiz Tagliaferro - 10/09/2020
+<#+description: Aula para entendermos modelos de representaçao
+computacional de um grafo
+
+* Capitulo 22 do livro do Cormen
+  - Dar uma olhada nesse capitulo, vale a pena...
+
+* Para maior entendimento dos conceitos abaixo, verifique as figuras do pdf
+
+* Tipos de representaçoes
+
+** 1. Representaçao  por lista ligada de adjacencia
+   * Onde cada lista sera correspondente a cada adjacencia do vertice
+
+** 2. Representaçao Matricial(adjacencia)
+   * Mesmo principio anterior de representaçao de adjacencia
+   * Linhas e colunas representam vertices
+   * 0 representa nao extremos(sem laços)
+   * 1 representa um laço entre dois vertices
+   * Zeros na diagonal principal, indicam que o grafo é simples
+
+
+* OBS
+
+  - Normalmente, as arestas de um grafo nao sao orientadas.
+    Para diferenciar esses grafos(orientados e nao), usaamos flexas
+    para dizermos a direçao
+
+  - No caso de representaçoes por matrizes, para indicarmos a origem
+    da "seta", as linhas sao correspondentes a origem, e colunas
+    referentes a destinos
