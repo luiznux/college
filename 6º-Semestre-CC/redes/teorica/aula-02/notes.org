@@ -1,7 +1,6 @@
 #+title: Notes da aula de redes 2
 #+author: Luiz Tagliaferro
 
-
 * Redes de acesso de meios fisicos
 
 ** Par trançado
@@ -45,4 +44,22 @@
 
 * Estrutura da Internet: redes de redes
 
-** ISP
+** ISP(internet service provide)
+
+*** Tier-1 ISP - Cobertura nacional/internacional
+    - embratel
+    - oi
+    - AT&T
+
+*** Tier-2 ISP- ISP menores(regionais)
+    - Conexao a um ou mais ISP tier-1, possivelmente a outros ISP tier-2
+
+
+* Aplicaçao WEB
+
+  * Sao processos remotos que integrarem atraves de uma infraestrutura de rede
+    * O mesmo principio de sistemas operacionais, eu gero um processos
+      na minha maquina e troco informaçoes com outras maquinas pela
+      rede
+
+

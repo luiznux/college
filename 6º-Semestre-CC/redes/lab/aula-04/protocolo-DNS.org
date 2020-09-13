@@ -1,0 +1,33 @@
+#+title: Lab Protocolo DNS
+#+author: Luiz Tagliaferro - TIA 31861806
+
+* resetar o cache do DNS antes de começar
+#+BEGIN_SRC  bash
+systemctl restart nscd
+#+END_SRC
+
+
+
+* 1)
+  UDP, porque a mensagem nao necessita de confirmaçao pelo remetente
+* 2)
+
+* 3)
+
+* 4)
+
+* 5)
+
+* 6)
+
+* 7)
+
+* 8)
+
+* 9)
+
+* 10)
+
+* 11)
+
+* 12)

@@ -1,0 +1,61 @@
+#+title: Terminologias e atrasos
+#+author: Luiz Tagliaferro
+<#+description: Resumo do [[https://www.youtube.com/watch?v=lo1O_4_08zg&list=PLYId9v3_N2OjJJJ0l5mVzmoh8EyA7tscv&index=3&t=0s][video]] do Bruno
+
+* Largura de banda
+  * É capaciade de transportar dados por um determinado tipo de
+    material utilizado.
+  * Em transmissão de dados temos uma situação similar, com diversos
+    tipos de meios de transmissão, cada um com uma largura de banda
+    específica de acordo com suas características construtivas: um
+    cabo coaxial, por exemplo, tem uma largura de banda da ordem de
+    5Mbits/seg ou 5MHz.
+  * Já uma fibra ótica tem normalmente uma largura de banda da ordem
+    de *200 a 10Gbits/seg*. Isso significa que é possível trafegar
+    muitas vezes mais dados em uma fibra ótica do que em um cabo
+    coaxial, por exemplo""
+
+* Taxa de transfencia
+  * Medida de transfencia de bits atravez de um determinado enlace
+    durante um determinado perio de tempo, dado em bits/s
+  * A medida sempre vai ser limitada sempre pelo ponto com a menor
+    taxa de transferencia, exemplo: Se tiver um ponto falho, mas o
+    resto da rede funciona com alta taxa, esse ultimo ponto vai
+    limitar o resto
+
+** Fatores que influencian a taxa de transf
+   - quant de trafego
+   - tipo de trafego
+   - latencia criada pelo numero de dispositivos de rede encontrados
+     entre a origem e o destino
+
+* Latencia
+  * Tempo necessario p/ os dados viajarem de um pnto a ponto, incluindo atrasos.
+
+
+* Tipos de atrasos
+  - Pacotes se enfileram nos buffers do roteador
+  - Taxa de chegada de pac. ao enlace execede a capaciade do link de saida
+  - pacotes enfileram, esperam pela sua vez
+
+** 1) Processamento no nó
+   - analise do cabeçalho
+   - verificaçao de bits errados
+   - atraso da ordem de microssundos
+
+** 2) Enfileramento
+   - tempo de espera no enlace de saida ate a transmissao
+   - depende do nivel de congestionamento
+   - Atraso da orgem de microssegundos e ate milissegundos
+
+** 3) Atraso de transmissao
+   - R = largura de banda do enlace (bps)(depende do meio)
+   - L = tamanho do pacote(bits)
+   - tempo para colocar os bits no enlace(tempo de acesso ao meio
+     fisico do pacote) = L/R
+
+** 4) atraso de propagaçao
+   -d = compr do enlace
+   -s = velocidade de propagaçao do meio (~2x10^8 m/seg)
+   - Atraso de progaçao = d/s
+ 
