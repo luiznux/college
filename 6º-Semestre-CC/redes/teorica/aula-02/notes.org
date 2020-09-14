@@ -62,4 +62,13 @@
       na minha maquina e troco informaçoes com outras maquinas pela
       rede
 
+** Tipos de Aplicaçao
+
+*** Cliente-servidor
+
+*** Peer-to-peer(P2P)
+
+*** Hibrida de cliente-servidor e P2P
+
+* sa
 
