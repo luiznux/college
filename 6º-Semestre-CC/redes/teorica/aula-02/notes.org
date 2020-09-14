@@ -65,10 +65,38 @@
 ** Tipos de Aplicaçao
 
 *** Cliente-servidor
+**** Vantagens
+     - atende  maior demanda
+     - centralizado
+**** Desvantagens
+     - Se cair o servidor é gg pra todo mundo
 
 *** Peer-to-peer(P2P)
+**** Vantagens
+     - Descentralizado
+     - Se cair um nao prejudica o resto
+     - Mais escalabilidade(quanto mais gente melhor)
+**** Desvantagens
+     - Segurança
 
 *** Hibrida de cliente-servidor e P2P
 
-* sa
+* Comunicaçao entre processos
+** Socket
+   Aplicaçao rodando num hospedeiro que envia e receve mensagens da rede
 
+** Porta
+   * De maneira generica, imagine como se eu precisasse entregar uma
+     carta num predio com muitos andares, se eu fornecer somente o
+     endereço e o numero nao é suficiente para encontrar o
+     destinatario, dai vem a ideia da porta(ou no caso o seu numero do
+     apt)
+
+   * Somente fornecer o endereço IP nao basta para saber para quem
+     enviar o processo recebido na rede, assim o SO define portas
+     expecificas para cada tipo de processo, exemplo: email porta 110
+
+   * Portas:
+     - HTTP = porta 80
+     - POP3 = porta 110
+     - SMTP = porta 25
