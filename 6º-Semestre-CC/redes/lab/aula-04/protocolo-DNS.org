@@ -7,12 +7,22 @@ systemctl restart nscd
 #+END_SRC
 
 
-
 * 1)
   UDP, porque a mensagem nao necessita de confirmaçao pelo remetente
+
 * 2)
+  * Origem 45785
+  * Destino 53
 
 * 3)
+|  | 0X4000, don't fragmentY |
+|            |                        |
+|            |                        |
+|            |                        |
+|            |                        |
+|            |                        |
+|            |                        |
+|            |                        |
 
 * 4)
 
