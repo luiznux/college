@@ -1,0 +1,104 @@
+#+title: T6 - Análise de Usuários e de Tarefas
+#+author: Luiz Tagliaferro - TIA 31861806
+
+* 1. Por que é importante, num projeto de sistemas, conhecer o perfil dos usuários?
+
+  - Pois, conhecendo o usuario alvo do sistema, podemos adequa-lo,
+    adptalo e tornar mais atrativo por exemplo. Com interfaces que
+    refletem no padrao de pessoa que ira utilizar o sistema.
+
+* 2. O que queremos saber sobre os usuários quando planejamos um sistema?
+
+** 1. Como se definem
+** 2. Como se diferem individualmente
+** 3. Como usam os produtos ao longo do tempo
+** 4. Quais escolhas fazem sobre níveis de perícia daquilo que querem ou precisam atingir
+
+* 3. Os usuários diferem entre si em função da frequência e da perícia com que utilizam um produto. Esta distinção permite caracterizar os usuários em etapas de utilização. Quais são estas etapas?
+
+** 1. O que sabem acerca das tarefas
+** 2. O que sabem acerca das ferramentas
+** 3. Modelo mental
+** 4. Diferenças de motivaçao
+
+* 4. Personas são descrições ricas de pessoas imaginárias que representam usuários típicos do sistema a ser desenvolvido. Os personas indicam para quem o sistema está sendo desenvolvido. Neste contexto, descreva um persona para uma aplicação chamada "Pauta Mágica", ilustrada no texto, com o objetivo de fornecer uma pauta interativa e inteligente para orientar o músico na composição da música, ensaio e atuação em concerto.
+
+   - Natalia:
+   - Possui 27 anos, gosta de tocar guitarra e ouve heavy metal. Faz
+     faculdade de SI, nas horas vagas faz estagio e ensaia com sua
+     banda. Muito organizada de metodica com seus estudos e trabalhos
+     pessoais. Possui um xiaomi de ultima geraçao onde usa muitos
+     aplicativo
+
+
+* 5. Cenários são histórias de pessoas e das suas atividades, que incluem um contexto, um ou mais atores (usuários), um objetivo orientador e um enredo com ações e acontecimentos que perfazem uma ou mais tarefas. Os cenários servem para verificar a validade da solução proposta, na medida que permitem perceber como é que as tarefas irão ser realizadas. Descreva um cenário para a aplicação "Pauta Mágica".
+
+* 6. Quais os elementos essenciais para se analisar uma tarefa?
+
+** Elementos essenciais:
+
+  - Objetivo: o que precisa ser feito? O que o usuário precisa fazer?
+
+  - Pré-condições: o que deve ser feito primeiro? Em alguns casos
+  algumas condições exigem a realização de outras tarefas.  para
+  anexar o arquivo, é preciso saber seu nome e sua localização.
+
+  - Subtarefas: quais os passos da tarefa? Algumas vezes essas
+  subtarefas pode ser outras tarefas. (obs: são muito importantes,
+  pois permitem distribuir as tarefas em várias telas)
+
+* 7. Siga o roteiro no final do slide "Análise de Usuários e de Tarefas" respondendo as 11 perguntas essenciais que auxiliam na análise de usuários e de tarefas, para analisar os usuários e as tarefas da aplicação "Pauta Mágica".
+
+** 1. Quem vai utilizar o sistema?
+   - Atinge todas as faixas etarias de usuarios de instrumentos musicais
+
+** 2. Que tarefas executam atualmente? (sem uso do sistema)
+   - tocar música a partir de partituras; ensaiar músicas a partir de
+     partituras; compor músicas novas; anotas as partituras com
+     indicações que os ajudem a tocar; tarefas mais frequentes são
+     tocar e ensaiar.
+
+** 3. Que tarefas são desejáveis?
+   - reprodução de áudio na partitura; possibilidade de baixar
+     partituras para o dispositivo (internet ou outro); detecção de
+     erros enquanto toca; seguimento visual da pauta (estilo karaokê);
+
+** 4. Como se aprendem as tarefas?
+   - Os usuários aprendem a realizar as tarefas através de cursos de
+     formação musical, de instrumentos e de composição musical.
+
+** 5. Onde são desempenhadas as tarefas?
+   -As tarefas são realizadas com mais frequência em casa ou no
+   estúdio, locais onde existe uma boa luz ambiente e normalmente sem
+   ruído. Quando atuam, as tarefas são realizadas num palco, que
+   tipicamente tem luz intensa ou um grande contraste de luzes.
+
+** 6 Qual a relação entre o usuário e a informação?
+   - A informação relevante para executar as tarefas está armazenada
+     nas partituras (em papel) e cada usuário tem as suas. Em alguns
+     casos os usuários partilham as partituras entre si. No entanto,
+     algumas partituras são consideradas privadas e não podem ser
+     compartilhadas.
+
+** 7.Que outros instrumentos tem o usuário?
+   - Os usuários usam ferramentas para afinação dos instrumentos
+     (afiador e diapasão); para fazer o acompanhamento musical (leitor
+     de música, rádio, etc.); e o metrônomo.
+
+** 8. Como os usuários se comunicam entre si?
+   - Em casa e no estúdio, os usuários se comunicam através de fala,
+     dialogando e trocando ideias. No palco, se comunicam por gestos.
+
+** 9. Qual a frequência de desempenho das tarefas?
+   - A maioria dos usuários apenas toca música, enquanto uma pequena
+   quantidade toca e compõem músicas. Quanto às tarefas mais
+   realizadas, o ensaio de uma música nova é feito com mais frequência
+   (várias vezes/semana), enquanto tocar em público é menos frequente
+   (uma vez por mês).
+
+** 10. Quais restrições de tempo impostas?
+
+   - Em concerto, os usuários selecionam as partituras em poucos
+     segundos. Nos ensaios, as restrições são menores, mas não excedem
+     1 minuto para que os colegas não tenham que esperar.
+

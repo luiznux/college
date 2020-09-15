@@ -1,0 +1,13 @@
+Antes de realizar esta tarefa, leia o texto "Análise de Tarefas II". O texto mostra três maneiras diferentes de formalizar as tarefas que o usuário pode realizar num sistema computacional. Vamos testar todas as três.
+
+Para as questões abaixo considere as seguintes tarefas que o usuário pode realizar no sistema de videocolaboração Zoom:
+- Agendar uma reunião
+- Entrar e realizar uma reunião
+- Escrever no Chat
+- Configurar o perfil do usuário
+
+1. Faça a análise hierárquica de tarefas (HTA) para o sistema de videocolaboração Zoom, considerando as tarefas descritas acima.
+
+2. Faça o GOMS (Goals, Operators, Methods, e Selection Rules) de cada tarefa do sistema de videocolaboração Zoom.
+
+3. Faça as árvores de tarefas do sistema de videocolaboração Zoom.

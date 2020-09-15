@@ -1,0 +1,112 @@
+#+title: Protocolos
+#+author: Luiz Tagliaferro
+
+* HTTP(HyperText Transfer Protocol)
+   * É um protocolo de comunicaçao entre sistemas de informaçao que
+     permite a transferencia de dados entre redes de computadores,
+     principalmente na World Wide Web
+
+** HTTP nao persistente
+   - no maximo um objeto é enviado por uma conexao TCP
+   - Utiliza HTTP/1.0[RFC 1945]
+   - Requer 2 RTTs por objeto
+   - Overhead do SO para cada conexao
+   - Navegador geralmente abrem conexoes TCP paralelas para buscar
+     objetos referenciados
+
+** HTTP persistente
+   - Multiplos objetos podem ser enviados por uma unica conexao TCP
+     entre cliente e servidor
+   - Utiliza HTTP/1.1[RFC 2616]
+   - Servidor deixa a conexao aberta depois de enviar a resposta
+   - Mensagens HTTP seguintes entre cliente/servidor enviadas pelas
+     conexao aberta
+   - Cliente envia requisiçoes assim que encontra um objeto referenciado
+   - No minimo um RTT para todos os objetos referenciados
+
+** Uriliza o TCP
+   * Cliente inicia uma conexao TCP(cria socket) com o servidor pela
+     porta 80
+
+   * Servidor aceita a conexao TPC do cliente
+
+   * Mensagens HTTP(do protocolo da camada de aplicaçao) trocadas
+     entre navegador(cliente HTTP) e servidor Web (servidor HTTP)
+
+   * Conexao TCP fechada
+
+*** HTPP é "sem estado"
+   ⇝ Servidor nao guarda informaçaoes sobre requisiçoes passadas do
+   cliente (compelxo manter estado)
+
+   * Ou seja, voce pede o dado por HTTP, o servidor so manda e nao se
+     preocupa com o estado que o cliente se encontra.
+
+* Como funciona a requisiçao HTTP
+  * Pensando na requisiçao, usando o TCP, ele nunca solocita uma
+    pagina sem antes ver se o servidor estiver disponivel
+    - Isso gera menos trafego e atrasos pois o protocolo nao fica
+      mandando varias requisiçoes para um servidor que nao esta
+      disponivel
+
+** RTT(Round trip time)
+   - tempo para o um pequeno pacote trafegar do cliente ao servidor e retornar
+
+   - um RTT para requisiçao HTTP e primeiros bytes da resposta HTTP
+     retornarem
+
+   - Tempo de transmissao de arquivo(depende da sua largura de banda)
+
+   - **T = 2RTT + tempo de transmissao*
+
+** HTTP2
+   * permite um uso mais eficiente da rede Recursos e uma percepçao
+     reduzida de latencia atraves da introduçao compressao do cabeçalho
+     e permitindo multiplas comunicaçoes usando a mesma conexao. Ele
+     tambem introduz *Server Push* de representaçoes de servidores para
+     clientes
+
+   * Ele ja manda um monte de coisa pra evitar requisiçoes
+     desnecesarias
+
+* Formato das Mensagens HTTP
+
+#+BEGIN_SRC html
+GET /home.html HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+#+END_SRC
+#+caption: caption of the image
+[[file:notes/formato-http.png]]
+
+** HTTP/1.0
+  - GET
+  - POST
+  - HEAD
+  – pede ao servidor para deixar objeto requisitado fora da resposta
+
+** HTTP/1.1
+   - GET, POST, HEAD
+   - PUT
+   - DELETE
+   – exclui arquivo especificado no campo de URL
+
+*** GET
+   - É o método mais comum: solicita algum recurso (qualquer dado que
+     estiver identificado pelo URI) por meio do protocolo HTTP. O
+     método GET é reconhecido por todos os servidores.
+
+*** HEAD
+    - É o mesmo que GET, mas sem que o corpo da mensagem seja
+    retornado. É usado para obter meta-informações por meio do
+    cabeçalho da resposta, sem ter que recuperar todo o conteúdo.
+
+*** POST
+    - POST: Envia dados para serem processados (por exemplo, dados de
+      um formulário HTML) para o recurso especificado. Os dados são
+      incluídos no corpo do comando
+
+* Cookie
