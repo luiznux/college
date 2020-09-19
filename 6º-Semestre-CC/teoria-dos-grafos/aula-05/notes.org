@@ -1,0 +1,22 @@
+#+title: Grafos Eulerianos
+#+author: Luiz Tagliaferro
+
+
+* Grafos Hamiltonianos
+
+ - Um grafo G é hamiltoniano se G contém um circuito hamiltoniano.
+
+
+** *Caminho Hamiltoniano*
+
+   - É um caminho que contem todos os vertices de um grafo.
+
+     *Caminho* é um passeio sem repetir vertice.
+
+
+** *Circuito Hamiltoniano*
+
+   - É um ciruito que contem todos os vertices de G
+
+     *Circuito* é um caminho fechado cuja origem e vertices sao todos
+     do mesmo grafo e o inicio e final sao os mesmos vertices.

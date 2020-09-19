@@ -1,0 +1,22 @@
+#+title: Implementaçao de Automatos
+#+author: Luiz Tagliaferro
+
+* Bora usar goto rapaziada
+
+#+BEGIN_SRC C
+  int scanner(char palavra[]){
+    int i=-1;
+    q1: i++;
+      if(palavra[i] == '0') goto q1;
+      else if (palavra[i] == '1') goto q2;
+      else if (palavra[i] == '\0') return(1); //o '\0' significa o fim
+                                              //da string
+      return(0);
+
+    q2: i++;
+      if (palabra[i] == '0') goto q1;
+      else if (palavra[i] == '1') goto q2;
+      return(0);
+  }
+#+END_SRC
+

@@ -2,9 +2,12 @@
 #+author: Luiz Tagliaferro
 
 * HTTP(HyperText Transfer Protocol)
+
    * É um protocolo de comunicaçao entre sistemas de informaçao que
      permite a transferencia de dados entre redes de computadores,
      principalmente na World Wide Web
+
+   * Ver esse [[https://httpbin.org/#/][link]]
 
 ** HTTP nao persistente
    - no maximo um objeto é enviado por uma conexao TCP
@@ -24,7 +27,7 @@
    - Cliente envia requisiçoes assim que encontra um objeto referenciado
    - No minimo um RTT para todos os objetos referenciados
 
-** Uriliza o TCP
+** Utiliza o TCP
    * Cliente inicia uma conexao TCP(cria socket) com o servidor pela
      porta 80
 
@@ -79,3 +82,119 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 #+END_SRC
+#+caption: caption of the image
+[[file:formato-http.png]]
+
+** HTTP/1.0
+  - GET
+  - POST
+  - HEAD
+  – pede ao servidor para deixar objeto requisitado fora da resposta
+
+** HTTP/1.1
+   - GET, POST, HEAD
+   - PUT
+   - DELETE
+   – exclui arquivo especificado no campo de URL
+
+*** GET
+   - É o método mais comum: solicita algum recurso (qualquer dado que
+     estiver identificado pelo URI) por meio do protocolo HTTP. O
+     método GET é reconhecido por todos os servidores.
+
+*** HEAD
+    - É o mesmo que GET, mas sem que o corpo da mensagem seja
+    retornado. É usado para obter meta-informações por meio do
+    cabeçalho da resposta, sem ter que recuperar todo o conteúdo.
+
+*** POST
+    - POST: Envia dados para serem processados (por exemplo, dados de
+      um formulário HTML) para o recurso especificado. Os dados são
+      incluídos no corpo do comando
+
+** Respostas *HTTP* Exemplos:
+   - As respostas do servidor sao em forma de numeros que indicam o
+     que aconteceu
+
+*** Sucesso
+    *200 OK*
+
+*** Not found
+   *404*
+
+* Cookie
+
+  * Um cookie é um pedaço de texto que um servidor Web pode armazenar
+    no disco rígido do usuário. São utilizados pelos sites
+    principalmente para identificar e armazenar informações sobre os
+    visitantes.
+
+  * A ideia do cookie é manter o estado, pois o protocolo http nao
+    possui estado, pensado numa maneira pratica: Voce esta navegando
+    em um site de compras, e seleciona um produto para colocar no
+    carrinho, caso voce recarregue a pagina, o produto nao some do
+    carrinho graças aos cookies que mantem o estado atravez do
+    protocolo HTTP, salvando assim as informaçoes.
+
+* Caches Web(Servidor proxy)
+
+  * HTTP é tipicamente usado para sistemas de informação distribuídos,
+  onde o desempenho pode ser melhorado pelo uso de caches de
+  resposta. Objetivo: satisfazer a requisição do cliente sem envolver
+  servidor de origem
+
+  * Assim, reduz o tempo de resposta a requisiçao do cliente, reduz o
+    trafego no enlace de acesso de uma instituiçao
+
+  - Usuário configura o browser: acesso Web é feito por meio de um
+    proxy
+
+  - Cliente envia todos os pedidos HTTP para o Web cache
+
+    - Se o objeto existe no Web cache: Web cache retorna o objeto
+
+    - Ou o Web cache solicita objeto do servidor original e então
+      envia o objeto ao cliente
+
+    - Cache atua como cliente e servidor;
+
+    - Normalmente, cache é instalado por ISP (da universidade,
+      empresa, residencial).
+
+
+* DNS (Domain Name Server)
+
+  * Ou Servidor de Nomes de Domínios é um sistema de gerenciamento de
+    nomes hierárquicos.
+
+  * Para simplificar, para acessar um site, normalmente voce nao
+    digita o endereço IP do mesmo para chegar nele, digitamos o "nome"
+    dele *www.mackenzie.com.br*, o que o DNS faz é verificar qual IP
+    esta asociado ao nome digitado e para isso, faz uma consulta na
+    base de dados que possui.
+
+** Serviços do *DNS*
+
+*** Traduçao nome de hospedeiro -> endereço IP
+
+***  Apelidodos de hospedeiros
+    - nome
+
+*** Apelidos de servidor de correio
+
+*** Distribuiçao de carga
+    - servidores web replicados: conjunto de endereços IP para um nome
+      canonico
+
+** DNS root
+[[file:root-dns.png]]
+
+   - A zona DNS é um arquivo que armazena registros diferentes que
+     especificam os endereços dos servidores que hospedam seu site (A)
+     ou seus e-mails (MX). Esses endereços podem ser na forma de
+     endereços IP ou nomes de host 
+
+   *Todos os servidores da arvore são chamados servidores
+    autoritativos*
+
+    * Para mais info sobre DNS, leia o slide desta pasta

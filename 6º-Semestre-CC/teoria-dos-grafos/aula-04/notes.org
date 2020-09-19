@@ -1,0 +1,50 @@
+#+title: Grafos Eulerianos
+#+author:  Luiz Tagliaferro
+
+* Grafo euleriano
+
+** É um grafo que possui uma trilha de Euler
+
+*** Trilha de Euler Fechada
+
+    - Lembrando que, uma *trilha* é um passeio sem arestas
+      repetidas(pode repetir vertice)
+
+    - É uma trilha fechada em que passe por todas as arestas do grafo
+      e retorna a origem(o vertice que iniciou a trilha)
+
+
+** *Teorema*
+
+   Um grafo conexo não vazio e não trivial é euleriano se e somente se
+   não contém vértices de grau ímpar.
+
+** *Outros dados:*
+
+   - Se G é um grafo conexo que contém exatamente dois vértices u,v de
+     grau ímpar, então G tem uma trilha de Euler com início em u e
+     término em v.
+
+   - Um grafo conexo tem uma trilha de Euler se e somente se tem no
+     máximo 2 vértices de grau ímpar.
+
+* Algoritimo de Fleury
+
+  - O algoritmo de Fleury é utilizado para a construção ou
+    identificação de um ciclo euleriano em um grafo euleriano.
+
+  1.Faço passeio pelo grafo onde vou removendo as arestas.
+     - Nao posso remover arestas de corte
+       - *a nao ser que nao haja outra alternativa*
+
+  2. Anoto o passeio resultante e repito o processo acima ate que nao
+     haja mais arestas
+
+  3. Obtenho uma trilha de Euler
+
+** *Arestas de corte*
+    - É uma  aresta que se retirada do grafo, deixa o mesmo com mais
+    *componentes* do que o grafo original, ou seja ela *corta* um pedaço
+    do grafo.
+*** *Componentes sao blocos de vertices e arestas*
+

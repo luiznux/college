@@ -1,0 +1,41 @@
+Projeto Etapa 1 - Parte 1 (em grupo)
+
+Projeto do Semestre
+
+Etapa 1 - parte 1 N
+
+Nome e TIA dos integrantes do grupo:
+
+Nome do aplicativo a ser desenvolvido:
+
+Brainstorm do projeto
+
+Story: Como usuário de um sistema colaborativo eu posso interagir
+remotamente com outras pessoas de forma síncrona. Posso trocar
+mensagens, conversar e ver as pessoas que estou interagindo em tempo
+real. Diante do story, responda as seguintes questões:
+
+1 - Descrição do aplicativo
+
+2 - O conteúdo a ser apresentado e ideias de funcionalidades a serem
+abordados pela sua aplicação.
+
+3 - Para qual o tipo de usuários se destina a aplicação? Quais suas
+limitações?
+
+4 - Pesquise pelo menos 3 aplicações semelhantes na Web ou nas lojas
+de app. Descreva as funcionalidades de cada uma delas, os pontos
+fortes e os pontos fracos.
+
+5 - Defina os componentes que a aplicação deverá ter para cumprir as
+seguintes metas de usabilidade:
+
+    * Facilitar a Aprendizagem de uso da aplicação
+
+    * Ser eficiente no uso
+
+    * Ser fácil para o usuário memorizar com se usa a aplicação
+
+    * Prevenir erros durante o uso
+
+    * Garantir a satisfação do usuário ao utilizar a aplicação.

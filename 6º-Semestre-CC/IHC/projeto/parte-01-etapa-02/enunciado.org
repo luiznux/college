@@ -1,0 +1,21 @@
+1. Baseado no público-alvo do sistema que o grupo irá desenvolver,
+   crie pelo menos três personas.
+
+2. Descreva um cenário indicando o contexto de uso do sistema que irá
+   desenvolver.
+
+3. Siga o roteiro no final do slide "Análise de Usuários e de Tarefas"
+   respondendo as 11 perguntas essenciais que auxiliam na análise de
+   usuários e de tarefas, para analisar os usuários e as tarefas da
+   aplicação que será desenvolvida.
+
+4. Especificar três tarefas que os usuários podem executar no sistema
+   a ser desenvolvido.
+
+ATENÇÃO: Entregar em PDF.
+
+5. Para cada tarefa, elabore um modelo HTA ou GOMS detalhado para os
+   principais objetivos a serem atingidos pelos usuários ao interagir
+   com o sistema a ser desenvolvido. Identifique a necessidade ou
+   oportunidade de diferentes estratégias para alcançar um mesmo
+   objetivo.

@@ -1,0 +1,65 @@
+#+title:  Exercicios Grafos Eulerianos e Hamiltonianos
+#+author: Dupla: Luiz Tagliaferro -  31861806 Edison Aguiar - 31812295
+
+* 1)
+
+Sim, pois possui o seguinte circuito hamiltoniano:
+
+C_{G}= (v_{1}, v_{2}, v_{3}, v_{6}, v_{5}, v_{4}, v_{1})
+
+* 2)
+
+** a)
+
+   Nenhuma. Pois caso haja alguma aresta de corte não será possível
+   formar um circuito hamiltoniano.
+
+** b)
+   Nenhum. Pois caso haja algum vértice de corte não será possível
+   formar um circuito hamiltoniano.
+
+* 3)
+
+** a)
+   É preciso adicionar 2 arestas para que ele seja um grafo euleriano.
+
+** b)
+
+   [[./grafo-3b.png]]
+
+** c)
+
+T_{0} = (v_{1})
+
+T_{1} = (v_{1}, v_{1}v_{v2}, v_{2})
+
+T_{2} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3})
+
+T_{3} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3}, v_{3}v_{6},
+v_{6})
+
+T_{4} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3}, v_{3}v_{6},
+v_{6}, v_{6}v_{2}, v_{2})
+
+T_{5} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3}, v_{3}v_{6},
+v_{6}, v_{6}v_{2}, v_{2}, v_{2}v_{4}, v_{4})
+
+T_{6} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3}, v_{3}v_{6},
+v_{6}, v_{6}v_{2}, v_{2}, v_{2}v_{4}, v_{4}, v_{4}v_{5}, v_{5})
+
+T_{7} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3}, v_{3}v_{6},
+v_{6}, v_{6}v_{2}, v_{2}, v_{2}v_{4}, v_{4}, v_{4}v_{5}, v_{5},
+v_{5}v_{6}, v_{6})
+
+T_{8} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3}, v_{3}v_{6},
+v_{6}, v_{6}v_{2}, v_{2}, v_{2}v_{4}, v_{4}, v_{4}v_{5}, v_{5},
+v_{5}v_{6}, v_{6}, v_{6}v_{5}, v_{5})
+
+T_{9} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3}, v_{3}v_{6},
+v_{6}, v_{6}v_{2}, v_{2}, v_{2}v_{4}, v_{4}, v_{4}v_{5}, v_{5},
+v_{5}v_{6}, v_{6}, v_{6}v_{5}, v_{5}, v_{5}v_{4}, v_{4})
+
+T_{10} = (v_{1}, v_{1}v_{v2}, v_{2}, v_{2}v_{3}, v_{3}, v_{3}v_{6},
+v_{6}, v_{6}v_{2}, v_{2}, v_{2}v_{4}, v_{4}, v_{4}v_{5}, v_{5},
+v_{5}v_{6}, v_{6}, v_{6}v_{5}, v_{5}, v_{5}v_{4}, v_{4}, v_{4}v_{1},
+v_{1})

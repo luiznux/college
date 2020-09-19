@@ -1,0 +1,77 @@
+* 1)
+
+** Personas:
+
+*** Persona 1
+
+    Giovanna tem 40 anos, formada em psicologia e sua profissao é
+    gerente de RH. Gosta de ler livros, gosta de tomar sorvete de
+    milho verde, no seu tempo livre estuda música e toca piano. Gosta
+    muito de convidar seus amigos para conversar em sua casa.  É uma
+    pessoa social, organizada e metódica. Nao gosta de pessoas
+    desorganizadas e de perder tempo com coisas fúteis.
+
+*** Persona 2
+
+    Dona Dalva tem 70 anos, é aposentada e mora com seu marido e
+    possui quatro filhos, dois homens e duas mulheres. No seu tempo
+    livre gosta de cuidar de seus netos e passar o tempo com seu
+    marido. Tem dons culinarios e adora cozinhar para sua família.
+    Nao gosta de ficar muito tempo longe de sua família e de dirigir.
+
+*** Persona 3
+
+    Ricardo Milos possui 32 anos, trabalhava como mototaxi no Rio de
+    Janeiro e foi vítma de uma bala perdida que ocasionou a perda de
+    visao parcial de seu olho esquerdo. Após o ocorrido, se mudou para
+    Cabo frio e começou a trabalhar no mercado Extra. No seu tempo
+    livre gosta de escutar pagode, samba e partido
+    alto. Frequentemente chama seus amigos e familia para fazer
+    churrasco na laje e escutar suas musicas. Por conta de seu
+    acidente desenvolveu uma aversao muito grande a violência.
+
+* 2)
+
+  Durante a pandemia do vírus COVID-19, Israel esta buscando uma
+  plataforma que tenha funcionalidades voltadas para pessoas que
+  possuem deficiencias visuais, pois sua irma tem perda de visao e ele
+  deseja realizar chamadas em grupo com sua familia já que mora
+  sozinho e se sente muito solitário durante a pandemia.
+
+  Israel recorre a plataforma Homice e solicita que sua irma usar
+  funcionalidade de comando de voz para iniciar uma chamada em grupo
+  com seus pais.
+
+* 3)
+
+** 1. Quem vai utilizar o sistema?
+
+   Pessoas que possuem um dispositivo eletronico e conhecimentos
+   basicos de como opera-lo.
+
+** 2. Que tarefas executam atualmente? (sem uso do sistema)
+
+   Pessoas que gostam de sair com amigos e família, trabalham em uma
+   empresa que dispoem de home office ou qualquer tipo de comunicaçao
+   com outras pessoas.
+
+** 3. Que tarefas são desejáveis?
+
+   Troca de mensagem, video conferências (privada ou em grupo), agenda
+   reuniao, autenticar-se na plataforma.
+
+** 4. Como se aprendem as tarefas?
+
+** 5. Onde são desempenhadas as tarefas?
+
+** 6 Qual a relação entre o usuário e a informação?
+
+** 7.Que outros instrumentos tem o usuário?
+
+** 8. Como os usuários se comunicam entre si?
+
+** 9. Qual a frequência de desempenho das tarefas?
+
+** 10. Quais restrições de tempo impostas?
+
+** 11. O que acontece se algo der errado?
