@@ -1,44 +1,47 @@
+#+TITLE: Etapa 2
+#+AUTHOR: Edison Aguiar - 31812295, Luiz Tagliaferro - 318, Natalia Gama - 318, Pietro Gonçalves - 318
+
 * 1)
 
 ** Personas:
 
 *** Persona 1
 
-    Giovanna tem 40 anos, formada em psicologia e sua profissao é
-    gerente de RH. Gosta de ler livros, gosta de tomar sorvete de
-    milho verde, no seu tempo livre estuda música e toca piano. Gosta
-    muito de convidar seus amigos para conversar em sua casa.  É uma
-    pessoa social, organizada e metódica. Nao gosta de pessoas
-    desorganizadas e de perder tempo com coisas fúteis.
+    Giovanna tem 40 anos, formada em psicologia e sua profissão é
+    gerente de RH. Gosta de ler livros, de tomar sorvete de milho
+    verde e no seu tempo livre estuda música e toca piano. Gosta muito
+    de convidar seus amigos para conversar em sua casa. É uma pessoa
+    social, organizada e metódica. Não gosta de pessoas desorganizadas
+    e de perder tempo com coisas fúteis.
 
 *** Persona 2
 
     Dona Dalva tem 70 anos, é aposentada e mora com seu marido e
     possui quatro filhos, dois homens e duas mulheres. No seu tempo
     livre gosta de cuidar de seus netos e passar o tempo com seu
-    marido. Tem dons culinarios e adora cozinhar para sua família.
-    Nao gosta de ficar muito tempo longe de sua família e de dirigir.
+    marido. Tem dons culinários e adora cozinhar para sua família.
+    Não gosta de ficar muito tempo longe de sua família e de dirigir.
 
 *** Persona 3
 
-    Ricardo Milos possui 32 anos, trabalhava como mototaxi no Rio de
-    Janeiro e foi vítma de uma bala perdida que ocasionou a perda de
-    visao parcial de seu olho esquerdo. Após o ocorrido, se mudou para
+    Ricardo Milos possui 32 anos, trabalhava como mototáxi no Rio de
+    Janeiro e foi vítima de uma bala perdida que ocasionou a perda de
+    visão parcial de seu olho esquerdo. Após o ocorrido, se mudou para
     Cabo frio e começou a trabalhar no mercado Extra. No seu tempo
     livre gosta de escutar pagode, samba e partido
-    alto. Frequentemente chama seus amigos e familia para fazer
-    churrasco na laje e escutar suas musicas. Por conta de seu
-    acidente desenvolveu uma aversao muito grande a violência.
+    alto. Frequentemente chama seus amigos e família para fazer
+    churrasco na laje e escutar suas músicas. Por conta de seu
+    acidente desenvolveu uma aversão muito grande a violência.
 
 * 2)
 
-  Durante a pandemia do vírus COVID-19, Israel esta buscando uma
+  Durante a pandemia do vírus COVID-19, Israel está buscando uma
   plataforma que tenha funcionalidades voltadas para pessoas que
-  possuem deficiencias visuais, pois sua irma tem perda de visao e ele
+  possuem deficiências visuais, pois sua irmã tem perda de visão e ele
   deseja realizar chamadas em grupo com sua familia já que mora
   sozinho e se sente muito solitário durante a pandemia.
 
-  Israel recorre a plataforma Homice e solicita que sua irma usar
+  Israel recorre a plataforma Homice e solicita que sua irmã use a
   funcionalidade de comando de voz para iniciar uma chamada em grupo
   com seus pais.
 
@@ -46,66 +49,66 @@
 
 ** 1. Quem vai utilizar o sistema?
 
-   Pessoas que possuem um dispositivo eletronico e conhecimentos
-   basicos de como opera-lo.
+   Pessoas que possuem um dispositivo eletrônico e conhecimentos
+   básicos de como operá-lo.
 
 ** 2. Que tarefas executam atualmente? (sem uso do sistema)
 
    Pessoas que gostam de sair com amigos e família, trabalham em uma
-   empresa que dispoem de home office ou qualquer tipo de comunicaçao
+   empresa que dispõem de home office ou qualquer tipo de comunicaçao
    com outras pessoas.
 
 ** 3. Que tarefas são desejáveis?
 
-   Troca de mensagem, video conferências (privada ou em grupo),chamadas
-   de audio, agenda reuniao, autenticar-se na plataforma, editar
-   configuraçoes da conta.
+   Troca de mensagem, video conferências (privada ou em
+   grupo), chamadas de áudio, agendar reuniões, autenticar-se no
+   aplicativo, editar configurações da conta.
 
 ** 4. Como se aprendem as tarefas?
 
-   Ao executar o programa pela primeira vez, sera disponibilizado uma
+   Ao executar o aplicativo pela primeira vez, será disponibilizada uma
    tela de tutorial onde o usuario vai aprender as funcionalidades
-   basicas do programa. Caso necessario, sera possivel clicar na
+   básicas do programa. Caso necessário, sera possíviel clicar na
    funcionalidade "ajuda" que fica disponivel em todas as telas do
    programa.
 
 ** 5. Onde são desempenhadas as tarefas?
 
-   Sao desempenhadas em qualquer local com conexao a internet.
+   Sao desempenhadas em qualquer local com conexão a internet.
 
-** 6 Qual a relação entre o usuário e a informação?
+** 6. Qual a relação entre o usuário e a informação?
 
-   O usuário para se utilizar do software precisa se autenticar na
+   O usuário para utilizar o aplicativo precisa se autenticar na
    plataforma, que previamente deve ter efetuado um cadastro, onde os
-   dados ficarao armazenados em um servidor, por segurança, de forma
+   dados ficarão armazenados em um servidor, por segurança, de forma
    criptografada. O utilizador pode também salvar suas credenciais
-   para nao efetuar a autenticaçao toda vez que inicia o programa,
-   assim, salvando os dados de loggin localemente criptografados.
+   para não efetuar a autenticação toda vez que inicía o programa,
+   assim, salvando os dados de login localmente criptografados.
 
-** 7.Que outros instrumentos tem o usuário?
+** 7. Que outros instrumentos tem o usuário?
 
-   Caso seja necessario, utiliza-se de fones de ouvido, se estiver em
+   Caso seja necessário, utiliza-se de fones de ouvido, se estiver em
    um computador ou dispositivo que nao possua camera, pode-se usar
    uma webcam, teclado ou mouse.
 
 ** 8. Como os usuários se comunicam entre si?
 
-   Os usuários podem se comunicar por chat ou video conferências.
+   Os usuários podem se comunicar por chat ou vídeo conferências.
 
 ** 9. Qual a frequência de desempenho das tarefas?
 
-   A maioria dos usuários utiliza-se da video conferências e chamada
-   de audio, em quanto uma parcela menor dos usuários que possuem
-   maior proficiencia na utilização do aplicativo, fazem o uso do chat
-   e do agendamento de reunioes.
+   A maioria dos usuários utiliza-se da vídeo conferências e chamada
+   de áudio, em quanto uma parcela menor dos usuários que possuem
+   maior proficiência na utilização do aplicativo, fazem o uso do chat
+   e do agendamento de reuniões.
 
 ** 10. Quais restrições de tempo impostas?
 
-   Em reunioes agendadas, a restriçao de tempo é que todos devem
-   aguardar a data que foi imposta, em relação a duraçao da reuniao
-   sera de acordo com o que foi proposto pelo usuário que a agendou.
+   Em reuniões agendadas, a restrição de tempo é que todos devem
+   aguardar a data que foi imposta, em relação a duração da reunião
+   será de acordo com o que foi proposto pelo usuário que a agendou.
 
-   Já em video conferências nao agendadas, o tempo nela é gasto de
+   Já em video conferências não agendadas, o tempo nela é gasto de
    acordo com os usuarios presentes nela.
 
 ** 11. O que acontece se algo der errado?
@@ -120,39 +123,46 @@
 
 * 4)
 
-** 1. Fazer uma chamada de audio
+** 1. Fazer uma chamada de áudio
 
    Usuário se autentica no aplicativo, seleciona um contato e depois
-   seleciona a opçao de realizar uma chamada de audio com ele.
+   seleciona a opção de realizar uma chamada de áudio com ele.
 
-   Integraçao para pessoas com deficiencias visuais: O passo de cada
-   tarefa é o mesmo, porem a integraçao é adaptada, autenticaçao é
+   Integração para pessoas com deficiências visuais: O passo de cada
+   tarefa é o mesmo, porém a integraçao é adaptada, autenticaçao é
    feita por faceid, depois disso, a escolha do contato é feita pelo
-   comando de voz e a opçao de realizar chamada também.
+   comando de voz e a opção de realizar chamada também.
 
-** 2. Agendar uma reuniao
+** 2. Agendar uma reuniã
 
-   Usuário se autentica no aplicativo, seleciona a opçao de agendar
-   uma reuniao. Um menu é exibido para ele preencher as informaçoe da
-   reuniao: nome da reuniao, horario, duraçao e participantes.
+   Usuário se autentica no aplicativo, seleciona a opção de agendar
+   uma reunião. Um menu é exibido para ele preencher as informações da
+   reunião: nome da reunião, horário, duração e participantes.
 
-   Integraçao para pessoas com deficiencias visuais: O passo de cada
-   tarefa é o mesmo, porem a integraçao é adaptada, autenticaçao é
-   feita por faceid, depois disso, a opçao de agendar uma reuniao é
+   Integração para pessoas com deficiências visuais: O passo de cada
+   tarefa é o mesmo, porém a integraçao é adaptada, autenticaçao é
+   feita por faceid, depois disso, a opção de agendar uma reunião é
    feita pelo comando de voz, depois disso um menu é enunciado para o
-   usuario deficiente onde ele entra com os dados por comando de voz.
+   usuário onde ele entra com os dados por comando de voz.
 
-** 3.Mensagem de texto
+** 3. Mensagem de texto
 
    Usuário se autentica no aplicativo, seleciona um contato e depois
-   seleciona a opçao de enviar uma mensagem de texto.
+   seleciona a opção de enviar uma mensagem de texto.
 
-   Integraçao para pessoas com deficiencias visuais: O passo de cada
-   tarefa é o mesmo, porem a integraçao é adaptada, autenticaçao é
-   feita por faceid, depois disso, a escolha do contato é feita pelo
-   comando de voz e a opçao de enviar uma mensagem de texto por
-   comando de voz e dita a mensagem para o aplicativo escrever e
-   mandar a mensagem.
+   Integração para pessoas com deficiências visuais: O passo de cada
+   tarefa é o mesmo, porem a integração é adaptada, autenticaçao é
+   feita por faceid, depois disso, a escolha do contato e a opçao de
+   enviar uma mensagem de texto são feitas por comandos de voz, assim
+   o usuário dita a mensagem para o aplicativo escrever e mandá-la.
 
 * 5)
 
+#+CAPTION: Chamada de áudio
+[[./Projeto-ChamadaDeAudio.png]]
+
+#+CAPTION: Agendar reunião
+[[./Projeto-AgendarReunião.png]]
+
+#+CAPTION: Mensagem de texto
+[[./Projeto-MensagemDeTexto.png]]
