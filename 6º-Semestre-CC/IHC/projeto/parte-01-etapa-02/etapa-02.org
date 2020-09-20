@@ -57,21 +57,102 @@
 
 ** 3. Que tarefas são desejáveis?
 
-   Troca de mensagem, video conferências (privada ou em grupo), agenda
-   reuniao, autenticar-se na plataforma.
+   Troca de mensagem, video conferências (privada ou em grupo),chamadas
+   de audio, agenda reuniao, autenticar-se na plataforma, editar
+   configuraçoes da conta.
 
 ** 4. Como se aprendem as tarefas?
 
+   Ao executar o programa pela primeira vez, sera disponibilizado uma
+   tela de tutorial onde o usuario vai aprender as funcionalidades
+   basicas do programa. Caso necessario, sera possivel clicar na
+   funcionalidade "ajuda" que fica disponivel em todas as telas do
+   programa.
+
 ** 5. Onde são desempenhadas as tarefas?
+
+   Sao desempenhadas em qualquer local com conexao a internet.
 
 ** 6 Qual a relação entre o usuário e a informação?
 
+   O usuário para se utilizar do software precisa se autenticar na
+   plataforma, que previamente deve ter efetuado um cadastro, onde os
+   dados ficarao armazenados em um servidor, por segurança, de forma
+   criptografada. O utilizador pode também salvar suas credenciais
+   para nao efetuar a autenticaçao toda vez que inicia o programa,
+   assim, salvando os dados de loggin localemente criptografados.
+
 ** 7.Que outros instrumentos tem o usuário?
+
+   Caso seja necessario, utiliza-se de fones de ouvido, se estiver em
+   um computador ou dispositivo que nao possua camera, pode-se usar
+   uma webcam, teclado ou mouse.
 
 ** 8. Como os usuários se comunicam entre si?
 
+   Os usuários podem se comunicar por chat ou video conferências.
+
 ** 9. Qual a frequência de desempenho das tarefas?
+
+   A maioria dos usuários utiliza-se da video conferências e chamada
+   de audio, em quanto uma parcela menor dos usuários que possuem
+   maior proficiencia na utilização do aplicativo, fazem o uso do chat
+   e do agendamento de reunioes.
 
 ** 10. Quais restrições de tempo impostas?
 
+   Em reunioes agendadas, a restriçao de tempo é que todos devem
+   aguardar a data que foi imposta, em relação a duraçao da reuniao
+   sera de acordo com o que foi proposto pelo usuário que a agendou.
+
+   Já em video conferências nao agendadas, o tempo nela é gasto de
+   acordo com os usuarios presentes nela.
+
 ** 11. O que acontece se algo der errado?
+
+   A aplicação irá possuir o sistema de cancelar o envio de mensagem e
+   apagar a mensagem após o envio; além de poder efetuar o
+   cancelamento de uma vídeo-chamada ou enviar notificações para todos
+   os participantes de uma chamada agendada informando que a mesma não
+   irá mais ser efetuada. Caso o usuário saia acidentalmente de uma
+   chamada, ela poderá voltar sem complicações apenas com alguns
+   cliques na interface da aplicação.
+
+* 4)
+
+** 1. Fazer uma chamada de audio
+
+   Usuário se autentica no aplicativo, seleciona um contato e depois
+   seleciona a opçao de realizar uma chamada de audio com ele.
+
+   Integraçao para pessoas com deficiencias visuais: O passo de cada
+   tarefa é o mesmo, porem a integraçao é adaptada, autenticaçao é
+   feita por faceid, depois disso, a escolha do contato é feita pelo
+   comando de voz e a opçao de realizar chamada também.
+
+** 2. Agendar uma reuniao
+
+   Usuário se autentica no aplicativo, seleciona a opçao de agendar
+   uma reuniao. Um menu é exibido para ele preencher as informaçoe da
+   reuniao: nome da reuniao, horario, duraçao e participantes.
+
+   Integraçao para pessoas com deficiencias visuais: O passo de cada
+   tarefa é o mesmo, porem a integraçao é adaptada, autenticaçao é
+   feita por faceid, depois disso, a opçao de agendar uma reuniao é
+   feita pelo comando de voz, depois disso um menu é enunciado para o
+   usuario deficiente onde ele entra com os dados por comando de voz.
+
+** 3.Mensagem de texto
+
+   Usuário se autentica no aplicativo, seleciona um contato e depois
+   seleciona a opçao de enviar uma mensagem de texto.
+
+   Integraçao para pessoas com deficiencias visuais: O passo de cada
+   tarefa é o mesmo, porem a integraçao é adaptada, autenticaçao é
+   feita por faceid, depois disso, a escolha do contato é feita pelo
+   comando de voz e a opçao de enviar uma mensagem de texto por
+   comando de voz e dita a mensagem para o aplicativo escrever e
+   mandar a mensagem.
+
+* 5)
+
