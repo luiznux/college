@@ -1,0 +1,27 @@
+#+title: Emparelhamentos e
+#+author: Luiz Tagliaferro
+
+* Emparelhamento
+- Um emparelhamento em um grafo G é um *subconjunto E $\subseteq$ AG*
+  tal que todo elemento de E é distinto de laço e todo vertice de G é
+  extremo de, no maximo, um elemento de E
+
+
+[[./emparelhamento.png]]
+
+- O grafo nao tem nenhum emparehamento de tamanho 5
+
+*Nao sao emparehamentos:*
+
+*Um grafo é bipartido se,e somente se, nao conter um circuito de
+ tamanho impar*
+
+
+[[./exercicio-empa.png]]
+
+* Caminho alternante
+
+[[./caminho-alternante.png]]
+
+
+[[./exercicio-alternante.png]]

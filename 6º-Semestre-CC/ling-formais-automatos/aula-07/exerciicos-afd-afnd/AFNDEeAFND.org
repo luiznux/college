@@ -1,0 +1,75 @@
+#+TITLE: AFND & e-AFND
+#+AUTHOR: Dupla: Luiz Tagliaferro - 31861806 Edison Aguiar - 31812295
+
+* 1
+
+Subconjuntos:
+
+- {}
+- {q0} *inicial*
+- {q1}
+- {q2}
+- {q3} *final*
+- {q0, q1}
+- {q0, q2}
+- {q0, q3} *final*
+- {q1, q2}
+- {q1, q3} *final*
+- {q2, q3} *final*
+- {q0, q1, q2}
+- {q0, q1, q3} *final*
+- {q0, q2, q3} *final*
+- {q1, q2, q3} *final*
+- {q0, q1, q2, q3} *final*
+
+Olhando para o afnd original: a quais estados consigo chegar usando
+uma transição com a letra a
+
+$\delta$ ({q0}, a) = {q0, q1}
+
+$\delta$ ({q0}, b) = {q0}
+
+Olhando para o afnd original: a quais estados consigo chegar usando
+uma transição com a letra a
+
+$\delta$ ({q0, q1}, a) = $\delta$ ({q0}, a) U $\delta$ ({q1}, a) = {q0, q1} U {q2} = {q0, q1, q2}
+
+$\delta$ ({q0, q1}, b) = $\delta$ ({q0}, b) U $\delta$ ({q1}, b) = {q0} U {} = {q0}
+
+Olhando para o afnd original: a quais estados consigo chegar usando
+uma transição com a letra a
+
+$\delta$ ({q0, q1, q2}, a) =
+
+  $\delta$ ({q0}, a) U $\delta$ ({q1}, a) U $\delta$ ({q2}, a) =
+
+  {q0, q1} U {q2} U {q3} = {q0, q1, q2, q3}
+
+$\delta$ ({q0, q1, q2}, b) =
+
+  $\delta$ ({q0}, b) U $\delta$ ({q1}, b) U $\delta$ ({q2}, b) =
+
+  {q0} U {} U {} = {q0}
+
+Olhando para o afnd original: a quais estados consigo chegar usando
+uma transição com a letra a
+
+$\delta$ ({q0, q1, q2, q3}, a) =
+
+  $\delta$ ({q0}, a) U $\delta$ ({q1}, a) U $\delta$ ({q2}, a) U $\delta$ ({q3}, a)=
+
+  {q0, q1} U {q2} U {q3} U {} = {q0, q1, q2, q3}
+
+
+$\delta$ ({q0, q1, q2}, b) =
+
+  $\delta$ ({q0}, b) U $\delta$ ({q1}, b) U $\delta$ ({q2}, b) U $\delta$ ({q3}, b) =
+
+  {q0} U {} U {} U {} = {q0}
+
+[[./Exercicio1-solucao.png]]
+
+
+* 2
+[[./exercio-2.png]]
+
