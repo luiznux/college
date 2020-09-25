@@ -1,0 +1,48 @@
+#+TITLE: Exercício Arvores e Algoritmo de Kruskal
+#+AUTHOR: Luiz Tagliaferro   TIA 31861806
+
+
+* 1)
+
+[[./arvore-geradora.png]]
+
+Este grafo possui apenas 4 arvores geradoras unicas, a menos de isomorfismo.
+
+
+* 2)
+
+  O algoritmo tem um problema pois mesmo depois de formar uma arvore
+  de caminho minimo, ele continua verificando se forma circuito ou nao
+  com as arestas restantes. Para aprimora-lo devemos verificar, antes
+  de adicionar uma aresta, se o numero o numero de aresta construidas
+  é igual ao numero de vertices menos 1.
+
+
+* 3)
+
+
+[[./arvore-custo-minimo.png]]
+
+
+
+
+
+| A	 | custo  | 	Justificativa              |
+|-------+--------+--------------------------------|
+| bh    | 	1  | OK	nao forma circuito       |
+| hg    | 	1  | OK	nao forma circuito       |
+| ci    | 	2  | OK	nao forma circuito       |
+| gf    | 	2  | OK	nao forma circuito       |
+| ah    | 	3  | OK	nao forma circuito       |
+| ab    | 	4  | erro	forma C = (a,b,h)      |
+| cf    | 	4  | OK	nao forma circuito       |
+| hi    | 	5  | erro	forma C = (h,i,c,f,g,) |
+| df    | 	5  | OK	nao forma circuito       |
+| ig    | 	6  | erro	forma C = (i,g,f,c)    |
+| cd    | 	7  | erro	forma C = (c,d,f)      |
+| bc    | 	8  | erro	forma C = (b,c,f,g,h)  |
+| de    | 	9  | OK	nao forma circuito       |
+| fe    | 	10 | erro	forma C = (f,d,e)      |
+
+
+*Custo total é 27*

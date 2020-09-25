@@ -1,0 +1,13 @@
+#+title: Arvores
+
+
+* Arvores
+** Um grafo que *nao contem circuitos* é chamado de aciclico
+
+** Um grafo *conexo aciclico* é chamado de arvore
+
+** Um *grafo aciclico* é tambem chamado de floresta
+   - Cada componente de uma floresta é uma arvore)
+
+* Numero minimo de arestas em um grafo conexo
+  - n-1, sendo *n* o valor de vertices

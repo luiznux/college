@@ -1,0 +1,135 @@
+#+title: Prova P1
+#+author: Luiz Fernando Tagliaferro Brito - TIA 31861806
+
+
+* 1.
+
+  $\Sigma$ = {a,b}
+
+** a)
+
+[[./images/questao-1a.png]]
+
+** b)
+
+   $GL$ = ( {S}, {a,b}, {S→a, S→aS, S→abS, S→baS}, S)
+
+   O tipo da gramática obtida é regular
+
+
+** c)
+
+   a(a|b)*a
+
+
+** d)
+
+*** 1.
+    [[./images/questao-1d-1.png]]
+
+*** 2.
+    [[./images/questao-1d-2.png]]
+
+
+*** 3.
+    [[./images/questao-1d-3.png]]
+
+*** 4.
+[[./images/questao-1d-4.png]]
+
+
+
+* 2.
+
+[[./images/questao-2.png]]
+
+* 3.
+
+| classe = 0 | estado qi | [ $\delta$ (qi, a)] = 0 | [ $\delta$ (qi, b)] = 0 |
+|------------+-----------+-------------------------+-------------------------|
+|          1 | q_{0}     |                       1 |                       1 |
+|            | q_{1}     |                       1 |                       2 |
+|            | q_{2}     |                       2 |                       1 |
+|            | q_{3}     |                       2 |                       1 |
+|            | q_{6}     |                       1 |                       2 |
+|------------+-----------+-------------------------+-------------------------|
+|          2 | q_{4}     |                       2 |                       1 |
+|            | q_{5}     |                       1 |                       2 |
+|------------+-----------+-------------------------+-------------------------|
+#+CAPTION: classe 1 = estados não finais, classe = 2 estados finais
+
+
+| classe = 0 | estado qi | [ $\delta$ (qi, a)] = 1 | [ $\delta$ (qi, b)] = 1 |
+|------------+-----------+-------------------------+-------------------------|
+|        1.1 | q_{0}     |                     1.3 |                     1.2 |
+|------------+-----------+-------------------------+-------------------------|
+|        1.2 | q_{1}     |                     1.2 |                     2.2 |
+|            | q_{6}     |                     1.2 |                     2.2 |
+|------------+-----------+-------------------------+-------------------------|
+|        1.3 | q_{2}     |                     2.1 |                     1.3 |
+|            | q_{3}     |                     2.1 |                     1.3 |
+|------------+-----------+-------------------------+-------------------------|
+|        2.1 | q_{4}     |                     2.1 |                     1.3 |
+|------------+-----------+-------------------------+-------------------------|
+|        2.2 | q_{5}     |                     1.2 |                     2.2 |
+|------------+-----------+-------------------------+-------------------------|
+#+CAPTION: classe 1 = estados não finais, classe = 2 estados finais
+
+[[./images/questao-3.png]]
+
+
+* 4.
+
+O numero de subconjuntos obtidos sera 2^3 = 8 .
+
+- {}
+- {q0}
+- {*q1*} *final*
+- {q2}
+- {q0, *q1*} *final*
+- {q0, q2}
+- {*q1*, q2} *final*
+- {q0, *q1*, q2} *final*
+
+
+[[./images/automato-original-4.png]]
+
+** 1.
+
+   Olhando para o afnd original: a quais estados consigo chegar usando
+   uma transição com a letra a
+
+   $\delta$ ({q0}, a) = {q2} $\cup$ {q1}
+
+   $\delta$ ({q0}, b) = {}
+
+** 2.
+
+   Olhando para o afnd original: a quais estados consigo chegar usando
+   uma transição com a letra a
+
+   $\delta$ ({q1, q2}, a) = {q1} $\cup$ {q0}
+
+   $\delta$ ({q1, q2}, b) = {q1} $\cup$ {}
+
+** 3.
+
+   Olhando para o afnd original: a quais estados consigo chegar usando
+   uma transição com a letra a
+
+   $\delta$ ({q1, q0}, a) = {q2} $\cup$ {q1}
+
+   $\delta$ ({q1, q0}, b) = {q1}
+
+
+** 4.
+
+   Olhando para o afnd original: a quais estados consigo chegar usando
+   uma transição com a letra a
+
+   $\delta$ ({q1} ,a) = {q1}
+
+   $\delta$ ({q1}, b) = {q1}
+
+
+[[./images/questao-4.png]]

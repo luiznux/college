@@ -1,0 +1,17 @@
+T8 - Metas, Requisitos e Critérios de Usabilidade
+
+Leia o texto Metas e Requisitos de Usabilidade e responda as seguintes questões:
+
+1. O que é usabilidade?
+
+2. Quais são as metas de usabilidade?
+
+3. Como medir a usabilidade de um sistema?
+
+4. O que são os critérios de usabilidade?
+
+5. Identifique e apresente as metas de usabilidade existentes no sistema de videoconferência Zoom.
+
+6. Para cada meta de usabilidade apresentada na questão anterior, apresente as medidas de usabilidade.
+
+7. Apresente os critérios de usabilidade do aplicativo do sistema de videoconferência Zoom para cada objetivo específico de usabilidade.
