@@ -1,0 +1,21 @@
+#+TITLE: Coberturas e Emparelhamentos
+#+AUTHOR: Dupla: Luiz Tagliaferro -  31861806 Edison Aguiar - 31812295
+
+* 1)
+
+* 2)
+
+* 3)
+
+* 4)
+
+* 5)
+
+** a)
+
+** b)
+
+** c)
+
+
+* 6)
