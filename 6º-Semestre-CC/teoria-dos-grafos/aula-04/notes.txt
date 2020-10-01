@@ -1,4 +1,0 @@
-Aresta de corte
-
-Aresta q ao se remover do grafo, a quantidade de compontes do grafo aumenta se remove-la
-

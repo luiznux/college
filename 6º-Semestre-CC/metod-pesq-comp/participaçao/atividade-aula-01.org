@@ -1,12 +1,61 @@
-1. O CNPq utiliza a expressão ​ áreas de conhecimento para apresentar
-   divisões da ciência.
-Existe um catálogo do CNPq para estas áreas, disponível no linkabaixo:
-http://www.cnpq.br/documents/10157/186158/TabeladeAreasdoConhecimento.pdf
-Com base neste documento, descreva como as áreas são classificadas,
-localize a área de Ciência da Computação e descreva suas sub-áreas.
+#+title:  Atividades Para nota de Participaçao
+#+author:  Luiz Tagliaferro - TIA 31861806
 
-As ciencias estao agrupadas em grandes conjuntos que possuem outros
-subconjuntos onde estao agrupadas as ciencias mais especificas.  A
-ciencia da computação esta contida em Ciencias Exatas e da Terra,
-possuindo um subconjunto exclusivo para a ela mesma, onde estao
-dispostas suas outras areas.
+
+
+* Aula 01
+
+** 1. O CNPq utiliza a expressão ​ áreas de conhecimento para apresentar divisões da ciência.
+
+   Existe um catálogo do CNPq para estas áreas, disponível no
+   [[http://www.cnpq.br/documents/10157/186158/TabeladeAreasdoConhecimento.pdf][link]] .
+
+   Com base neste documento, descreva como as áreas são classificadas,
+   localize a área de Ciência da Computação e descreva suas sub-áreas.
+   As ciencias estao agrupadas em grandes conjuntos que possuem outros
+   subconjuntos onde estao agrupadas as ciencias mais especificas.  A
+   ciencia da computação esta contida em Ciencias Exatas e da Terra,
+   possuindo um subconjunto exclusivo para a ela mesma, onde estao
+   dispostas suas outras areas.
+
+
+* Aula 02
+
+** 1. O Método Dialético é uma outra alternativa de método científico. Mostre como este método funciona.
+
+
+* Aula 03
+** 1. Descreva, informalmente, o que você gostaria de fazer no seu TCC.
+
+   Gostaria de fazer algo relacionado com o tema Sistemas
+   operacionais, mais voltado a hardware e linux.
+
+** 2. Transforme a descrição informal da questão (1) em:
+*** a. Tema
+    Sistemas Operacionais
+
+*** b. Enunciado do Problema
+    Utilizaçao de Raspberry Pi como roteador de rede
+
+*** c. Hipótese
+
+
+* Aula 04
+
+*** Escreva
+
+  - o nome e TIA dos alunos componentes do grupo de TCC (ou o nome e
+    TIA do aluno se o TCC for elaborado de modo individual);
+
+    * Luiz Fernando Tagliaferro Brito
+
+    * Tia - 31861806
+
+
+  - o Tema do seu Projeto de TCC
+
+    * Sistemas Operacionais
+
+  - o nome do Orientador do seu Projeto de TCC.
+
+    Professor Luciano Silva

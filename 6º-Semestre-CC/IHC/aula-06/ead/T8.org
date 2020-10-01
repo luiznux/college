@@ -1,17 +1,48 @@
-T8 - Metas, Requisitos e Critérios de Usabilidade
+#+title: T8 - Metas, Requisitos e Critérios de Usabilidade
+#+author:  Luiz Tagliaferro TIA 31861806
 
-Leia o texto Metas e Requisitos de Usabilidade e responda as seguintes questões:
+* 1. O que é usabilidade?
 
-1. O que é usabilidade?
+  Usabilidade é um conjunto de quatro fatores reunidos em um
+  dispositivo como : capacidade de ser usado com sucesso, facilidade
+  de ser usado, capacidade de ser usado, capacidade de o usuario,
+  capacidade de o usuario aprender a usar o dispositivo de forma
+  simples e rapida
 
-2. Quais são as metas de usabilidade?
+* 2. Quais são as metas de usabilidade?
 
-3. Como medir a usabilidade de um sistema?
+  Eficacia, eficiencia, segurança, utilidade, aprendizagem e memorizaçao
 
-4. O que são os critérios de usabilidade?
+* 3. Como medir a usabilidade de um sistema?
 
-5. Identifique e apresente as metas de usabilidade existentes no sistema de videoconferência Zoom.
+  Medimos verificando : Adequado para usuários experientes,Adequado
+  para usar facilmente,Adequado para uso não frequente ou
+  intermitente, Redução da necessidade de ajuda,Facilidade de
+  Aprendizado,Tolerância a erros.
 
-6. Para cada meta de usabilidade apresentada na questão anterior, apresente as medidas de usabilidade.
+* 4. O que são os critérios de usabilidade?
 
-7. Apresente os critérios de usabilidade do aplicativo do sistema de videoconferência Zoom para cada objetivo específico de usabilidade.
+  Objetivos específicos que permitem verificar se os objetivos de
+  usabilidade foram ou não atingidos, os critérios de usabilidade são
+  normalmente apresentados sob a forma de frases declarativas, como:
+  “Os usuários conseguirão (em média) escolher a imagem correta em
+  menos de 30 segundos e sem cometer erros” tempo para completar uma
+  tarefa (eficiência), tempo para aprender uma tarefa (aprendizagem)
+  número de erros numa tarefa ao longo do tempo (memorização).
+
+* 5. Identifique e apresente as metas de usabilidade existentes no sistema de videoconferência Zoom.
+
+  Eficiência, Utilidades, aprendizagem e memorização.
+
+* 6. Para cada meta de usabilidade apresentada na questão anterior, apresente as medidas de usabilidade.
+
+  Eficiência: Possibilita a interação social sem um encontro físico.
+  Utilidades: Funcionalidades de comunicação (chamadas de áudios/vídeos,
+  chat de mensagens).
+  Aprendizagem: Interface de fácil aprendizagem e memorização.
+
+* 7. Apresente os critérios de usabilidade do aplicativo do sistema de videoconferência Zoom para cada objetivo específico de usabilidade.
+
+  O usuário consegue entrar ou agendar uma reunião de forma simples e
+  rápida. Os botões de interação são bem explicativos facilitando a
+  aprendizagem do usuário.

@@ -6,7 +6,6 @@ s = socket.socket()
 # Defindo porta e Ip do servidor
 PORT = 31861
 IP = "0.0.0.0"
-
 # tamanho do buffer
 buffer_size = 1024
 
