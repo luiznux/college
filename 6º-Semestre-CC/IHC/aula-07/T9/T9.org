@@ -1,0 +1,81 @@
+#+title: T9
+#+author: Luiz Tagliaferro - TIA 31861806
+
+
+* 1. Qual a importância do modelo conceitual para o desenvolvimento de um sistema?
+  O moledo concentual é importante para facilitar seu uso, facilitar a
+  compreensao da interface para com o usuário.
+
+* 2. Quais as vantagens e desvantagens no uso de metáforas na elaboração de um sistema interativo?
+
+** Vantagens
+   * Oferecem dispositivos de orientação familiares
+   * Tornam a aprendizagem de novos sistemas mais fácil
+   * Ajudam usuários a aprender o modelo conceptual subjacente
+   * Simplificam descrição do sistema para novatos e estranhos
+   * Podem ser inovadoras e tornar a realidade dos computadores mais
+   * acessível aos mais diversos usuários
+
+** Desvantagens
+   * Podem violar regras culturais e convenções
+   * Demasiado restritivas
+   * Conflito com princípios de desenho
+   * Limitam a compreensão do sistema para além dos conceitos básicos
+   * Interpretação demasiado literal de desenhos maus
+   * Limitam a criatividade dos designers ao dificultare
+
+* 3. Dê um exemplo de metáfora de interface que possa ser utilizada em um sistema de gerenciamento de reservas de quartos de hotel.
+  O sistema seria represento por uma recepçao onde o usuario realizara
+  seu cadastro e escolha de hotel
+
+* 4. Escreva o modelo conceitual para o sistema de gerenciamento de reservas de quartos de hotel.
+
+*** sistema de gerenciamento de reservas de quartos de hotel.
+
+**** Metaforas e analogias
+     - As informaçoes serao distribuidas como uma recepçao onde a
+       partir das escolhas do usuario, serao exibidos quartos
+       disponiveis.
+
+**** Conceitos:
+
+***** Quartos:
+      *Atributos*: Numero, quantidade de camas, arcondicionado,
+       abajur, banheiro esuite.
+      *Açoes*: reservar, cancelar reserva
+
+***** Conta do usuario
+      *Atributos*: Nome, metodo de pagamento, dados pessoais
+
+***** Reserva
+      *Atributos*: numero de dias, numero de pessoas
+
+**** Relaçoes
+     * Um quarto compoe reserva
+     * usuario tem umar reserva
+
+**** Mapeamentos:
+     * Cada item do sistema corresponde a um item físico na biblioteca
+
+* 5. Leia as frases abaixo e escreva a qual(is) princípio(s) de design elas estão em conformidade. Obs.: pode haver mais de um princípio.
+
+** a) Os usuários devem ter a sensação de que controlam o sistema e de que este apenas responde a suas ações, caso contrário sentirão ansiedade, insatisfação e frustração.
+   Fornecer controle e iniciativa ao usuário
+
+** b) É a qualidade de um objeto para sugerir como é que podemos e devemos interagir com ele, sem necessidade de explicação prévia.
+   Manter a coerência
+
+** c) A interface não pode dar vias para o usuário cometer erros graves, e caso ocorram erros, devem haver mecanismos que tratem, corrijam na medida do possível, e caso não seja possível, instrua o usuário para uma possível solução.
+   Evitar erros
+
+** d) O sistema deve manter os usuários sempre informados sobre o que está acontecendo, fornecendo um feedback adequado, dentro de um tempo razoável.
+   Fornecer retorno informativo
+
+** e) Os usuários não devem ter que se preocupar em adivinhar se palavras, situações ou ações em contextos diferentes significam a mesma coisa.
+   Coerência e adesão a normas
+** f) A interface deve tornar visíveis os objetos, ações e opções de modo a minimizar a carga cognitiva.
+   Reconhecimento em vez de lembrança
+** g) Os diálogos da interface não devem conter informações irrelevantes ou raramente necessárias.
+   Desenho estético e minimalista
+** h) Convenções das plataformas e regulamentos existentes devem ser seguidos.
+   Consistencias e padroes
