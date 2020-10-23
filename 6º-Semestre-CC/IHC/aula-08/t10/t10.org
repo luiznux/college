@@ -1,0 +1,32 @@
+#+title: T10
+#+author: Luiz Tagliaferro
+
+
+* 1) Leia o texto “Prototipagem”
+
+* 2) Veja o vídeo "Prototipagem em Papel - Paper Prototyping Tutorial"
+
+* 3) Responda:
+
+** 3.1. Quais as diferenças entre um protótipo de baixa, média ou alta qualidade?
+
+***   Baixa
+   Protótipo de Baixa Fidelidade (PBF): representações artísticas
+   usando esboços em papel, sem muito esforço.
+
+*** Media
+   Protótipo de Média Fidelidade (PMF): Wireframes com detalhamento
+   através de componentes de interface.
+
+*** Alta
+   Protótipo de Alta Fidelidade (PAF): assemelha-se ao produto final
+   permitindo controle de transições e interações complexas
+
+** 3.2. Como podemos avaliar um protótipo de média qualidade?
+   O observador anota os problemas , dificuldades e soluçoes para
+   entao planejar uma soluçao.
+
+** 3.3. Quais os papéis do usuário, facilitador, computador e observador num teste de usabilidade de um protótipo de média fidelidade?
+   O usuário é quem vai utilizar o sistema e avaliar, o facilitador
+   auxilia o usuário, computador realiza as ações e o observador cria
+   as anotações com problemas e dificuldade e soluções
