@@ -1,0 +1,36 @@
+#+title: Exercícios de Busca em Grafos
+#+author: Luiz Tagliaferro TIA 31861806
+
+
+* 1)
+
+** a)
+
+[[./img/1-a.png]]
+
+
+** b)
+[[./img/1-b.png]]
+
+
+* 2)
+
+  Podemos afirmar que o grafo G em questao possui mais de uma
+  componente e ,sendo assim, nao é conexo.
+
+* 3)
+
+** a)
+
+[[./img/3-a.png]]
+
+
+** b)
+[[./img/3-b.png]]
+
+
+* 4)
+
+  Podemos obter a distância de um vértice v contanto os níveis até u,
+  para isso deveremos utilizar o algorito de busca em largura da
+  árvore resultante

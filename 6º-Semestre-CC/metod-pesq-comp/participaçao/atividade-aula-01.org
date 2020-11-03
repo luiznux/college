@@ -44,7 +44,7 @@
 
 *** Escreva
 
-  - o nome e TIA dos alunos componentes do grupo de TCC (ou o nome e
+  -> o nome e TIA dos alunos componentes do grupo de TCC (ou o nome e
     TIA do aluno se o TCC for elaborado de modo individual);
 
     * Luiz Fernando Tagliaferro Brito
@@ -52,10 +52,47 @@
     * Tia - 31861806
 
 
-  - o Tema do seu Projeto de TCC
+  -> o Tema do seu Projeto de TCC
 
     * Sistemas Operacionais
 
-  - o nome do Orientador do seu Projeto de TCC.
+  -> o nome do Orientador do seu Projeto de TCC.
 
     Professor Luciano Silva
+
+* Aula 5
+
+  Você já descreveu:
+
+  * nome e TIA dos alunos componentes do grupo de TCC (ou o nome e
+  TIA do aluno se o TCC for elaborado de modo individual);
+
+  * Tema do seu Projeto de TCC
+
+  * o nome do Orientador do seu Projeto de TCC.
+
+  * problema de pesquisa do Projeto de TCC.
+
+  Agora, no mesmo arquivo que já definiu a tarefa anterior, acrescente:
+
+  * a hipótese básica de pesquisa do Projeto de TCC
+
+* Aula 6
+
+  Agora, no mesmo arquivo que já definiu a tarefa anterior, acrescente:
+
+  * os objetivos gerais e específicos
+
+  * a justificativa de pesquisa do Projeto de TCC
+
+* Aula 7
+
+  Agora, no mesmo arquivo que já definiu a tarefa anterior, acrescente e entregue:
+
+   O Referencial Teórico (Revisão da Literatura) com no mínimo 5
+   (cinco) obras (artigos) utilizadas no Projeto de TCC, com as
+   devidas citações e com as respectivas Referências (formato
+   ABNT/Guia Mackenzie de Trabalhos Acadêmicos). Este Referencial
+   Teórico (Revisão da Literatura) poderá ser 5 (cinco) Sínteses de
+   artigos, no formato de subcapítulos, sendo um subcapítulo para cada
+   Síntese de Artigo.

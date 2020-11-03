@@ -1,0 +1,40 @@
+#+title: Buscas em grafos
+
+
+* Definiçao de Busca
+-> Percorro (a partir de um vertice inicial) os vertices de um grafo e
+   paro assim que minha condiçao for atingida
+
+* Marcas
+-> Dentre tantos detalhes, os algoritmos de buscas em grafo devem
+   fazer uma "marcação" nos vértices para evitar que o algoritmo caia
+   em um loop infinito (ao repetir sempre os mesmos vértices durante a
+   busca).  Para evitar isso, uma estratégia comum é usar um sistema
+   de cores nos vértices:
+
+-> um vértice *BRANCO* é aquele que ainda não foi atingido pela busca;
+
+-> um vértice *CINZA* é aquele que já foi atingido, mas, a partir
+   dele, ainda pode ser usado para expandir a busca;
+
+-> um vértice é *PRETO* se ele já foi atingido e todas as
+   possibilidades de expandir a busca a apartir dele já foram
+   consideradas
+
+
+* Busca em Largura
+  Algoritmo simples que expande os vértices na
+  mesma ordem em que eles são atingidos. É útil para
+  obter o caminho mais curto a partir do vértice inicial
+  da busca. Algoritmo publicado no livro do
+  “Cormen”, 3a. edição, página 595:
+
+[[./largura.png]]
+
+
+* Busca em Profundidade
+  Algoritmo que, como estratégia, expande primeiro o vértice que foi
+  atingido por último no processo de busca. Algoritmo publicado no
+  livro do “Cormen”, 3a. edição, página 604:
+
+[[./profundidade.png]]

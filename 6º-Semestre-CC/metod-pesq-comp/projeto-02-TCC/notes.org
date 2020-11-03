@@ -1,0 +1,25 @@
+#+title: Notes do TCC
+#+author: Luiz Tagliaferro Tia 31861806
+#+description: Arquivo para guardar todas as minhas anotaçoes do  TCC
+
+* TODO Encontrar pelo menos 10 artigos sobre meu tema (RaspberryPi  as a Router)
+
+* Links para estudo
+
+https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md
+
+https://www.zahradnik.io/raspberry-pi-as-a-home-router
+
+https://openwrt.org/
+
+
+* Palavras do Luciano
+
+ "O que a gente pode fazer é enxugar bastante o kernel do Linux do
+  Raspberry (OpenWRT por exemplo) para deixá-lo muito mais eficiente
+  que os comerciais.  Isto dá um excelente projeto de TCC e você ainda
+  pode vendê-lo com um produto.
+
+  O detalhe mais legal é que vc pode levá-lo no bolso. "
+
+
