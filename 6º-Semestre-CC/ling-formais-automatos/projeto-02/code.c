@@ -1,6 +1,19 @@
 /*
- * COLOQUE AQUI OS AUTORES DO PROJETO - 1 por linha
- * 
+ *
+* +-------------------------------------+-------------------+
+* | NOME                                | TIA               |
+* +-------------------------------------+-------------------+
+* | Edison Aguiar de Souza Neto         | 31812295          |
+* +-------------------------------------+-------------------+
+* | Raphael Prandini Thome de Abrantes  | 31828728          |
+* +-------------------------------------+-------------------+
+* | Lucas Morita da Nova                | 31826199          |
+* +-------------------------------------+-------------------+
+* | Luiz Tagliaferro Brito              | 31861806          |
+* +-------------------------------------+-------------------+
+* | Kayque Lima                         | 31861806          |
+* +-------------------------------------+-------------------+
+ *
  */
 
 #include<stdio.h>
@@ -8,10 +21,10 @@
 
 /*
  * S -> aBc$
- * B -> bB 
+ * B -> bB
  * B -> e         e: palavra vazia
  */
- 
+
 char lookahead;   /* Excepcionalmente variavel global */
 
 int  match(char t, char palavra[], int *pos){
@@ -19,7 +32,7 @@ int  match(char t, char palavra[], int *pos){
 		lookahead= palavra[++(*pos)];
 		return(1);
 	}
-	return(0);  
+	return(0);
 }
 
 /* S -> aBc$  */
@@ -50,11 +63,11 @@ void trataErro(){
 int main(){
 	char palavra[]= "abbbc$";
 	int  pos=0;
-	
+
 	lookahead= palavra[pos];
 	if (S(palavra, &pos))
 	    printf("\nPalavra %s reconhecida\n", palavra);
-	else 
+	else
 	    trataErro();
 	system("PAUSE");
 	return(0);
