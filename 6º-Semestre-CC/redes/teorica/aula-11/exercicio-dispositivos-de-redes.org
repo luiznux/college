@@ -1,0 +1,63 @@
+#+title: Atividade de Dispositivos de Redes
+#+author: Luiz Tagliaferro TIA 31861806
+
+  * Qual a diferença entre Hub, Switch e Roteador ?. Você deve
+   apresentar as diferenças bem como as principais características das
+   técnicas: cut-through, de store-and-forward e adaptative
+   cut-through.
+
+* Resposta
+
+   O Hub simplesmente connecta fisicamente as maquinas sem fazer
+   nenhum tipo de filtro de pacotes ou de endereços, simplesmente
+   repassando os pacotes para todas as maquinas conectadas.
+
+   O switch possui buffer e repassamento de pacotes seletivamente para
+   os enlaces conectados, assim evitando colisoes de pacotes. Tambem
+   Contem uma tabela que associa o endereço MAC de uma maquina
+   conectada a um Ip, possibilita a comunicaçao entre maquinas da
+   mesma rede.  Para identificar maquinas conectadas, o switch envia
+   pacotes para todas as portas que se respondidos novas maquinas
+   passam a fazerem parte da tabela.
+
+   O Roteador encaminha pacotes entre redes atravez de um endereço Ip,
+   alem de possuir um sistema operacional, memoria, processador, sendo
+   praticamente um mini-computador, relizando calculo de rota,
+   encaminhamento  de pacotes e fragmentaçao de pacotes.
+
+** cut-through
+
+  Cut-Through é um método, em que o switch começa encaminhando um
+  pacote antes mesmo dele ser totalmente recebido. o Cut-Through reduz
+  o tempo de atraso durante o switching e deixa que dispositivos de
+  outras camadas façam o reconhecimento de erros.
+
+** store-and-forward
+
+  Store-and-forward é uma técnica de telecomunicações em que a
+  informação é enviada a uma estação intermediária onde ela é mantida
+  para ser posteriormente enviada para um dispositivo de destino ou
+  para outra estação intermediária. A estação intermediária, ou nó, no
+  contexto de redes, verifica a integridade da mensagem antes de
+  encaminhá-la. No geral, essa técnica é usada em redes com
+  conectividade intermitente (quando um modem ou roteador derruba a
+  conexão em intervalos de tempo aleatórios[1]) especialmente em
+  locais que requerem uma grande mobilidade. É preferível em situações
+  em que há longos atrasos na transmissão e taxas de erros voláteis e
+  grandes, ou quando conexões fim-a-fim não são possíveis.
+
+
+** adaptative cut-through
+
+  Um Switcing adaptável é designado para atuar normalmente no modo
+  Cut-Through. Contudo, se a taxa de erro em uma de suas portas for
+  muito alta, o switch reconfigura automaticamente a porta para atuar
+  no modo Store-and-Forward.
+
+  Essa característica otimiza o funcionamento do dispositivo, uma vez
+  que permite que o mesmo provenha um switching (comutação) mais
+  rápido com uma maior taxa de transmissão pelo modo cut-through, ou
+  em caso de alta taxa de erro, alterar a porta para o modo
+  store-and-forward. Switches adaptáveis garantem o melhor
+  funcionamento possível para o sistema, pois conciliam o melhor de
+  cada tipo de tecnologia comutadora.

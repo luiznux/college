@@ -1,0 +1,30 @@
+* Roteador conf de interface simples
+
+#+BEGIN_SRC
+enable
+conf t
+hostname <nome do roteador>
+interface <INTERFACE>
+ip address <ip> <mascara>
+end
+#+END_SRC
+
+#+BEGIN_SRC
+Roteador conf de rota
+enable
+conf t
+ip route <End.Rede>  <mascara>  <Next_hop>
+#+END_SRC
+
+#+BEGIN_SRC
+Conf de Switch basico
+enable
+conf t
+ip default-gateway <ip do roteador da rede>
+interface vlan 1
+ip address <ip> <mascara>
+end
+#+END_SRC
+
+
+

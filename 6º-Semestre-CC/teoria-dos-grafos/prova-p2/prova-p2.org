@@ -1,0 +1,60 @@
+#+title: Prova P2 Teoria Dos Grafos
+#+author: Luiz tagliaferro TIA 31861806
+
+
+* 1)
+
+** a)
+[[./img/1-a.png]]
+
+
+
+** b)
+
+[[./img/1-b.png]]
+
+
+
+* 2)
+
+** a)
+[[./img/2-a.png]]
+
+** b)
+[[./img/2-b.png]]
+
+
+* 3)
+
+  Primeiramente realizamos uma busca em profundidade começando em um
+  vertice adjacente a X, no caso B, ate encontramos o vertice Y, apos
+  isso guardamos o caminho e o vertice adjacente em que
+  começamos.
+
+  Recomeçamos a busca a partir de outro vertice adjacente que nao seja
+  o B, ate acharmos o vertice Y, comparando o tamanho do caminho com o
+  calculado anteriormente, caso seja menor , armazeno, caso contrario
+  nao.
+
+  Repito o procedimento a cima ate esgotarem os vertices adjacentes de
+  X.
+
+
+* 4)
+
+** a)
+   Fluxo Máximo = 4
+
+   [[./img/4-a.png]]
+
+** b)
+
+   xv1, xv2, v1v3, v3y
+
+   K = ({x}, {v1, v2, v3, v4, y}) = xv1 + xv2 = 4
+
+** c)
+
+   Obtemos o fluxo máximo igual a 4, assim, segundo o teorema, em uma
+   rede o valor do fluxo máximo é igual a capacidade de um corte
+   mínimo, obtendo o valor 4 neste caso.
