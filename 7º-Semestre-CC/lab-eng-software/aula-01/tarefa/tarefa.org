@@ -1,0 +1,15 @@
+#+title: Lei de Conway
+
+Pesquisar o que é a Lei de Conway e relacioná-la com a leitura
+realizada (Como ensinar um elefante a dançar), onde se afirma que a
+entrega contínua não é para todos.
+
+Explique porque Rachel resolveu cancelar o projeto de implantação de
+entrega contínua em uma grande empresa financeira e porque o software
+não era exatamente o problema para esta implantação, como podemos
+entender do trecho a seguir:
+
+Parte do problema era a tecnologia e a arquitetura. A empresa de
+serviços financeiros tinha uma base de códigos com mais de 70 milhões
+de linhas, além de uma arquitetura bagunçada e mal-estruturada. No
+entanto, o software era a parte fácil, pois era um problema óbvio
