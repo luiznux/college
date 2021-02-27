@@ -1,0 +1,14 @@
+#+title: Atividade - Hyper-V (Windows) e o Xen (Linux)
+
+* Description
+Na virtualização nativa, existem programas especiais nativos do
+sistema operacional chamados ​monitores de máquina virtual (VMM –
+Virtual Machine Monitor) ou ​hypervisors​. Descreva como funciona o
+Hyper-V (Windows) e o Xen (Linux).
+
+Formate o seu trabalho como um pequeno artigo (como se fosse um blog),
+com no máximo 3 páginas (não menos que 2 páginas).
+
+Submeta um PDF.
+
+Atividade individual.

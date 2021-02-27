@@ -1,0 +1,13 @@
+#+title: Atividade - Formas de Virtualização
+
+* Description
+  Escolha uma das formas de virtualização vistas na aula dê uma
+  aplicação prática para ela.
+
+  Escreva um pequeno resumo sobre a forma de virtualização escolhida,
+  com algumas características técnicas e depois faça um resumo sobre a
+  aplicação específica desta forma de virtualização.
+
+  Submeta um PDF.
+
+  Pode ser feito em duplals.

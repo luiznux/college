@@ -1,0 +1,6 @@
+[submodule "7º-Semestre-CC/compiladores/compiladores"]
+	path = 7º-Semestre-CC/compiladores/compiladores
+	url = https://github.com/lucianosilva-github/compiladores.git
+[submodule "7º-Semestre-CC/compiladores/Github-rep/compiladores"]
+	path = 7º-Semestre-CC/compiladores/Github-rep/compiladores
+	url = https://github.com/lucianosilva-github/compiladores.git

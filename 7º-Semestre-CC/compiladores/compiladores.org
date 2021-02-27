@@ -1,0 +1,141 @@
+#+title: Compiladores
+#+description: Anotaçoes da aula de Compiladores
+
+* Aula 01
+  Analisador Lexico -> reconhece os tokens da linguagem
+
+
+* Aula 02 Analisadores Lexicos parte 2
+
+** Linguagem
+   #+begin_src
+   LINGUAGEM TINY-C
+
+   Abaixo temos a gramática (livre de contexto) da linguagem TINY-C, um subconjunto bastante expressivo da linguagem C:
+
+   Smallc_program ::= type_specifier id ‘(‘ param_decl_list ‘)’ compound_stmt
+
+   Type_specifier ::= int | char
+
+   Param_decl_list ::= parameter_decl (‘,’ parameter_decl )*
+
+   Param_decl ::= type_specifier id
+
+   Compound_stmt ::= ‘{‘ (var_decl* stmt*)? ‘}’
+
+   Var_decl ::= type_specifier var_decl_list ‘;’
+
+   Var_decl_list ::= variable_id ( ‘,’ variable_id)*
+
+   Variable_id ::= id ( ‘=’ expr )?
+
+   Stmt ::= compound_stmt | cond_stmt | while_stmt | break ‘;’ | continue ‘;’ | return expr ‘;’ | readint ‘(‘ id ‘)’ ‘;’ | writeint ‘(‘ expr ‘)’ ‘;’
+
+   Cond_stmt ::= if ‘(‘ expr ‘)’ stmt (else stmt)?
+
+   While_stmt ::= while ‘(‘ expr ‘)’ stmt
+
+   Expr ::= id ‘=’ expr | condition
+
+   Condition ::= disjunction | disjunction ‘?’ expr ‘:’ condition
+
+   Disjunction ::= conjunction | disjunction ‘||’ conjunction
+
+   Conjunction ::= comparison | conjunction ‘&&’ comparison
+
+   Comparison ::= relation | relation ‘==’ relation
+
+   Relation ::= sum | sum (‘<’ | ‘>’) sum
+
+   Sum ::= sum ‘+’ term | sum ‘-’ term | term
+
+   Term ::= term ‘*’ factor | term ‘/’ factor | term ‘%’ factor | factor
+
+   Factor ::= ‘!’ factor | ‘-’ factor | primary
+
+   Primary ::= num | charconst | id | ‘(‘ expr ‘)’
+   #+end_src
+
+** TOKENS
+  #+begin_src
+  * id
+  (
+  )
+  int
+  char
+  ,
+  ;
+  {
+  }
+  =
+  break
+  continue
+  return
+  readint
+  writeint
+  if
+  else
+  while
+  ?
+  ||
+  &&
+  ==
+  <
+  >
+  +
+  -
+  *
+  /
+  %
+  !
+  charconst
+  num
+  #+end_src
+
+** Analisador Lexico
+  #+begin_src python
+  from rply import LexerGenerator
+
+  lg = LexerGenerator()
+
+  #regra Type_specifier ::= int | char
+  lg.add('INT', r'int')
+  lg.add('CHAR', r'char')
+  lg.add("RETURN", r'return')
+
+  #regra Smallc_program ::= type_specifier id ‘(‘ param_decl_list ‘)’ compound_stmt
+  lg.add('ID', r'[a-zA-Z][a-zA-Z0-9]*')
+  lg.add('OPEN_PARENS', r'\(')
+  lg.add('CLOSE_PARENS', r'\)')
+  lg.add('COMMA', r',')
+  lg.add("OPEN_BRACKES", r'\{')
+  lg.add("CLOSE_BRACKES", r'\}')
+  lg.add("GIVING_VALUE", r'=')
+  lg.add("ADD", r'\+')
+  lg.add("SEMICOLON", r';')
+  lg.ignore('\s+')
+
+  lexer = lg.build()
+
+  #+end_src
+
+** Aplicador da Linguagem
+   #+begin_src python
+
+   #+end_src
+
+** EAD
+
+*** ATIVIDADE EAD
+    - [ ] Aumentar as regras de sua gramática para incluir mais de uma
+      função por programa
+
+    - [ ] Aumentar as regras de sua gramática para incluir definição
+      de vetores no estilo C (Exemplo: int v[10];)
+
+    - [ ] Implementar um analisador léxico para incluir as duas novas
+      regras acima
+
+    Escrever um programa em TINY-C (com as novas regras acima) e fazer
+    sua análise léxica com o analisador do item (3).  O que entregar:
+    notebook contendo os programas em Python

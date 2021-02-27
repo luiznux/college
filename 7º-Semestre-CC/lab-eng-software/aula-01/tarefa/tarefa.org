@@ -1,5 +1,6 @@
 #+title: Lei de Conway
 
+* Enunciado
 Pesquisar o que é a Lei de Conway e relacioná-la com a leitura
 realizada (Como ensinar um elefante a dançar), onde se afirma que a
 entrega contínua não é para todos.
@@ -12,4 +13,15 @@ entender do trecho a seguir:
 Parte do problema era a tecnologia e a arquitetura. A empresa de
 serviços financeiros tinha uma base de códigos com mais de 70 milhões
 de linhas, além de uma arquitetura bagunçada e mal-estruturada. No
-entanto, o software era a parte fácil, pois era um problema óbvio
+entanto, o software era a parte fácil, pois era um problema óbvio.
+
+
+** Resposta
+   A lei de Conway em poucas palavras diz que a cultura da empresa é
+   refletida em seu codigo, pois se por exemplo a empresa X possui uma
+   pessima administraçao e gestao, seu codigo também sera do mesmo modo.
+
+   A partir da leitura do artigo, da situaçao apresentada e tendo em
+   vista os conceitos definidos na entrega continua, fica claro que a
+   decisao de Rachel foi sensata pois seria necessario primeiro mudar a
+   gestao da empresa para depois contruir um codigo de qualidade.
