@@ -139,3 +139,5 @@
     Escrever um programa em TINY-C (com as novas regras acima) e fazer
     sua análise léxica com o analisador do item (3).  O que entregar:
     notebook contendo os programas em Python
+
+* Aula 03
